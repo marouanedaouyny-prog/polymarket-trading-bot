@@ -1,0 +1,7 @@
+{
+  "enabledMcpjsonServers": [
+    "claude-flow",
+    "pencil"
+  ],
+  "enableAllProjectMcpServers": true
+}

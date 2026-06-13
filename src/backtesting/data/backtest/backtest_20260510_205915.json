@@ -1,0 +1,52 @@
+[
+  {
+    "starting_balance": 100,
+    "final_balance": 12064.660777000223,
+    "profit": 11964.660777000223,
+    "roi": 11964.660777000223,
+    "total_trades": 100,
+    "wins": 86,
+    "losses": 14,
+    "win_rate": 86.0
+  },
+  {
+    "starting_balance": 100,
+    "final_balance": 14918.038344640818,
+    "profit": 14818.038344640818,
+    "roi": 14818.038344640818,
+    "total_trades": 100,
+    "wins": 88,
+    "losses": 12,
+    "win_rate": 88.0
+  },
+  {
+    "starting_balance": 100,
+    "final_balance": 15369.535269118696,
+    "profit": 15269.535269118696,
+    "roi": 15269.535269118696,
+    "total_trades": 100,
+    "wins": 86,
+    "losses": 14,
+    "win_rate": 86.0
+  },
+  {
+    "starting_balance": 100,
+    "final_balance": 14626.244212161853,
+    "profit": 14526.244212161853,
+    "roi": 14526.244212161853,
+    "total_trades": 100,
+    "wins": 86,
+    "losses": 14,
+    "win_rate": 86.0
+  },
+  {
+    "starting_balance": 100,
+    "final_balance": 15185.287714895796,
+    "profit": 15085.287714895796,
+    "roi": 15085.287714895796,
+    "total_trades": 100,
+    "wins": 87,
+    "losses": 13,
+    "win_rate": 87.0
+  }
+]

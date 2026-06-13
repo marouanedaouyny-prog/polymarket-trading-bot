@@ -1,0 +1,25 @@
+# Configuration file for the Polymarket AI Trading System
+
+# API configuration
+API_KEY=your_api_key_here
+SECRET_KEY=your_secret_key_here
+
+# Database configuration
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=polymarket_trading
+DB_USER=trader
+DB_PASSWORD=secret123
+
+# Redis configuration
+REDIS_HOST=localhost
+REDIS_PORT=6379
+REDIS_DB=0
+
+# Polymarket API settings
+POLYMARKET_API_KEY=your_clob_api_key
+POLYMARKET_API_SECRET=your_clob_secret
+POLYMARKET_API_PASSPHRASE=your_clob_passphrase
+RELAYER_API_KEY=your_relayer_api_key
+RELAYER_API_KEY_ADDRESS=0x0000000000000000000000000000000000000000
+POLYMARKET_API_URL=https://gamma-api.polymarket.com

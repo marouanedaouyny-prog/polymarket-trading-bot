@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-05-10T15:23:17.204257",
+  "balance": 3027547.3819043646,
+  "initial_balance": 100,
+  "profit": 3027447.3819043646,
+  "return_pct": 3027447.3819043646,
+  "total_trades": 0,
+  "daily_stats": {
+    "trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_rate": 0
+  }
+}

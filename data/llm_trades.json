@@ -1,0 +1,182 @@
+[
+  {
+    "timestamp": "2026-05-09T19:36:26.733252",
+    "market_id": "0xc648d7a3e11e8b5997424f487be86fc00720a8c63a402dd5d1603ea4a2a3f7f7",
+    "question": "NCAAB: Texas Southern Tigers vs. Fairleigh Dickinson Knights 2023-03-15",
+    "llm_strategy": "high_probability",
+    "outcome_chosen": "Fairleigh Dickinson",
+    "winning_outcome": "Fairleigh Dickinson",
+    "amount": 2.0,
+    "profit": 0.0,
+    "balance": 10.0,
+    "odds": {
+      "Texas Southern": 0,
+      "Fairleigh Dickinson": 1
+    }
+  },
+  {
+    "timestamp": "2026-05-09T19:36:26.733392",
+    "market_id": "0xbcf045f209513f57cccb3e821b987c3bf04dbf046844f597161117df08652207",
+    "question": "NBA: Houston Rockets vs. New Orleans Pelicans 2023-03-17",
+    "llm_strategy": "high_probability",
+    "outcome_chosen": "Rockets",
+    "winning_outcome": "Rockets",
+    "amount": 2.0,
+    "profit": 0.0,
+    "balance": 10.0,
+    "odds": {
+      "Rockets": 1,
+      "Pelicans": 0
+    }
+  },
+  {
+    "timestamp": "2026-05-09T19:36:26.733552",
+    "market_id": "0xe86b279600dce6a9c53c1779bb765ed80ea550cec9ac5125983d918938848ab5",
+    "question": "Will 'Shazam! Fury of the Gods' gross more than $25 million domestically on its opening weekend?",
+    "llm_strategy": "random",
+    "outcome_chosen": "No",
+    "winning_outcome": "Yes",
+    "amount": 2.0,
+    "profit": -2.0,
+    "balance": 8.0,
+    "odds": {
+      "Yes": 1,
+      "No": 0
+    }
+  },
+  {
+    "timestamp": "2026-05-09T19:36:26.733621",
+    "market_id": "0x269db3712e22859234b2cb1b6334ba2f81b0be72b08bbdbcca8129ee00bf8195",
+    "question": "Will Spurs beat Wolves? (03/04/2023)",
+    "llm_strategy": "random",
+    "outcome_chosen": "No",
+    "winning_outcome": "No",
+    "amount": 1.6,
+    "profit": 0.0,
+    "balance": 8.0,
+    "odds": {
+      "Yes": 0,
+      "No": 1
+    }
+  },
+  {
+    "timestamp": "2026-05-09T19:36:26.733717",
+    "market_id": "0x2277e0a3af6c289c220ea72e0fb833d79df6cf3dbdc30ef417aba5b51c7c9130",
+    "question": "NBA: Miami Heat vs. Atlanta Hawks 2023-03-04",
+    "llm_strategy": "high_probability",
+    "outcome_chosen": "Heat",
+    "winning_outcome": "Heat",
+    "amount": 1.6,
+    "profit": 0.0,
+    "balance": 8.0,
+    "odds": {
+      "Heat": 1,
+      "Hawks": 0
+    }
+  },
+  {
+    "timestamp": "2026-05-09T19:36:26.733780",
+    "market_id": "0x41190eb9336ae73949c04f4900f9865092e69a57cf9c942a6157abf6ae8d16c6",
+    "question": "[Single Market] Will Donald J. Trump win the U.S. 2024 Republican presidential nomination?",
+    "llm_strategy": "random",
+    "outcome_chosen": "No",
+    "winning_outcome": "Yes",
+    "amount": 1.6,
+    "profit": -1.6,
+    "balance": 6.4,
+    "odds": {
+      "Yes": 1,
+      "No": 0
+    }
+  },
+  {
+    "timestamp": "2026-05-09T19:36:26.733837",
+    "market_id": "0x1bdd0e463f0cf033656b3695164a1ccbb5d355f72a7b26f4c2f4df5f7d287834",
+    "question": "Will Ali Khamenei remain Supreme Leader of Iran through June 30, 2023?",
+    "llm_strategy": "random",
+    "outcome_chosen": "No",
+    "winning_outcome": "Yes",
+    "amount": 1.28,
+    "profit": -1.28,
+    "balance": 5.12,
+    "odds": {
+      "Yes": 1,
+      "No": 0
+    }
+  },
+  {
+    "timestamp": "2026-05-09T19:36:26.733889",
+    "market_id": "0xf6c10171a01fc72f50555ebd21a56434be30dd4b7d05f35ea2a0b44930f2102f",
+    "question": "archWill Ron DeSantis win the 2024 US Presidential Election?",
+    "llm_strategy": "random",
+    "outcome_chosen": "No",
+    "winning_outcome": "No",
+    "amount": 1.02,
+    "profit": 0.0,
+    "balance": 5.12,
+    "odds": {
+      "Yes": 0,
+      "No": 1
+    }
+  },
+  {
+    "timestamp": "2026-05-09T19:36:26.733939",
+    "market_id": "0x65303b60df4dfeb396dfcb4104e14dfeb7f159406a8c08b5b7ac1681877cda9a",
+    "question": "NBA: San Antonio Spurs vs. Oklahoma City Thunder 2023-03-12",
+    "llm_strategy": "high_probability",
+    "outcome_chosen": "Thunder",
+    "winning_outcome": "Thunder",
+    "amount": 1.02,
+    "profit": 0.0,
+    "balance": 5.12,
+    "odds": {
+      "Spurs": 0,
+      "Thunder": 1
+    }
+  },
+  {
+    "timestamp": "2026-05-09T19:36:26.733987",
+    "market_id": "0xab71c618ab4aead75e75357bd9487c10781e50245c63350f33ce20e2a5940138",
+    "question": "NBA: Phoenix Suns vs. Milwaukee Bucks 2023-03-14",
+    "llm_strategy": "high_probability",
+    "outcome_chosen": "Bucks",
+    "winning_outcome": "Bucks",
+    "amount": 1.02,
+    "profit": 0.0,
+    "balance": 5.12,
+    "odds": {
+      "Suns": 0,
+      "Bucks": 1
+    }
+  },
+  {
+    "timestamp": "2026-05-09T19:36:26.734035",
+    "market_id": "0xd51018c6ba466c859c2c0c12a7f018cc5627f32459c59c57052a1457bcb61785",
+    "question": "NHL: Florida Panthers vs. New Jersey Devils 2023-03-18",
+    "llm_strategy": "high_probability",
+    "outcome_chosen": "Panthers",
+    "winning_outcome": "Panthers",
+    "amount": 1.02,
+    "profit": 0.0,
+    "balance": 5.12,
+    "odds": {
+      "Panthers": 1,
+      "Devils": 0
+    }
+  },
+  {
+    "timestamp": "2026-05-09T19:36:26.734085",
+    "market_id": "0x4ba970209639b2fd6765e65fe6f4eb093a7b1c7eb158e486729cfd135c1843cd",
+    "question": "NBA: Miami Heat vs. New York Knicks 2023-03-03",
+    "llm_strategy": "high_probability",
+    "outcome_chosen": "Knicks",
+    "winning_outcome": "Knicks",
+    "amount": 1.02,
+    "profit": 0.0,
+    "balance": 5.12,
+    "odds": {
+      "Heat": 0,
+      "Knicks": 1
+    }
+  }
+]

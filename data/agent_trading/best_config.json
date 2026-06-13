@@ -1,0 +1,17 @@
+{
+  "trades": 15,
+  "wins": 15,
+  "win_rate": 100.0,
+  "profit": 5612.160370178213,
+  "config": {
+    "max_position_pct": 0.18,
+    "min_edge": 0.78,
+    "min_confidence": 82,
+    "price_preference": [
+      0.01,
+      0.11
+    ],
+    "min_volume": 55000,
+    "min_score": 0.62
+  }
+}

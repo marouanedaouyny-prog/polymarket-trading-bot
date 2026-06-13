@@ -1,0 +1,77 @@
+[
+  {
+    "timestamp": "2026-05-09T18:58:44.350288",
+    "market_id": "0x6e22d4fe279894dfe22854258eefea3893502043db541a7b095b85056aa7b6c9",
+    "question": "NBA: Charlotte Hornets vs. Indiana Pacers 2023-03-20",
+    "outcome_chosen": "Pacers",
+    "winning_outcome": "Hornets",
+    "amount": 1.59,
+    "profit": -1.59,
+    "balance": 8.41,
+    "odds": {
+      "Hornets": 1,
+      "Pacers": 0
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T18:58:44.350407",
+    "market_id": "0x0c5947d3fc27682b7a3e948d6aa843c57d5230270f7499565909422dd9c811e4",
+    "question": "Formula 1: Will Max Verstappen win the 2023 Bahrain Grand Prix?",
+    "outcome_chosen": "Yes",
+    "winning_outcome": "Yes",
+    "amount": 1.93,
+    "profit": 0.0,
+    "balance": 8.41,
+    "odds": {
+      "Yes": 1,
+      "No": 0
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T18:58:44.350810",
+    "market_id": "0xf9b7e17d9cfd7f8d9d66571311a261095b9d25bddfeca9548b85423b64953e4a",
+    "question": "NCAAB: Alabama Crimson Tide vs. Maryland Terrapins 2023-03-18",
+    "outcome_chosen": "Maryland",
+    "winning_outcome": "Alabama",
+    "amount": 1.72,
+    "profit": -1.72,
+    "balance": 6.69,
+    "odds": {
+      "Alabama": 1,
+      "Maryland": 0
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T18:58:44.350836",
+    "market_id": "0x3648ab7c146a9a85957e07c1d43a82272be71fde767822fd425e10ba0d6c0757",
+    "question": "[Single Market] Will Glenn Youngkin win the 2024 Republican presidential nomination?",
+    "outcome_chosen": "Yes",
+    "winning_outcome": "No",
+    "amount": 1.19,
+    "profit": -1.19,
+    "balance": 5.5,
+    "odds": {
+      "Yes": 0,
+      "No": 1
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T18:58:44.350856",
+    "market_id": "0x30e43afd052cce9f1b2d8f718592e145a0624241f50d430262ef5d3ab6946fd3",
+    "question": "NBA: Boston Celtics vs. Portland Trail Blazers 2023-03-08",
+    "outcome_chosen": "Celtics",
+    "winning_outcome": "Celtics",
+    "amount": 1.03,
+    "profit": 0.0,
+    "balance": 5.5,
+    "odds": {
+      "Celtics": 1,
+      "Trail Blazers": 0
+    },
+    "result": "WIN"
+  }
+]

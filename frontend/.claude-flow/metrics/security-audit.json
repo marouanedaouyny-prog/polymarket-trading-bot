@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-05-15T18:48:09.594Z",
+  "mode": "headless",
+  "workerType": "audit",
+  "model": "haiku",
+  "durationMs": 72173,
+  "executionId": "audit_1778870817421_bxbnog",
+  "success": true,
+  "findings": {
+    "parseError": true,
+    "rawOutput": "Error code: 400 - {'error': {'message': 'qwen/qwen2.5-coder-32b-instruct is not a valid model ID', 'code': 400}, 'user_id': 'user_31jKVuVfPnSsn1TdxrwiXC50xqH'} (request_id=req_3b8b03196878)\n"
+  },
+  "rawOutputPreview": "Error code: 400 - {'error': {'message': 'qwen/qwen2.5-coder-32b-instruct is not a valid model ID', 'code': 400}, 'user_id': 'user_31jKVuVfPnSsn1TdxrwiXC50xqH'} (request_id=req_3b8b03196878)\n",
+  "rawOutputLength": 190
+}

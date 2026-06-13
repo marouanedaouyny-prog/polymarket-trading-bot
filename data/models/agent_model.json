@@ -1,0 +1,18 @@
+{
+  "weights": {
+    "price_weight": 0.25,
+    "edge_weight": 0.4,
+    "confidence_weight": 0.35
+  },
+  "trained_on_trades": 889,
+  "config": {
+    "max_position_pct": 0.2,
+    "min_edge": 0.1,
+    "min_confidence": 40,
+    "price_preference": [
+      0.15,
+      0.85
+    ]
+  },
+  "accuracy": 88.63892013498312
+}

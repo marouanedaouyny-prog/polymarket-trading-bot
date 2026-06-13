@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-06-10T12:45:54.133150",
+  "trending_markets": [
+    {
+      "topic": "BTC 80k vs 100k",
+      "volume": "$328K",
+      "sentiment": "bullish"
+    },
+    {
+      "topic": "ETH above $1900",
+      "volume": "$64K",
+      "sentiment": "bullish"
+    },
+    {
+      "topic": "SOL above $85",
+      "volume": "$53K",
+      "sentiment": "bullish"
+    }
+  ],
+  "sentiment_score": 0.85,
+  "confidence_boost": 0.1,
+  "recommended_sectors": [
+    "crypto",
+    "bitcoin",
+    "ethereum",
+    "solana"
+  ]
+}

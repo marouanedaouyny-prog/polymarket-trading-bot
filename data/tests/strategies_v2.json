@@ -1,0 +1,42 @@
+[
+  {
+    "config_name": "Best_HF_Tuned",
+    "total_trades": 450,
+    "win_rate": 69.55555555555556,
+    "final_balance": 131.84725928935686,
+    "profit": 121.84725928935686,
+    "return_pct": 1218.4725928935686
+  },
+  {
+    "config_name": "Aggressive_Mix",
+    "total_trades": 478,
+    "win_rate": 72.17573221757321,
+    "final_balance": 112.25304068186016,
+    "profit": 102.25304068186016,
+    "return_pct": 1022.5304068186016
+  },
+  {
+    "config_name": "Large_Mix",
+    "total_trades": 370,
+    "win_rate": 73.51351351351352,
+    "final_balance": 126.74921558690153,
+    "profit": 116.74921558690153,
+    "return_pct": 1167.4921558690153
+  },
+  {
+    "config_name": "Safe_HF",
+    "total_trades": 496,
+    "win_rate": 67.33870967741935,
+    "final_balance": 74.97293231103586,
+    "profit": 64.97293231103586,
+    "return_pct": 649.7293231103586
+  },
+  {
+    "config_name": "Smart_Entry",
+    "total_trades": 172,
+    "win_rate": 74.4186046511628,
+    "final_balance": 34.85076727509503,
+    "profit": 24.85076727509503,
+    "return_pct": 248.50767275095032
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "time": "2026-05-10T15:20:16.380188",
+    "level": "INFO",
+    "message": "Trading started with $100.00"
+  },
+  {
+    "time": "2026-05-10T15:23:17.205422",
+    "level": "INFO",
+    "message": "Trading session complete. Profit: $3027447.38"
+  }
+]

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Poly-Bot-01 | Risk Management Console</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=IBM+Plex+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131b2e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3d494c;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline-variant": "#3d494c",
+                      "secondary-fixed": "#ffddb8",
+                      "on-secondary": "#472a00",
+                      "on-surface-variant": "#bcc9cd",
+                      "primary": "#4cd7f6",
+                      "on-error-container": "#ffdad6",
+                      "on-primary": "#003640",
+                      "outline": "#869397",
+                      "inverse-on-surface": "#283044",
+                      "tertiary-container": "#ff817a",
+                      "on-secondary-fixed-variant": "#653e00",
+                      "tertiary-fixed-dim": "#ffb3ad",
+                      "on-primary-fixed": "#001f26",
+                      "surface-variant": "#2d3449",
+                      "inverse-primary": "#00687a",
+                      "on-tertiary-fixed-variant": "#930013",
+                      "surface-container-low": "#131b2e",
+                      "on-primary-container": "#00424f",
+                      "secondary-fixed-dim": "#ffb95f",
+                      "secondary": "#ffb95f",
+                      "on-secondary-fixed": "#2a1700",
+                      "on-primary-fixed-variant": "#004e5c",
+                      "surface-container-lowest": "#060e20",
+                      "surface-tint": "#4cd7f6",
+                      "secondary-container": "#ee9800",
+                      "surface-container-high": "#222a3d",
+                      "on-background": "#dae2fd",
+                      "on-surface": "#dae2fd",
+                      "primary-fixed-dim": "#4cd7f6",
+                      "primary-fixed": "#acedff",
+                      "surface": "#0b1326",
+                      "error": "#ffb4ab",
+                      "inverse-surface": "#dae2fd",
+                      "tertiary": "#ffb3ad",
+                      "surface-container": "#171f33",
+                      "surface-bright": "#31394d",
+                      "on-tertiary-container": "#7e000f",
+                      "on-secondary-container": "#5b3800",
+                      "background": "#0b1326",
+                      "primary-container": "#06b6d4",
+                      "on-tertiary-fixed": "#410004",
+                      "surface-container-highest": "#2d3449",
+                      "surface-dim": "#0b1326",
+                      "error-container": "#93000a",
+                      "on-tertiary": "#68000a",
+                      "on-error": "#690005",
+                      "tertiary-fixed": "#ffdad7"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "sm": "8px",
+                      "xs": "4px",
+                      "md": "16px",
+                      "margin": "16px",
+                      "base": "4px",
+                      "gutter": "12px",
+                      "xl": "32px",
+                      "lg": "24px"
+              },
+              "fontFamily": {
+                      "label-caps": ["IBM Plex Mono"],
+                      "h2": ["Space Grotesk"],
+                      "data-sm": ["IBM Plex Mono"],
+                      "data-lg": ["IBM Plex Mono"],
+                      "data-md": ["IBM Plex Mono"],
+                      "h1": ["Space Grotesk"]
+              },
+              "fontSize": {
+                      "label-caps": ["10px", {"lineHeight": "12px", "letterSpacing": "0.08em", "fontWeight": "700"}],
+                      "h2": ["18px", {"lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "data-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400"}],
+                      "data-lg": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "data-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "500"}],
+                      "h1": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="flex h-screen overflow-hidden bg-background">
+<!-- SideNavBar (Authority: JSON) -->
+<aside class="flex flex-col h-full overflow-y-auto h-screen w-64 border-r border-outline-variant bg-surface-container-low shrink-0">
+<div class="p-lg">
+<h1 class="font-h1 text-h1 font-bold text-primary">POLY-BOT-01</h1>
+<p class="font-data-sm text-data-sm text-on-surface-variant">V2.4.0-STABLE</p>
+</div>
+<nav class="flex-1 mt-md">
+<div class="px-sm py-xs mx-md flex items-center gap-md font-data-md text-data-md text-on-surface-variant hover:bg-surface-container-highest transition-colors duration-150 cursor-pointer group active:scale-95">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Overview</span>
+</div>
+<div class="px-sm py-xs mx-md flex items-center gap-md font-data-md text-data-md text-on-surface-variant hover:bg-surface-container-highest transition-colors duration-150 cursor-pointer group active:scale-95">
+<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+<span>Markets</span>
+</div>
+<div class="px-sm py-xs mx-md flex items-center gap-md font-data-md text-data-md text-on-surface-variant hover:bg-surface-container-highest transition-colors duration-150 cursor-pointer group active:scale-95">
+<span class="material-symbols-outlined" data-icon="swap_horiz">swap_horiz</span>
+<span>Trades</span>
+</div>
+<!-- Active State Logic: Risk Page -->
+<div class="px-sm py-xs mx-md flex items-center gap-md font-data-md text-data-md text-primary border-l-2 border-primary bg-surface-container-high transition-colors duration-150 cursor-pointer group active:scale-95">
+<span class="material-symbols-outlined" data-icon="gpp_maybe">gpp_maybe</span>
+<span>Risk</span>
+</div>
+<div class="px-sm py-xs mx-md flex items-center gap-md font-data-md text-data-md text-on-surface-variant hover:bg-surface-container-highest transition-colors duration-150 cursor-pointer group active:scale-95">
+<span class="material-symbols-outlined" data-icon="dns">dns</span>
+<span>System</span>
+</div>
+<div class="px-sm py-xs mx-md flex items-center gap-md font-data-md text-data-md text-on-surface-variant hover:bg-surface-container-highest transition-colors duration-150 cursor-pointer group active:scale-95">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</div>
+</nav>
+<div class="p-lg mt-auto">
+<div class="flex items-center gap-md mb-lg">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center border border-outline-variant overflow-hidden">
+<img alt="Bot Operator Profile" class="w-full h-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApeplWvUi-l-9nskJsl6fl21FgXfcIuKB8HE8iA_t9GRXUMz9Vj4S00vmgpMhjvKMHfOdV8eLg5QZTn1Cf3r4N4z1_Jrks3Zpbq-mxXkhjgGYQhYKPRGxnyKsvw5szPATgJp7cYFvX70IBld5CgGPf0J5Cc1unJUT1C_DOHi6Qp9vfmwkNBvwYnRgQuyh2c6ol8ACziRwY1BE068WKTz6xSwpRKVD-ERpwzK5Twb9QQu92OO8cOfephyW60zq9kzzpbkxfYRmplwGb"/>
+</div>
+<div>
+<p class="font-data-md text-data-md text-on-surface">OPERATOR-A</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant">ONLINE</p>
+</div>
+</div>
+<button class="w-full py-md bg-error-container text-on-error-container font-h2 text-h2 rounded-lg border border-error hover:brightness-110 active:scale-95 transition-all">
+                Manual Killswitch
+            </button>
+</div>
+</aside>
+<div class="flex flex-col flex-1 min-w-0">
+<!-- TopNavBar (Authority: JSON) -->
+<header class="flex justify-between items-center w-full px-6 bg-surface h-16 border-b border-outline-variant shrink-0">
+<div class="flex items-center gap-lg">
+<span class="font-h2 text-h2 font-bold text-on-surface">Terminal Console</span>
+<div class="flex items-center gap-md bg-surface-container-low border border-outline-variant px-md py-xs rounded">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 font-data-sm text-data-sm text-on-surface w-64" placeholder="Global Risk Search..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-xl">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary" data-icon="sensors">sensors</span>
+<span class="font-data-md text-data-md text-primary">Running</span>
+</div>
+<div class="h-6 w-px bg-outline-variant"></div>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-secondary" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="font-data-md text-data-md text-secondary">$42,084.12</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-opacity" data-icon="notifications">notifications</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 overflow-y-auto p-lg bg-background">
+<div class="max-w-[1440px] mx-auto space-y-lg">
+<!-- Risk Alert Banner -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-surface-container border border-error p-md flex items-center gap-md">
+<span class="material-symbols-outlined text-error" data-icon="report" style="font-variation-settings: 'FILL' 1;">report</span>
+<div>
+<p class="font-label-caps text-label-caps text-error">CRITICAL BREACH</p>
+<p class="font-data-md text-data-md">Drawdown Limit: -14.2% (Threshold: 12.0%)</p>
+</div>
+</div>
+<div class="bg-surface-container border border-secondary p-md flex items-center gap-md">
+<span class="material-symbols-outlined text-secondary" data-icon="warning" style="font-variation-settings: 'FILL' 1;">warning</span>
+<div>
+<p class="font-label-caps text-label-caps text-secondary">WARNING</p>
+<p class="font-data-md text-data-md">Concentration: TECH-INDEX (42.1%)</p>
+</div>
+</div>
+<div class="bg-surface-container border border-primary p-md flex items-center gap-md">
+<span class="material-symbols-outlined text-primary" data-icon="info" style="font-variation-settings: 'FILL' 1;">info</span>
+<div>
+<p class="font-label-caps text-label-caps text-primary">INFO</p>
+<p class="font-data-md text-data-md">Hedge Adjustment Required in 24m</p>
+</div>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Market Category Exposure -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container border border-outline-variant p-lg">
+<div class="flex justify-between items-center mb-lg">
+<h2 class="font-h2 text-h2 text-on-surface">Category Exposure</h2>
+<span class="font-label-caps text-label-caps text-on-surface-variant">LIVE TELEMETRY</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-lg">
+<div class="space-y-sm">
+<p class="font-data-sm text-data-sm text-on-surface-variant">CRYPTO-ALT</p>
+<p class="font-data-lg text-data-lg text-primary">28.4%</p>
+<div class="w-full h-1 bg-surface-container-lowest">
+<div class="h-full bg-primary" style="width: 28.4%"></div>
+</div>
+</div>
+<div class="space-y-sm">
+<p class="font-data-sm text-data-sm text-on-surface-variant">EQUITIES-EU</p>
+<p class="font-data-lg text-data-lg text-primary">12.1%</p>
+<div class="w-full h-1 bg-surface-container-lowest">
+<div class="h-full bg-primary" style="width: 12.1%"></div>
+</div>
+</div>
+<div class="space-y-sm">
+<p class="font-data-sm text-data-sm text-on-surface-variant">FOREX-MAJORS</p>
+<p class="font-data-lg text-data-lg text-secondary">41.0%</p>
+<div class="w-full h-1 bg-surface-container-lowest">
+<div class="h-full bg-secondary" style="width: 41.0%"></div>
+</div>
+</div>
+<div class="space-y-sm">
+<p class="font-data-sm text-data-sm text-on-surface-variant">COMMODITIES</p>
+<p class="font-data-lg text-data-lg text-primary">18.5%</p>
+<div class="w-full h-1 bg-surface-container-lowest">
+<div class="h-full bg-primary" style="width: 18.5%"></div>
+</div>
+</div>
+</div>
+<!-- Large Visual Metric -->
+<div class="mt-xl h-48 bg-surface-container-low border border-outline-variant relative overflow-hidden flex items-end">
+<div class="absolute inset-0 opacity-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[160px]" data-icon="monitoring">monitoring</span>
+</div>
+<div class="relative z-10 w-full p-md flex gap-base h-full items-end">
+<div class="flex-1 bg-primary/20 border-t border-primary h-[40%]"></div>
+<div class="flex-1 bg-primary/20 border-t border-primary h-[55%]"></div>
+<div class="flex-1 bg-primary/20 border-t border-primary h-[42%]"></div>
+<div class="flex-1 bg-primary/20 border-t border-primary h-[30%]"></div>
+<div class="flex-1 bg-secondary/20 border-t border-secondary h-[75%]"></div>
+<div class="flex-1 bg-secondary/20 border-t border-secondary h-[85%]"></div>
+<div class="flex-1 bg-error/20 border-t border-error h-[95%]"></div>
+<div class="flex-1 bg-secondary/20 border-t border-secondary h-[70%]"></div>
+<div class="flex-1 bg-primary/20 border-t border-primary h-[50%]"></div>
+<div class="flex-1 bg-primary/20 border-t border-primary h-[45%]"></div>
+</div>
+</div>
+</div>
+<!-- Killswitch Status -->
+<div class="col-span-12 lg:col-span-4 bg-surface-container border border-outline-variant p-lg flex flex-col">
+<h2 class="font-h2 text-h2 text-on-surface mb-lg">Killswitch Matrix</h2>
+<div class="flex-1 flex flex-col justify-center items-center py-xl">
+<div class="w-24 h-24 rounded-full border-4 border-primary flex items-center justify-center mb-md relative">
+<div class="absolute inset-0 bg-primary/10 rounded-full animate-pulse"></div>
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="power_settings_new">power_settings_new</span>
+</div>
+<p class="font-data-lg text-data-lg text-on-surface">SYSTEM: INACTIVE</p>
+<p class="font-data-sm text-data-sm text-on-surface-variant text-center mt-xs">Auto-Execution Mode Enabled</p>
+</div>
+<div class="space-y-sm pt-lg border-t border-outline-variant">
+<p class="font-label-caps text-label-caps text-on-surface-variant">LAST TRIGGER</p>
+<div class="flex justify-between items-center">
+<span class="font-data-md text-data-md">2023-11-24 09:12:04</span>
+<span class="px-xs bg-error-container text-on-error-container font-label-caps text-[8px] rounded">MANUAL</span>
+</div>
+</div>
+</div>
+<!-- Position Sizing Policy -->
+<div class="col-span-12 lg:col-span-6 bg-surface-container border border-outline-variant p-lg">
+<div class="flex justify-between items-center mb-lg">
+<h2 class="font-h2 text-h2 text-on-surface">Position Sizing Policy</h2>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="gavel">gavel</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-data-sm text-data-sm">
+<thead class="border-b border-outline-variant text-on-surface-variant">
+<tr>
+<th class="py-sm">Variable</th>
+<th class="py-sm">Value</th>
+<th class="py-sm">Constraint</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/30">
+<tr>
+<td class="py-md">Base Unit Size</td>
+<td class="py-md font-bold text-primary">0.25%</td>
+<td class="py-md">Equity Adjusted</td>
+</tr>
+<tr>
+<td class="py-md">Max Pair Cluster</td>
+<td class="py-md font-bold text-primary">4.00%</td>
+<td class="py-md">Per Sector</td>
+</tr>
+<tr>
+<td class="py-md">Leverage Cap</td>
+<td class="py-md font-bold text-secondary">3.5x</td>
+<td class="py-md">Hard Limit</td>
+</tr>
+<tr>
+<td class="py-md">Volatility Buffer</td>
+<td class="py-md font-bold text-primary">12.5%</td>
+<td class="py-md">ATR 14 Filter</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Trigger History -->
+<div class="col-span-12 lg:col-span-6 bg-surface-container border border-outline-variant p-lg">
+<h2 class="font-h2 text-h2 text-on-surface mb-lg">Kill-Switch History</h2>
+<div class="space-y-md">
+<div class="flex items-center gap-md p-md bg-surface-container-low border-l-2 border-error">
+<div class="w-8 h-8 rounded-full bg-error/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-error text-sm" data-icon="close">close</span>
+</div>
+<div class="flex-1">
+<p class="font-data-md text-data-md">Manual Killswitch Activation</p>
+<p class="font-data-sm text-data-sm text-on-surface-variant">Operator: USER_04 | Reason: High Latency Detection</p>
+</div>
+<div class="text-right">
+<p class="font-data-sm text-data-sm">Nov 12, 14:00</p>
+</div>
+</div>
+<div class="flex items-center gap-md p-md bg-surface-container-low border-l-2 border-secondary">
+<div class="w-8 h-8 rounded-full bg-secondary/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="emergency_home">emergency_home</span>
+</div>
+<div class="flex-1">
+<p class="font-data-md text-data-md">Auto-Deleverage Trigger</p>
+<p class="font-data-sm text-data-sm text-on-surface-variant">Threshold Breach: Account NAV -5%</p>
+</div>
+<div class="text-right">
+<p class="font-data-sm text-data-sm">Oct 28, 22:15</p>
+</div>
+</div>
+<div class="flex items-center gap-md p-md bg-surface-container-low border-l-2 border-outline">
+<div class="w-8 h-8 rounded-full bg-outline/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-outline text-sm" data-icon="history">history</span>
+</div>
+<div class="flex-1">
+<p class="font-data-md text-data-md">System Reset / Re-Arm</p>
+<p class="font-data-sm text-data-sm text-on-surface-variant">Automated procedure successful</p>
+</div>
+<div class="text-right">
+<p class="font-data-sm text-data-sm">Oct 28, 22:45</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Confirmation Modal (Floating/Fixed Overlay) -->
+<div class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-md">
+<div class="bg-surface-container border-2 border-error max-w-md w-full p-xl shadow-2xl relative">
+<div class="absolute top-0 left-0 w-full h-1 bg-error"></div>
+<div class="flex items-center gap-md mb-lg">
+<span class="material-symbols-outlined text-error text-4xl" data-icon="dangerous">dangerous</span>
+<h3 class="font-h1 text-h1 text-error">Confirm Killswitch</h3>
+</div>
+<p class="font-data-md text-data-md text-on-surface mb-xl leading-relaxed">
+                You are about to execute the **Manual Killswitch**. This will immediately cancel all open orders and liquidate all active positions at market price. This action is irreversible.
+            </p>
+<div class="flex flex-col gap-md">
+<button class="w-full py-lg bg-error text-on-error font-h2 text-h2 rounded border border-transparent hover:bg-error/90 active:scale-95 transition-all uppercase tracking-widest">
+                    Terminate All Systems
+                </button>
+<button class="w-full py-md bg-transparent text-on-surface-variant font-data-md text-data-md border border-outline-variant hover:bg-surface-container-high active:scale-95 transition-all">
+                    Cancel Request
+                </button>
+</div>
+<div class="mt-lg flex items-center gap-sm justify-center">
+<span class="material-symbols-outlined text-on-surface-variant text-sm" data-icon="lock">lock</span>
+<p class="font-label-caps text-label-caps text-on-surface-variant">MFA AUTHORIZATION REQUIRED NEXT</p>
+</div>
+</div>
+</div>
+</body></html>

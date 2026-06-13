@@ -1,0 +1,105 @@
+# Python
+__pycache__/
+.pycache/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+.venv312/
+.venv*/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.tox/
+coverage.xml
+
+# Logs
+*.log
+logs/
+frontend/logs/
+
+# Database
+*.sqlite
+*.db
+
+# Models
+models/*.pkl
+models/*.joblib
+!models/.gitkeep
+
+# Environment
+.env
+.env.local
+.env.*.local
+keys.txt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node / Frontend
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.npm-cache/
+frontend/ruvector.db
+frontend/.swarm/
+frontend/logs/
+scripts/node_modules/
+
+# Data
+data/test_runs/
+data/raw/
+data/processed/
+data/training/
+data/results/
+data/public_markets.json
+
+# MiroFish submodule
+/mirofish/
+/data/mirofish_cache/
+/data/mirofish_temp_seed.txt
+
+# Swarm
+.swarm/
+
+# Temp
+tmp/
+temp/
+*.tmp
+
+# Docs / reports screenshots
+docs/reports/**/*.png
+docs/reports/**/*.jpg
+docs/reports/**/*.jpeg

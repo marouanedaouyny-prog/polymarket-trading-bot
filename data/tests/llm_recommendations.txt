@@ -1,0 +1,73 @@
+TRADING STRATEGY ANALYSIS
+==================================================
+
+
+TEST RESULTS SUMMARY:
+=====================
+
+Configs tested (8 total):
+
+1. Conservative (Low risk, small positions):
+   - Trades: 146 | Win Rate: 61.6%
+   - Profit: $1.52 | Return: 15.2%
+
+2. Balanced (Medium risk):
+   - Trades: 173 | Win Rate: 64.2%
+   - Profit: $9.41 | Return: 94.1%
+
+3. Aggressive (High risk):
+   - Trades: 177 | Win Rate: 57.1%
+   - Profit: $21.24 | Return: 212.4%
+
+4. High_Frequency (Many trades, lower edge threshold):
+   - Trades: 281 | Win Rate: 57.7%
+   - Profit: $29.26 | Return: 292.6%
+
+5. Low_Fee_Sensitive (Higher edge threshold, fewer trades):
+   - Trades: 111 | Win Rate: 62.2%
+   - Profit: $3.84 | Return: 38.4%
+
+6. High_Confidence (Only trade with 70%+ confidence):
+   - Trades: 122 | Win Rate: 72.1%
+   - Profit: $10.32 | Return: 103.2%
+
+7. Small_Positions (Very small position sizes):
+   - Trades: 348 | Win Rate: 64.1%
+   - Profit: $4.34 | Return: 43.4%
+
+8. Large_Positions (Big position sizes):
+   - Trades: 129 | Win Rate: 60.5%
+   - Profit: $22.24 | Return: 222.4%
+
+
+RECOMMENDATIONS:
+
+Based on the test results, here's the recommended strategy:
+
+OPTIMAL CONFIGURATION (Hybrid Approach):
+========================================
+
+Position Sizing:
+- Use {best['config_name']} style: max_position_pct = 0.15 (15% of balance)
+- Minimum position: 2% of balance
+
+Risk Management:
+- Stop loss: 5% per trade
+- Take profit: 2x risk (reward:risk = 2:1)
+- Max daily loss: 10% of initial balance
+- Max consecutive losses: 3 (then cooldown)
+
+Entry Criteria:
+- Minimum edge threshold: 5% (price away from 50%)
+- Confidence threshold: 60%+ for regular, 80%+ for larger positions
+- Skip trades when confidence < 50%
+
+Position Scaling:
+- Confidence 80-99%: Max position size (15%)
+- Confidence 60-79%: 70% of max
+- Confidence 50-59%: 40% of max
+- Confidence <50%: Skip or minimum (2%)
+
+Polymarket Fees:
+- Already modeled 7% fee in simulations
+- Net returns shown are after fees

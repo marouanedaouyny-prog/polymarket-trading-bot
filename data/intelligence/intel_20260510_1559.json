@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-05-10T15:59:59.712554",
+  "key_insights": [
+    "Bitcoin 80k-100k first market highly active ($328K volume)",
+    "Ethereum above $1900 by May 12 at 99%",
+    "Solana above 85 by May 5 at 100%",
+    "Crypto price prediction markets dominate volume",
+    "Bitcoin hit 2025 range: 78K-125K with 188M volume"
+  ],
+  "trending_markets": [
+    {
+      "topic": "BTC 80k vs 100k",
+      "volume": "$328K",
+      "sentiment": "bullish"
+    },
+    {
+      "topic": "ETH above $1900",
+      "volume": "$64K",
+      "sentiment": "bullish"
+    },
+    {
+      "topic": "SOL above $85",
+      "volume": "$53K",
+      "sentiment": "bullish"
+    }
+  ],
+  "sentiment_score": 0.85,
+  "confidence_boost": 0.15
+}

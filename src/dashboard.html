@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Polymarket Trading Dashboard</title>
+    <style>
+        body {
+            background: #1a1a1a;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            padding: 20px;
+            background: #1a1a1a;
+        }
+        .card {
+            background: #2a2a2a;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background: #1a1a1a;
+            border-bottom: 1px solid #333;
+            margin-bottom: 20px;
+        }
+        .card-title {
+            color: #00ccff;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+        }
+        .value.positive {
+            color: #4caf50;
+        }
+        .value.negative {
+            color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Polymarket Trading Dashboard</h1>
+    </div>
+
+    <div class="dashboard">
+        <!-- System Status Card -->
+        <div class="card">
+            <div class="card-title">System Status</div>
+            <div class="metric">Status: <span class="value positive">Operational</span></div>
+            <div class="metric">Active Strategies: <span>3</span></div>
+            <div class="metric">Uptime: <span>99.9%</span></div>
+            <div class="metric">PnL: <span class="value positive">+$2,450</span></div>
+        </div>
+
+        <!-- Market Overview Card -->
+        <div class="card">
+            <div class="card-title">Market Overview</div>
+            <div class="metric">Active Markets: <span>3</span></div>
+            <div class="metric">24h Volume: <span class="value">$1.2M</span></div>
+            <div class="metric">Top Market: <span>TRUMP24 (0.65)</span></div>
+        </div>
+
+        <!-- Risk Metrics Card -->
+        <div class="card">
+            <div class="card-title">Risk Metrics</div>
+            <div class="metric">Max Drawdown: <span class="value">2.3%</span></div>
+            <div class="metric">Daily PnL: <span class="value positive">+$150</span></div>
+            <div class="metric">Position Risk: <span>Low</span></div>
+        </div>
+    </div>
+</body>
+</html>

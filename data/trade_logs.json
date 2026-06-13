@@ -1,0 +1,946 @@
+[
+  {
+    "timestamp": "2026-05-09T19:22:12.248088",
+    "market_id": "0x600d4db7297f96b649df914a4085aa3b119df9082ae1be4395bfa748ee20efc2",
+    "question": "NHL: San Jose Sharks vs. New York Islanders 2023-03-18",
+    "strategy": "underdog",
+    "outcome_chosen": "Sharks",
+    "winning_outcome": "Islanders",
+    "amount": 2.0,
+    "profit": -2.0,
+    "balance": 8.0,
+    "odds": {
+      "Sharks": 0,
+      "Islanders": 1
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248185",
+    "market_id": "0xcd8ad5152423fb73226aa103d2a1d55bef636bb89ff5d3f7d17c4229d35b5861",
+    "question": "NBA: Cleveland Cavaliers vs. Boston Celtics 2023-03-06",
+    "strategy": "underdog",
+    "outcome_chosen": "Celtics",
+    "winning_outcome": "Cavaliers",
+    "amount": 1.6,
+    "profit": -1.6,
+    "balance": 6.4,
+    "odds": {
+      "Cavaliers": 1,
+      "Celtics": 0
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248219",
+    "market_id": "0x7b12b7ab810ae2dfdab37b5bd5f8d86786eb9f82e8cb5043115c3c49255b2883",
+    "question": "NHL: Florida Panthers vs. Winnipeg Jets 2023-03-11",
+    "strategy": "underdog",
+    "outcome_chosen": "Panthers",
+    "winning_outcome": "Jets",
+    "amount": 1.28,
+    "profit": -1.28,
+    "balance": 5.12,
+    "odds": {
+      "Panthers": 0,
+      "Jets": 1
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248236",
+    "market_id": "0x99396d39da700625abead3042bc3a2f4f965bcc7be240410c1f01c7e4db2f453",
+    "question": "NCAAB: Alabama Crimson Tide vs. Texas A&M-CC Islanders 2023-03-16",
+    "strategy": "underdog",
+    "outcome_chosen": "Texas A&M-CC",
+    "winning_outcome": "Alabama",
+    "amount": 1.02,
+    "profit": -1.02,
+    "balance": 4.1,
+    "odds": {
+      "Alabama": 1,
+      "Texas A&M-CC": 0
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248255",
+    "market_id": "0x762c0f5ae8f763fdeef9cb72cf1e206b498a19acdcdbdba1708a344b0190a5f7",
+    "question": "NBA: Detroit Pistons vs. Chicago Bulls 2023-03-01",
+    "strategy": "underdog",
+    "outcome_chosen": "Pistons",
+    "winning_outcome": "Bulls",
+    "amount": 0.82,
+    "profit": -0.82,
+    "balance": 3.28,
+    "odds": {
+      "Pistons": 0,
+      "Bulls": 1
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248270",
+    "market_id": "0xf9b7e17d9cfd7f8d9d66571311a261095b9d25bddfeca9548b85423b64953e4a",
+    "question": "NCAAB: Alabama Crimson Tide vs. Maryland Terrapins 2023-03-18",
+    "strategy": "high_probability",
+    "outcome_chosen": "Alabama",
+    "winning_outcome": "Alabama",
+    "amount": 0.66,
+    "profit": 0.0,
+    "balance": 3.28,
+    "odds": {
+      "Alabama": 1,
+      "Maryland": 0
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248689",
+    "market_id": "0xd4d318f0118fac3d6c6ca0e0e54da33f17bb5f9228f24a64848ef49026e656fe",
+    "question": "Will Tottenham beat Milan? (03/08/2023)",
+    "strategy": "random",
+    "outcome_chosen": "Yes",
+    "winning_outcome": "No",
+    "amount": 0.66,
+    "profit": -0.66,
+    "balance": 2.6199999999999997,
+    "odds": {
+      "Yes": 0,
+      "No": 1
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248708",
+    "market_id": "0xf6c10171a01fc72f50555ebd21a56434be30dd4b7d05f35ea2a0b44930f2102f",
+    "question": "archWill Ron DeSantis win the 2024 US Presidential Election?",
+    "strategy": "underdog",
+    "outcome_chosen": "Yes",
+    "winning_outcome": "No",
+    "amount": 0.52,
+    "profit": -0.52,
+    "balance": 2.0999999999999996,
+    "odds": {
+      "Yes": 0,
+      "No": 1
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248726",
+    "market_id": "0x6898b869f0bb1f31d309897956fab3437a7e82408cb91d4bfc888dbf52e259a8",
+    "question": "[Single Market] Will Donald Trump Jr. win the U.S. 2024 Republican presidential nomination?",
+    "strategy": "underdog",
+    "outcome_chosen": "Yes",
+    "winning_outcome": "No",
+    "amount": 0.42,
+    "profit": -0.42,
+    "balance": 1.6799999999999997,
+    "odds": {
+      "Yes": 0,
+      "No": 1
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248739",
+    "market_id": "0x12ed0febce7826a8aacc033e71f4c354571829f2f6700b52fd38226dc930e0d3",
+    "question": "NHL: Seattle Kraken vs. Dallas Stars 2023-03-11",
+    "strategy": "high_probability",
+    "outcome_chosen": "Stars",
+    "winning_outcome": "Stars",
+    "amount": 0.34,
+    "profit": 0.0,
+    "balance": 1.6799999999999997,
+    "odds": {
+      "Kraken": 0,
+      "Stars": 1
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248753",
+    "market_id": "0x9de2ca74bc26b938769f39168c96a8f064fc1c85e09a93e1f4b3392366bde33a",
+    "question": "NBA: Phoenix Suns vs. Sacramento Kings 2023-03-11",
+    "strategy": "random",
+    "outcome_chosen": "Kings",
+    "winning_outcome": "Kings",
+    "amount": 0.34,
+    "profit": 0.0,
+    "balance": 1.6799999999999997,
+    "odds": {
+      "Suns": 0,
+      "Kings": 1
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248771",
+    "market_id": "0x43f266a1b7c389023f9d5353e18308a00903b7bf0eb56352fdcb5801c681ffa6",
+    "question": "NCAAB: Iowa State Cyclones vs. Pittsburgh Panthers 2023-03-17",
+    "strategy": "high_probability",
+    "outcome_chosen": "Pittsburgh",
+    "winning_outcome": "Pittsburgh",
+    "amount": 0.34,
+    "profit": 0.0,
+    "balance": 1.6799999999999997,
+    "odds": {
+      "Iowa State": 0,
+      "Pittsburgh": 1
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248785",
+    "market_id": "0x2ef3046e46f066792fb21b15371dd96257024af8126dbbb6d6942feb6ade2c05",
+    "question": "NHL: New Jersey Devils vs. Carolina Hurricanes 2023-03-12",
+    "strategy": "underdog",
+    "outcome_chosen": "Hurricanes",
+    "winning_outcome": "Devils",
+    "amount": 0.34,
+    "profit": -0.34,
+    "balance": 1.3399999999999996,
+    "odds": {
+      "Devils": 1,
+      "Hurricanes": 0
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248797",
+    "market_id": "0x1a3064157a48898a7b6b822350c870ffe733e095826f42af891b622b50644630",
+    "question": "Will there be more than 9.5 first round upsets in 2023 NCAA Tournament?",
+    "strategy": "random",
+    "outcome_chosen": "No",
+    "winning_outcome": "No",
+    "amount": 0.27,
+    "profit": 0.0,
+    "balance": 1.3399999999999996,
+    "odds": {
+      "Yes": 0,
+      "No": 1
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248808",
+    "market_id": "0xd5375a4be47dfa4ebcbe73447b2929008a9ce9563e50a2c8390acfe07aadab66",
+    "question": "NBA: Golden State Warriors vs. LA Clippers 2023-03-02",
+    "strategy": "high_probability",
+    "outcome_chosen": "Warriors",
+    "winning_outcome": "Warriors",
+    "amount": 0.27,
+    "profit": 0.0,
+    "balance": 1.3399999999999996,
+    "odds": {
+      "Warriors": 1,
+      "Clippers": 0
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248822",
+    "market_id": "0x74814e8219dc664969efbe81a4919e6b56eaac3b9f0f37082dcecf41dfb538f7",
+    "question": "NCAAB: Kansas Jayhawks vs. Arkansas Razorbacks 2023-03-18",
+    "strategy": "underdog",
+    "outcome_chosen": "Kansas",
+    "winning_outcome": "Arkansas",
+    "amount": 0.27,
+    "profit": -0.27,
+    "balance": 1.0699999999999996,
+    "odds": {
+      "Kansas": 0,
+      "Arkansas": 1
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248835",
+    "market_id": "0x06cb7312f35e41a4bc2ee266aa989f7af7b7c359379f46d170b517b99db2e1d2",
+    "question": "NCAAB: TCU Horned Frogs vs. Arizona State Sun Devils 2023-03-17",
+    "strategy": "random",
+    "outcome_chosen": "TCU",
+    "winning_outcome": "TCU",
+    "amount": 0.21,
+    "profit": 0.0,
+    "balance": 1.0699999999999996,
+    "odds": {
+      "TCU": 1,
+      "Arizona State": 0
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248854",
+    "market_id": "0x234e19058f7f14aa6c4624c0721c752cab7aa71db686e531bfbe704f0169f00b",
+    "question": "NCAAB: Missouri Tigers vs. Princeton Tigers 2023-03-18",
+    "strategy": "high_probability",
+    "outcome_chosen": "Princeton",
+    "winning_outcome": "Princeton",
+    "amount": 0.21,
+    "profit": 0.0,
+    "balance": 1.0699999999999996,
+    "odds": {
+      "Missouri": 0,
+      "Princeton": 1
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248868",
+    "market_id": "0x2621e818aa90a92ee5aa23835186b58f58cc5f182810f3dd9e59bc8eac9c752a",
+    "question": "Will West Ham beat Nottingham Forest? (02/25/2023)",
+    "strategy": "underdog",
+    "outcome_chosen": "No",
+    "winning_outcome": "Yes",
+    "amount": 0.21,
+    "profit": -0.21,
+    "balance": 0.8599999999999997,
+    "odds": {
+      "Yes": 1,
+      "No": 0
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248879",
+    "market_id": "0x180689754c5b3fe77d317a2c66a54eac07e96e426385e9200fcbb004f097e9aa",
+    "question": "NBA: Boston Celtics vs. Cleveland Cavaliers 2023-03-01",
+    "strategy": "underdog",
+    "outcome_chosen": "Cavaliers",
+    "winning_outcome": "Celtics",
+    "amount": 0.17,
+    "profit": -0.17,
+    "balance": 0.6899999999999996,
+    "odds": {
+      "Celtics": 1,
+      "Cavaliers": 0
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248893",
+    "market_id": "0x7aadd5ae57764b37b6628b0a8a366b491f8dd9c4af89bf27bd8f30445414921a",
+    "question": "Will @elonmusk have 23,431-23,450 tweets on March 6?",
+    "strategy": "high_probability",
+    "outcome_chosen": "No",
+    "winning_outcome": "No",
+    "amount": 0.14,
+    "profit": 0.0,
+    "balance": 0.6899999999999996,
+    "odds": {
+      "Yes": 0,
+      "No": 1
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248913",
+    "market_id": "0x5837d875a108e295b0ec51e84ddea38f1182737bbb4737a1515b81e762f643e6",
+    "question": "NBA: Detroit Pistons vs. Miami Heat 2023-03-19",
+    "strategy": "random",
+    "outcome_chosen": "Heat",
+    "winning_outcome": "Heat",
+    "amount": 0.14,
+    "profit": 0.0,
+    "balance": 0.6899999999999996,
+    "odds": {
+      "Pistons": 0,
+      "Heat": 1
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248929",
+    "market_id": "0x180689754c5b3fe77d317a2c66a54eac07e96e426385e9200fcbb004f097e9aa",
+    "question": "NBA: Boston Celtics vs. Cleveland Cavaliers 2023-03-01",
+    "strategy": "random",
+    "outcome_chosen": "Celtics",
+    "winning_outcome": "Celtics",
+    "amount": 0.14,
+    "profit": 0.0,
+    "balance": 0.6899999999999996,
+    "odds": {
+      "Celtics": 1,
+      "Cavaliers": 0
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248942",
+    "market_id": "0xf7c7f26b211e1674fd0bba3011c93bdc926fe2e0ca958783bc7eb24b2dd08d0f",
+    "question": "Will the Fed decrease interest rates by 25 bps after its March meeting?",
+    "strategy": "random",
+    "outcome_chosen": "No",
+    "winning_outcome": "No",
+    "amount": 0.14,
+    "profit": 0.0,
+    "balance": 0.6899999999999996,
+    "odds": {
+      "Yes": 0,
+      "No": 1
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248953",
+    "market_id": "0x53588c4d4df580cf04333b8eb0735918e720545eabe35f46edeae3cf71aed340",
+    "question": "NBA: Portland Trail Blazers vs. New Orleans Pelicans 2023-03-01",
+    "strategy": "underdog",
+    "outcome_chosen": "Trail Blazers",
+    "winning_outcome": "Pelicans",
+    "amount": 0.14,
+    "profit": -0.14,
+    "balance": 0.5499999999999996,
+    "odds": {
+      "Trail Blazers": 0,
+      "Pelicans": 1
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248964",
+    "market_id": "0x71880ec794d973b49bcbf30da04e6a8fb7270bb8d7522edb20b1da266b500f74",
+    "question": "Will Michelle Yeoh win the Oscar for Best Actress in a Leading Role?",
+    "strategy": "high_probability",
+    "outcome_chosen": "Yes",
+    "winning_outcome": "Yes",
+    "amount": 0.11,
+    "profit": 0.0,
+    "balance": 0.5499999999999996,
+    "odds": {
+      "Yes": 1,
+      "No": 0
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248976",
+    "market_id": "0xfdd6cb8fde10f9cbe697b350c3b5efaf32abcc7d37bf651c3aa5a75d9d3c3aa8",
+    "question": "NBA: Atlanta Hawks vs. Boston Celtics 2023-03-11",
+    "strategy": "high_probability",
+    "outcome_chosen": "Celtics",
+    "winning_outcome": "Celtics",
+    "amount": 0.11,
+    "profit": 0.0,
+    "balance": 0.5499999999999996,
+    "odds": {
+      "Hawks": 0,
+      "Celtics": 1
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.248992",
+    "market_id": "0xb1e57b286dbc90414a978601171e1e429dded2dd1fd8c15b4fc91ff67944280d",
+    "question": "NHL: Seattle Kraken vs. Ottawa Senators 2023-03-09",
+    "strategy": "random",
+    "outcome_chosen": "Senators",
+    "winning_outcome": "Senators",
+    "amount": 0.11,
+    "profit": 0.0,
+    "balance": 0.5499999999999996,
+    "odds": {
+      "Kraken": 0,
+      "Senators": 1
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249008",
+    "market_id": "0x600d4db7297f96b649df914a4085aa3b119df9082ae1be4395bfa748ee20efc2",
+    "question": "NHL: San Jose Sharks vs. New York Islanders 2023-03-18",
+    "strategy": "random",
+    "outcome_chosen": "Islanders",
+    "winning_outcome": "Islanders",
+    "amount": 0.11,
+    "profit": 0.0,
+    "balance": 0.5499999999999996,
+    "odds": {
+      "Sharks": 0,
+      "Islanders": 1
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249025",
+    "market_id": "0x93d6ecd84ac21ba860e80de8b91db67f66ecd742bdf929bb04545c4f6ea829ed",
+    "question": "NBA: Utah Jazz vs. San Antonio Spurs 2023-02-28",
+    "strategy": "high_probability",
+    "outcome_chosen": "Spurs",
+    "winning_outcome": "Spurs",
+    "amount": 0.11,
+    "profit": 0.0,
+    "balance": 0.5499999999999996,
+    "odds": {
+      "Jazz": 0,
+      "Spurs": 1
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249035",
+    "market_id": "0x8dbd92fdfaa32336815db6973720f327f000a3e39fb9f2933ca00e46e21c2ab5",
+    "question": "Will Manchester United be the 2022-23 Premier League champions?",
+    "strategy": "random",
+    "outcome_chosen": "Yes",
+    "winning_outcome": "No",
+    "amount": 0.11,
+    "profit": -0.11,
+    "balance": 0.4399999999999996,
+    "odds": {
+      "Yes": 0,
+      "No": 1
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249053",
+    "market_id": "0x2a53113f70c30044c4ddf5bc8bf49352084ffa1fc6751dbce51df60c0b8fb28f",
+    "question": "Will Liverpool beat Bournemouth? (03/11/2023)",
+    "strategy": "high_probability",
+    "outcome_chosen": "No",
+    "winning_outcome": "No",
+    "amount": 0.09,
+    "profit": 0.0,
+    "balance": 0.4399999999999996,
+    "odds": {
+      "Yes": 0,
+      "No": 1
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249063",
+    "market_id": "0xf1beebeeba8caf761c16a58750b4049ffbcaa3252b4667d75b39da3787d2e446",
+    "question": "Will @elonmusk have 23,391-23,410 tweets on March 6?",
+    "strategy": "underdog",
+    "outcome_chosen": "Yes",
+    "winning_outcome": "No",
+    "amount": 0.09,
+    "profit": -0.09,
+    "balance": 0.34999999999999964,
+    "odds": {
+      "Yes": 0,
+      "No": 1
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249081",
+    "market_id": "0x76e79c9c8ae087cae72ad228de23c9cdbe8b60856233925ee6a808434b1e3921",
+    "question": "Will the price of $BLUR be above $0.50 on February 28?",
+    "strategy": "underdog",
+    "outcome_chosen": "No",
+    "winning_outcome": "Yes",
+    "amount": 0.07,
+    "profit": -0.07,
+    "balance": 0.27999999999999964,
+    "odds": {
+      "Yes": 1,
+      "No": 0
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249094",
+    "market_id": "0x63458a6d93cba729347da8fb214e3941fd255078c7f210f3d697964c6a43c659",
+    "question": "NHL: St. Louis Blues vs. Winnipeg Jets 2023-03-19",
+    "strategy": "underdog",
+    "outcome_chosen": "Jets",
+    "winning_outcome": "Blues",
+    "amount": 0.06,
+    "profit": -0.06,
+    "balance": 0.21999999999999964,
+    "odds": {
+      "Blues": 1,
+      "Jets": 0
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249111",
+    "market_id": "0x51799fde52cd258501c042e9b5062de4fe69f53023d27cc8b7a55e549268f9c6",
+    "question": "NBA: Atlanta Hawks vs. Minnesota Timberwolves 2023-03-13",
+    "strategy": "underdog",
+    "outcome_chosen": "Hawks",
+    "winning_outcome": "Timberwolves",
+    "amount": 0.04,
+    "profit": -0.04,
+    "balance": 0.17999999999999963,
+    "odds": {
+      "Hawks": 0,
+      "Timberwolves": 1
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249128",
+    "market_id": "0xdaeb02c49e3a6293f4d6f1d16909255a523cbb3beeba1fcbc693bff3be9c35bd",
+    "question": "NHL: Anaheim Ducks vs. Columbus Blue Jackets 2023-03-17",
+    "strategy": "random",
+    "outcome_chosen": "Ducks",
+    "winning_outcome": "Ducks",
+    "amount": 0.04,
+    "profit": 0.0,
+    "balance": 0.17999999999999963,
+    "odds": {
+      "Ducks": 1,
+      "Blue Jackets": 0
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249141",
+    "market_id": "0xca06c276b89a1ff2afb02f8e7fa31e4ebd6588c4df03765cbe9dca25fab8eb23",
+    "question": "Will Manchester City win the 2023 Champions League?",
+    "strategy": "underdog",
+    "outcome_chosen": "No",
+    "winning_outcome": "Yes",
+    "amount": 0.04,
+    "profit": -0.04,
+    "balance": 0.13999999999999962,
+    "odds": {
+      "Yes": 1,
+      "No": 0
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249154",
+    "market_id": "0xc42499aa410e6a8aca7710f62b2230dc59ea2ec465b8da5a667cdb22c5425abd",
+    "question": "Will Real Madrid beat Liverpool? 2023-03-15",
+    "strategy": "high_probability",
+    "outcome_chosen": "Yes",
+    "winning_outcome": "Yes",
+    "amount": 0.03,
+    "profit": 0.0,
+    "balance": 0.13999999999999962,
+    "odds": {
+      "Yes": 1,
+      "No": 0
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249244",
+    "market_id": "0xbae919b42f4585af8848a3e291dad4c0c2d39145db4fce6618b1b4ca8993923f",
+    "question": "NHL: Toronto Maple Leafs vs. Carolina Hurricanes 2023-03-17",
+    "strategy": "underdog",
+    "outcome_chosen": "Hurricanes",
+    "winning_outcome": "Maple Leafs",
+    "amount": 0.03,
+    "profit": -0.03,
+    "balance": 0.10999999999999963,
+    "odds": {
+      "Maple Leafs": 1,
+      "Hurricanes": 0
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249265",
+    "market_id": "0x7e15663876b0931755c39db9f2dcc599838bb9ab5323e3d08dfd2fe958f68ab5",
+    "question": "NHL: Vegas Golden Knights vs. Calgary Flames 2023-03-16",
+    "strategy": "underdog",
+    "outcome_chosen": "Golden Knights",
+    "winning_outcome": "Flames",
+    "amount": 0.02,
+    "profit": -0.02,
+    "balance": 0.08999999999999962,
+    "odds": {
+      "Golden Knights": 0,
+      "Flames": 1
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249289",
+    "market_id": "0x6a8c685c8671c457463a8c9efec8d4789505bad931d01b0eca1bcd705a0e7c3a",
+    "question": "Will Brentford beat Southampton? (03/15/2023)",
+    "strategy": "high_probability",
+    "outcome_chosen": "Yes",
+    "winning_outcome": "Yes",
+    "amount": 0.02,
+    "profit": 0.0,
+    "balance": 0.08999999999999962,
+    "odds": {
+      "Yes": 1,
+      "No": 0
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249301",
+    "market_id": "0xb63ea0a4b868f06c69d257f0066561ae4874077bfd7d31b88c066272275060e1",
+    "question": "NBA: New Orleans Pelicans vs. Orlando Magic 2023-02-27",
+    "strategy": "high_probability",
+    "outcome_chosen": "Magic",
+    "winning_outcome": "Magic",
+    "amount": 0.02,
+    "profit": 0.0,
+    "balance": 0.08999999999999962,
+    "odds": {
+      "Pelicans": 0,
+      "Magic": 1
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249317",
+    "market_id": "0x704a562f12774cf92bb103a75e853c125973370d6c90d39d9eacfbf4a7eb76b6",
+    "question": "NHL: Arizona Coyotes vs. Vancouver Canucks 2023-03-16",
+    "strategy": "underdog",
+    "outcome_chosen": "Canucks",
+    "winning_outcome": "Coyotes",
+    "amount": 0.02,
+    "profit": -0.02,
+    "balance": 0.06999999999999962,
+    "odds": {
+      "Coyotes": 1,
+      "Canucks": 0
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249327",
+    "market_id": "0x9d15c171c5ae68a3eeb39ae5be1b610479964743c29f58635e94ff38ee3bf798",
+    "question": "NHL: Nashville Predators vs. Detroit Red Wings 2023-03-14",
+    "strategy": "high_probability",
+    "outcome_chosen": "Predators",
+    "winning_outcome": "Predators",
+    "amount": 0.01,
+    "profit": 0.0,
+    "balance": 0.06999999999999962,
+    "odds": {
+      "Predators": 1,
+      "Red Wings": 0
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249340",
+    "market_id": "0xa83993f60fdecfb17b489495e162e7f2ec5c054b16668cb82c3d3e00bc3b7ae4",
+    "question": "UFC 285: Who will win - Gamrot or Turner?",
+    "strategy": "underdog",
+    "outcome_chosen": "Turner",
+    "winning_outcome": "Gamrot",
+    "amount": 0.01,
+    "profit": -0.01,
+    "balance": 0.059999999999999616,
+    "odds": {
+      "Gamrot": 1,
+      "Turner": 0
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249355",
+    "market_id": "0xe37f54347e1371a09f0b691af4f59fbefd767205ad7a56282414c9d38b9cb907",
+    "question": "NHL: Edmonton Oilers vs. Dallas Stars 2023-03-16",
+    "strategy": "high_probability",
+    "outcome_chosen": "Oilers",
+    "winning_outcome": "Oilers",
+    "amount": 0.01,
+    "profit": 0.0,
+    "balance": 0.059999999999999616,
+    "odds": {
+      "Oilers": 1,
+      "Stars": 0
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249369",
+    "market_id": "0xafbc3b6d12834f11bfb9cab32c052f80d52fe520fbe889b7f0986a35db3984e6",
+    "question": "UFC 285: Who will win - Jones or Gane?",
+    "strategy": "high_probability",
+    "outcome_chosen": "Jones",
+    "winning_outcome": "Jones",
+    "amount": 0.01,
+    "profit": 0.0,
+    "balance": 0.059999999999999616,
+    "odds": {
+      "Jones": 1,
+      "Gane": 0
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249387",
+    "market_id": "0x85d63e80d47857c277a5cb3a4e3f897ec0887ddd34789d3b5cf15e73d1dbaa59",
+    "question": "Will @elonmusk have 23,370 or fewer tweets on March 6?",
+    "strategy": "high_probability",
+    "outcome_chosen": "Yes",
+    "winning_outcome": "Yes",
+    "amount": 0.01,
+    "profit": 0.0,
+    "balance": 0.059999999999999616,
+    "odds": {
+      "Yes": 1,
+      "No": 0
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249421",
+    "market_id": "0x5844ea37c476f40ac08f622ce395e62a3f4e1fb4030f123113dc0b2871b5b9bd",
+    "question": "Will @realDonaldTrump tweet by April 1?",
+    "strategy": "underdog",
+    "outcome_chosen": "Yes",
+    "winning_outcome": "No",
+    "amount": 0.01,
+    "profit": -0.01,
+    "balance": 0.049999999999999614,
+    "odds": {
+      "Yes": 0,
+      "No": 1
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249441",
+    "market_id": "0x9de2ca74bc26b938769f39168c96a8f064fc1c85e09a93e1f4b3392366bde33a",
+    "question": "NBA: Phoenix Suns vs. Sacramento Kings 2023-03-11",
+    "strategy": "underdog",
+    "outcome_chosen": "Suns",
+    "winning_outcome": "Kings",
+    "amount": 0.01,
+    "profit": -0.01,
+    "balance": 0.03999999999999961,
+    "odds": {
+      "Suns": 0,
+      "Kings": 1
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249461",
+    "market_id": "0x09ed5f2e970e5c1ce81ef34a96418da159afc2334e0932f1b395c5d2319a604e",
+    "question": "NHL: Seattle Kraken vs. Edmonton Oilers 2023-03-18",
+    "strategy": "high_probability",
+    "outcome_chosen": "Oilers",
+    "winning_outcome": "Oilers",
+    "amount": 0.01,
+    "profit": 0.0,
+    "balance": 0.03999999999999961,
+    "odds": {
+      "Kraken": 0,
+      "Oilers": 1
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249472",
+    "market_id": "0x26c2456b9bc4b09993c4dc1a9672490a4478313d98aac365572d4dd373a9edfd",
+    "question": "NBA: Houston Rockets vs. Brooklyn Nets 2023-03-07",
+    "strategy": "underdog",
+    "outcome_chosen": "Rockets",
+    "winning_outcome": "Nets",
+    "amount": 0.01,
+    "profit": -0.01,
+    "balance": 0.02999999999999961,
+    "odds": {
+      "Rockets": 0,
+      "Nets": 1
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249486",
+    "market_id": "0x9373eae5512fcabc7661f05a2477852f5eaec8b20938f0c2573cd3ac006a44f6",
+    "question": "NHL: Montreal Canadiens vs. New Jersey Devils 2023-03-11",
+    "strategy": "random",
+    "outcome_chosen": "Devils",
+    "winning_outcome": "Devils",
+    "amount": 0.01,
+    "profit": 0.0,
+    "balance": 0.02999999999999961,
+    "odds": {
+      "Canadiens": 0,
+      "Devils": 1
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249538",
+    "market_id": "0x24f3b8ff985258a2ed5144960b3fa842cd5412794454ac9997ab10b5f48de9fe",
+    "question": "NBA: Golden State Warriors vs. Portland Trail Blazers 2023-02-28",
+    "strategy": "random",
+    "outcome_chosen": "Warriors",
+    "winning_outcome": "Warriors",
+    "amount": 0.01,
+    "profit": 0.0,
+    "balance": 0.02999999999999961,
+    "odds": {
+      "Warriors": 1,
+      "Trail Blazers": 0
+    },
+    "result": "WIN"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249556",
+    "market_id": "0x8cb5196f9cd554c55abdb18b8c65a2d44b7909f53428a099939f8225e36515ad",
+    "question": "NBA: Minnesota Timberwolves vs. Brooklyn Nets 2023-03-10",
+    "strategy": "underdog",
+    "outcome_chosen": "Timberwolves",
+    "winning_outcome": "Nets",
+    "amount": 0.01,
+    "profit": -0.01,
+    "balance": 0.01999999999999961,
+    "odds": {
+      "Timberwolves": 0,
+      "Nets": 1
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249567",
+    "market_id": "0x2dcf9c73e3905330558ae693f8552d374ee0e489d13ba96c4d83ffe554e94dbf",
+    "question": "Will a #1 seed win 2023 NCAA Tournament?",
+    "strategy": "underdog",
+    "outcome_chosen": "Yes",
+    "winning_outcome": "No",
+    "amount": 0.0,
+    "profit": -0.0,
+    "balance": 0.01999999999999961,
+    "odds": {
+      "Yes": 0,
+      "No": 1
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249577",
+    "market_id": "0x2ef3046e46f066792fb21b15371dd96257024af8126dbbb6d6942feb6ade2c05",
+    "question": "NHL: New Jersey Devils vs. Carolina Hurricanes 2023-03-12",
+    "strategy": "random",
+    "outcome_chosen": "Hurricanes",
+    "winning_outcome": "Devils",
+    "amount": 0.0,
+    "profit": -0.0,
+    "balance": 0.01999999999999961,
+    "odds": {
+      "Devils": 1,
+      "Hurricanes": 0
+    },
+    "result": "LOSS"
+  },
+  {
+    "timestamp": "2026-05-09T19:22:12.249588",
+    "market_id": "0xb1c8f7b68807e6b39fac87a0f6a29ee6f006890d343becc922d0590c8424e258",
+    "question": "NHL: Tampa Bay Lightning vs. Chicago Blackhawks 2023-03-11",
+    "strategy": "high_probability",
+    "outcome_chosen": "Lightning",
+    "winning_outcome": "Lightning",
+    "amount": 0.0,
+    "profit": 0.0,
+    "balance": 0.01999999999999961,
+    "odds": {
+      "Lightning": 1,
+      "Blackhawks": 0
+    },
+    "result": "WIN"
+  }
+]

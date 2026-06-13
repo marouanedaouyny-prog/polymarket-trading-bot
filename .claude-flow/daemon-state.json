@@ -1,0 +1,140 @@
+{
+  "running": true,
+  "startedAt": "2026-05-10T23:52:20.320Z",
+  "workers": {
+    "map": {
+      "runCount": 217,
+      "successCount": 217,
+      "failureCount": 0,
+      "averageDurationMs": 30.69585253456222,
+      "isRunning": false,
+      "nextRun": "2026-05-15T19:02:31.842Z",
+      "lastStartedAt": "2026-05-15T18:48:17.889Z",
+      "lastRun": "2026-05-15T18:48:17.893Z"
+    },
+    "audit": {
+      "runCount": 300,
+      "successCount": 300,
+      "failureCount": 0,
+      "averageDurationMs": 333099.3333333333,
+      "isRunning": false,
+      "nextRun": "2026-05-15T18:58:17.889Z",
+      "lastStartedAt": "2026-05-15T18:46:57.304Z",
+      "lastRun": "2026-05-15T18:48:17.886Z"
+    },
+    "optimize": {
+      "runCount": 178,
+      "successCount": 178,
+      "failureCount": 0,
+      "averageDurationMs": 661476.6404494382,
+      "isRunning": false,
+      "nextRun": "2026-05-15T10:25:20.604Z",
+      "lastStartedAt": "2026-05-15T18:47:30.692Z",
+      "lastRun": "2026-05-15T18:48:40.654Z"
+    },
+    "consolidate": {
+      "runCount": 114,
+      "successCount": 114,
+      "failureCount": 0,
+      "averageDurationMs": 32.92982456140351,
+      "isRunning": false,
+      "nextRun": "2026-05-15T19:17:31.846Z",
+      "lastStartedAt": "2026-05-15T18:48:17.896Z",
+      "lastRun": "2026-05-15T18:48:17.900Z"
+    },
+    "testgaps": {
+      "runCount": 131,
+      "successCount": 131,
+      "failureCount": 0,
+      "averageDurationMs": 874257.7786259541,
+      "isRunning": false,
+      "nextRun": "2026-05-15T19:07:30.692Z",
+      "lastStartedAt": "2026-05-15T10:10:21.323Z",
+      "lastRun": "2026-05-15T18:47:30.650Z"
+    },
+    "predict": {
+      "runCount": 0,
+      "successCount": 0,
+      "failureCount": 0,
+      "averageDurationMs": 0,
+      "isRunning": false
+    },
+    "document": {
+      "runCount": 0,
+      "successCount": 0,
+      "failureCount": 0,
+      "averageDurationMs": 0,
+      "isRunning": false
+    }
+  },
+  "config": {
+    "autoStart": false,
+    "logDir": "C:\\Users\\HP\\OneDrive\\Desktop\\New folder\\polymarket\\.claude-flow\\logs",
+    "stateFile": "C:\\Users\\HP\\OneDrive\\Desktop\\New folder\\polymarket\\.claude-flow\\daemon-state.json",
+    "maxConcurrent": 2,
+    "workerTimeoutMs": 960000,
+    "resourceThresholds": {
+      "maxCpuLoad": 6.4,
+      "minFreeMemoryPercent": 10
+    },
+    "workers": [
+      {
+        "type": "map",
+        "intervalMs": 900000,
+        "offsetMs": 0,
+        "priority": "normal",
+        "description": "Codebase mapping",
+        "enabled": true
+      },
+      {
+        "type": "audit",
+        "intervalMs": 600000,
+        "offsetMs": 120000,
+        "priority": "critical",
+        "description": "Security analysis",
+        "enabled": true
+      },
+      {
+        "type": "optimize",
+        "intervalMs": 900000,
+        "offsetMs": 240000,
+        "priority": "high",
+        "description": "Performance optimization",
+        "enabled": true
+      },
+      {
+        "type": "consolidate",
+        "intervalMs": 1800000,
+        "offsetMs": 360000,
+        "priority": "low",
+        "description": "Memory consolidation",
+        "enabled": true
+      },
+      {
+        "type": "testgaps",
+        "intervalMs": 1200000,
+        "offsetMs": 480000,
+        "priority": "normal",
+        "description": "Test coverage analysis",
+        "enabled": true
+      },
+      {
+        "type": "predict",
+        "intervalMs": 600000,
+        "offsetMs": 0,
+        "priority": "low",
+        "description": "Predictive preloading",
+        "enabled": false
+      },
+      {
+        "type": "document",
+        "intervalMs": 3600000,
+        "offsetMs": 0,
+        "priority": "low",
+        "description": "Auto-documentation",
+        "enabled": false
+      }
+    ]
+  },
+  "savedAt": "2026-05-15T18:48:40.655Z"
+}

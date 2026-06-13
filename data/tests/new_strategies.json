@@ -1,0 +1,42 @@
+[
+  {
+    "config_name": "ML_Hybrid",
+    "total_trades": 11,
+    "win_rate": 63.63636363636363,
+    "final_balance": 12.323077360919253,
+    "profit": 2.323077360919253,
+    "return_pct": 23.230773609192532
+  },
+  {
+    "config_name": "Momentum_Bias",
+    "total_trades": 56,
+    "win_rate": 64.28571428571429,
+    "final_balance": 23.610429974866033,
+    "profit": 13.610429974866033,
+    "return_pct": 136.10429974866034
+  },
+  {
+    "config_name": "Low_Risk_High_Freq",
+    "total_trades": 148,
+    "win_rate": 67.56756756756756,
+    "final_balance": 21.87897605719706,
+    "profit": 11.878976057197061,
+    "return_pct": 118.78976057197062
+  },
+  {
+    "config_name": "Mean_Reversion",
+    "total_trades": 0,
+    "win_rate": 0,
+    "final_balance": 10.0,
+    "profit": 0.0,
+    "return_pct": 0.0
+  },
+  {
+    "config_name": "Volatility_Adjusted",
+    "total_trades": 0,
+    "win_rate": 0,
+    "final_balance": 10.0,
+    "profit": 0.0,
+    "return_pct": 0.0
+  }
+]

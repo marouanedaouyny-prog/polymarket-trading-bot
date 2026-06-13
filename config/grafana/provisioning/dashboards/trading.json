@@ -1,0 +1,83 @@
+{
+  "dashboard": {
+    "title": "Polymarket Trading Bot",
+    "tags": ["trading", "polymarket"],
+    "timezone": "browser",
+    "panels": [
+      {
+        "id": 1,
+        "title": "Total PnL",
+        "type": "graph",
+        "gridPos": {"x": 0, "y": 0, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "sum(rate(trades_pnl_total[5m]))",
+            "legendFormat": "Total PnL"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Win Rate",
+        "type": "graph",
+        "gridPos": {"x": 12, "y": 0, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "rate(trades_wins_total[5m]) / rate(trades_total[5m]) * 100",
+            "legendFormat": "Win Rate %"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Active Positions",
+        "type": "stat",
+        "gridPos": {"x": 0, "y": 8, "w": 6, "h": 4},
+        "targets": [
+          {
+            "expr": "positions_active",
+            "legendFormat": "Active"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Total Trades",
+        "type": "stat",
+        "gridPos": {"x": 6, "y": 8, "w": 6, "h": 4},
+        "targets": [
+          {
+            "expr": "trades_total",
+            "legendFormat": "Trades"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Sharpe Ratio",
+        "type": "stat",
+        "gridPos": {"x": 12, "y": 8, "w": 6, "h": 4},
+        "targets": [
+          {
+            "expr": "portfolio_sharpe_ratio",
+            "legendFormat": "Sharpe"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Max Drawdown",
+        "type": "stat",
+        "gridPos": {"x": 18, "y": 8, "w": 6, "h": 4},
+        "targets": [
+          {
+            "expr": "portfolio_max_drawdown",
+            "legendFormat": "Max DD"
+          }
+        ]
+      }
+    ],
+    "refresh": "5s",
+    "time": {"from": "now-1h", "to": "now"}
+  }
+}

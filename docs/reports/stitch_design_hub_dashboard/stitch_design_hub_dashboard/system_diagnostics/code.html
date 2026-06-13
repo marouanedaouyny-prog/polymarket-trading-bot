@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#3d494c",
+                        "secondary-fixed": "#ffddb8",
+                        "on-secondary": "#472a00",
+                        "on-surface-variant": "#bcc9cd",
+                        "primary": "#4cd7f6",
+                        "on-error-container": "#ffdad6",
+                        "on-primary": "#003640",
+                        "outline": "#869397",
+                        "inverse-on-surface": "#283044",
+                        "tertiary-container": "#ff817a",
+                        "on-secondary-fixed-variant": "#653e00",
+                        "tertiary-fixed-dim": "#ffb3ad",
+                        "on-primary-fixed": "#001f26",
+                        "surface-variant": "#2d3449",
+                        "inverse-primary": "#00687a",
+                        "on-tertiary-fixed-variant": "#930013",
+                        "surface-container-low": "#131b2e",
+                        "on-primary-container": "#00424f",
+                        "secondary-fixed-dim": "#ffb95f",
+                        "secondary": "#ffb95f",
+                        "on-secondary-fixed": "#2a1700",
+                        "on-primary-fixed-variant": "#004e5c",
+                        "surface-container-lowest": "#060e20",
+                        "surface-tint": "#4cd7f6",
+                        "secondary-container": "#ee9800",
+                        "surface-container-high": "#222a3d",
+                        "on-background": "#dae2fd",
+                        "on-surface": "#dae2fd",
+                        "primary-fixed-dim": "#4cd7f6",
+                        "primary-fixed": "#acedff",
+                        "surface": "#0b1326",
+                        "error": "#ffb4ab",
+                        "inverse-surface": "#dae2fd",
+                        "tertiary": "#ffb3ad",
+                        "surface-container": "#171f33",
+                        "surface-bright": "#31394d",
+                        "on-tertiary-container": "#7e000f",
+                        "on-secondary-container": "#5b3800",
+                        "background": "#0b1326",
+                        "primary-container": "#06b6d4",
+                        "on-tertiary-fixed": "#410004",
+                        "surface-container-highest": "#2d3449",
+                        "surface-dim": "#0b1326",
+                        "error-container": "#93000a",
+                        "on-tertiary": "#68000a",
+                        "on-error": "#690005",
+                        "tertiary-fixed": "#ffdad7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "xs": "4px",
+                        "md": "16px",
+                        "margin": "16px",
+                        "base": "4px",
+                        "gutter": "12px",
+                        "xl": "32px",
+                        "lg": "24px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["IBM Plex Mono"],
+                        "h2": ["Space Grotesk"],
+                        "data-sm": ["IBM Plex Mono"],
+                        "data-lg": ["IBM Plex Mono"],
+                        "data-md": ["IBM Plex Mono"],
+                        "h1": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["10px", {"lineHeight": "12px", "letterSpacing": "0.08em", "fontWeight": "700"}],
+                        "h2": ["18px", {"lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "data-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "data-lg": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "data-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "500"}],
+                        "h1": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+        }
+    </style>
+</head>
+<body class="flex overflow-hidden">
+<!-- SideNavBar (Shared Component) -->
+<nav class="flex flex-col h-full overflow-y-auto h-screen w-64 border-r border-outline-variant bg-surface-container-low shrink-0">
+<div class="p-lg">
+<h1 class="font-h1 text-h1 font-bold text-primary dark:text-primary">POLY-BOT-01</h1>
+<p class="font-data-md text-data-md text-on-surface-variant opacity-70">V2.4.0-STABLE</p>
+</div>
+<div class="flex-grow">
+<!-- Navigation Links -->
+<div class="flex flex-col">
+<a class="flex items-center px-lg py-md font-data-md text-data-md text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined mr-md">dashboard</span>
+                    Overview
+                </a>
+<a class="flex items-center px-lg py-md font-data-md text-data-md text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined mr-md">query_stats</span>
+                    Markets
+                </a>
+<a class="flex items-center px-lg py-md font-data-md text-data-md text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined mr-md">swap_horiz</span>
+                    Trades
+                </a>
+<a class="flex items-center px-lg py-md font-data-md text-data-md text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined mr-md">gpp_maybe</span>
+                    Risk
+                </a>
+<a class="flex items-center px-lg py-md font-data-md text-data-md text-primary dark:text-primary border-l-2 border-primary bg-surface-container-high transition-colors duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined mr-md">dns</span>
+                    System
+                </a>
+<a class="flex items-center px-lg py-md font-data-md text-data-md text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined mr-md">settings</span>
+                    Settings
+                </a>
+</div>
+</div>
+<div class="p-lg mt-auto">
+<button class="w-full bg-error-container text-on-error-container font-h2 text-h2 py-sm rounded-lg active:scale-95 transition-transform">
+                Manual Killswitch
+            </button>
+</div>
+</nav>
+<div class="flex-grow flex flex-col min-w-0">
+<!-- TopNavBar (Shared Component) -->
+<header class="flex justify-between items-center w-full px-6 bg-surface docked full-width top-0 h-16 border-b border-outline-variant bg-surface-container">
+<div class="flex items-center gap-md">
+<span class="font-h2 text-h2 font-bold text-on-surface">Terminal Console</span>
+<div class="flex items-center bg-surface-container-lowest border border-outline-variant rounded-lg px-sm h-8">
+<span class="material-symbols-outlined text-outline text-data-md">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-data-sm text-on-surface w-48" placeholder="Search parameters..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-lg">
+<div class="flex items-center gap-sm">
+<div class="flex flex-col items-end">
+<span class="font-data-md text-data-md text-primary font-bold">Running</span>
+<span class="font-data-sm text-[10px] text-on-surface-variant uppercase tracking-widest">Bot Status</span>
+</div>
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant"></div>
+<div class="flex flex-col items-end">
+<span class="font-data-md text-data-md text-secondary-fixed font-bold">$42,084.12</span>
+<span class="font-data-sm text-[10px] text-on-surface-variant uppercase tracking-widest">Equity Value</span>
+</div>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-opacity active:opacity-80">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-opacity active:opacity-80">account_balance_wallet</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-opacity active:opacity-80">sensors</span>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow p-lg overflow-y-auto space-y-lg">
+<!-- Real-time Health Cards (Bento Layout) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- API Latency -->
+<div class="bg-surface-container-low border border-outline-variant p-md rounded-lg flex flex-col justify-between h-32 hover:border-primary transition-colors">
+<div class="flex justify-between items-start">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">API Endpoints</span>
+<span class="material-symbols-outlined text-primary">speed</span>
+</div>
+<div class="flex items-baseline gap-xs">
+<span class="font-data-lg text-[32px] text-primary">45</span>
+<span class="font-data-md text-data-md text-on-surface-variant">ms</span>
+</div>
+<div class="flex justify-between items-center">
+<div class="w-24 h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="w-1/3 h-full bg-primary"></div>
+</div>
+<span class="font-data-sm text-data-sm text-outline">Last Updated: 14:20:01</span>
+</div>
+</div>
+<!-- WebSocket Status -->
+<div class="bg-surface-container-low border border-outline-variant p-md rounded-lg flex flex-col justify-between h-32 hover:border-primary transition-colors">
+<div class="flex justify-between items-start">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">WebSocket Stream</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">sync_alt</span>
+</div>
+<div class="flex items-center gap-sm">
+<div class="w-3 h-3 rounded-full bg-primary pulse-pip"></div>
+<span class="font-data-lg text-data-lg text-on-surface">Active</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-data-sm text-data-sm text-primary">99.98% Uptime</span>
+<span class="font-data-sm text-data-sm text-outline">Last Updated: 14:20:02</span>
+</div>
+</div>
+<!-- Update Loop Lag -->
+<div class="bg-surface-container-low border border-secondary p-md rounded-lg flex flex-col justify-between h-32 hover:border-secondary transition-colors">
+<div class="flex justify-between items-start">
+<span class="font-label-caps text-label-caps text-on-secondary-container uppercase">Execution Lag</span>
+<span class="material-symbols-outlined text-secondary">warning</span>
+</div>
+<div class="flex items-baseline gap-xs text-secondary">
+<span class="font-data-lg text-[32px]">120</span>
+<span class="font-data-md text-data-md">ms</span>
+</div>
+<div class="flex justify-between items-center">
+<div class="w-24 h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="w-[85%] h-full bg-secondary"></div>
+</div>
+<span class="font-data-sm text-data-sm text-outline">Last Updated: 14:19:59</span>
+</div>
+</div>
+</div>
+<!-- Dashboard Center Piece -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Internal Component Status Table -->
+<div class="lg:col-span-8 bg-surface-container-low border border-outline-variant rounded-lg flex flex-col">
+<div class="px-md py-sm border-b border-outline-variant flex justify-between items-center bg-surface-container">
+<h2 class="font-h2 text-h2">Internal Components</h2>
+<span class="font-data-sm text-data-sm text-outline">4 Services Nominal</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="border-b border-outline-variant bg-surface-container-lowest">
+<th class="px-md py-sm font-label-caps text-label-caps text-on-surface-variant">COMPONENT</th>
+<th class="px-md py-sm font-label-caps text-label-caps text-on-surface-variant">STATUS</th>
+<th class="px-md py-sm font-label-caps text-label-caps text-on-surface-variant">THREAD LOAD</th>
+<th class="px-md py-sm font-label-caps text-label-caps text-on-surface-variant text-right">LAST UPDATED</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="px-md py-sm font-data-md text-data-md">Data Provider</td>
+<td class="px-md py-sm">
+<span class="inline-flex items-center px-xs py-1 rounded bg-primary/10 text-primary font-data-sm text-[10px] uppercase border border-primary/20">Operational</span>
+</td>
+<td class="px-md py-sm">
+<div class="flex items-center gap-sm">
+<div class="flex-grow bg-surface-container-highest h-1 rounded-full overflow-hidden max-w-[100px]">
+<div class="bg-primary h-full" style="width: 24%"></div>
+</div>
+<span class="font-data-sm text-data-sm">24%</span>
+</div>
+</td>
+<td class="px-md py-sm font-data-sm text-data-sm text-outline text-right">14:20:01.04</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="px-md py-sm font-data-md text-data-md">Strategy Engine</td>
+<td class="px-md py-sm">
+<span class="inline-flex items-center px-xs py-1 rounded bg-primary/10 text-primary font-data-sm text-[10px] uppercase border border-primary/20">Operational</span>
+</td>
+<td class="px-md py-sm">
+<div class="flex items-center gap-sm">
+<div class="flex-grow bg-surface-container-highest h-1 rounded-full overflow-hidden max-w-[100px]">
+<div class="bg-primary h-full" style="width: 62%"></div>
+</div>
+<span class="font-data-sm text-data-sm">62%</span>
+</div>
+</td>
+<td class="px-md py-sm font-data-sm text-data-sm text-outline text-right">14:20:00.82</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="px-md py-sm font-data-md text-data-md">Execution Service</td>
+<td class="px-md py-sm">
+<span class="inline-flex items-center px-xs py-1 rounded bg-secondary/10 text-secondary font-data-sm text-[10px] uppercase border border-secondary/20">Busy</span>
+</td>
+<td class="px-md py-sm">
+<div class="flex items-center gap-sm">
+<div class="flex-grow bg-surface-container-highest h-1 rounded-full overflow-hidden max-w-[100px]">
+<div class="bg-secondary h-full" style="width: 88%"></div>
+</div>
+<span class="font-data-sm text-data-sm">88%</span>
+</div>
+</td>
+<td class="px-md py-sm font-data-sm text-data-sm text-outline text-right">14:20:01.12</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="px-md py-sm font-data-md text-data-md">Database</td>
+<td class="px-md py-sm">
+<span class="inline-flex items-center px-xs py-1 rounded bg-primary/10 text-primary font-data-sm text-[10px] uppercase border border-primary/20">Operational</span>
+</td>
+<td class="px-md py-sm">
+<div class="flex items-center gap-sm">
+<div class="flex-grow bg-surface-container-highest h-1 rounded-full overflow-hidden max-w-[100px]">
+<div class="bg-primary h-full" style="width: 12%"></div>
+</div>
+<span class="font-data-sm text-data-sm">12%</span>
+</div>
+</td>
+<td class="px-md py-sm font-data-sm text-data-sm text-outline text-right">14:20:00.01</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Event/Error Stream Log -->
+<div class="lg:col-span-4 bg-surface-container-low border border-outline-variant rounded-lg flex flex-col h-[400px]">
+<div class="px-md py-sm border-b border-outline-variant flex justify-between items-center bg-surface-container">
+<h2 class="font-h2 text-h2">System Log</h2>
+<div class="flex items-center gap-sm">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="font-data-sm text-data-sm text-error">2 Errors</span>
+</div>
+</div>
+<div class="flex-grow overflow-y-auto p-sm font-data-sm text-data-sm space-y-sm">
+<div class="p-xs bg-surface-container-lowest border-l-2 border-primary">
+<span class="text-outline">[14:19:58]</span> <span class="text-primary font-bold">INFO:</span> Polling market data for ETH-USD successful.
+                        </div>
+<div class="p-xs bg-surface-container-lowest border-l-2 border-secondary">
+<span class="text-outline">[14:19:59]</span> <span class="text-secondary font-bold">WARN:</span> Execution lag exceeded 100ms threshold.
+                        </div>
+<div class="p-xs bg-surface-container-lowest border-l-2 border-primary">
+<span class="text-outline">[14:20:00]</span> <span class="text-primary font-bold">INFO:</span> Strategy rebalancing initiated.
+                        </div>
+<div class="p-xs bg-error-container/20 border-l-2 border-error">
+<span class="text-outline">[14:20:01]</span> <span class="text-error font-bold">ERROR:</span> Rejected order ID 4429x: Insufficient liquidity.
+                        </div>
+<div class="p-xs bg-surface-container-lowest border-l-2 border-primary">
+<span class="text-outline">[14:20:01]</span> <span class="text-primary font-bold">INFO:</span> WebSocket heart-beat received.
+                        </div>
+<div class="p-xs bg-surface-container-lowest border-l-2 border-primary">
+<span class="text-outline">[14:20:02]</span> <span class="text-primary font-bold">INFO:</span> Signal generated: LONG BTC-USD.
+                        </div>
+<div class="p-xs bg-error-container/20 border-l-2 border-error">
+<span class="text-outline">[14:20:02]</span> <span class="text-error font-bold">ERROR:</span> Connection timeout to secondary relay node.
+                        </div>
+<div class="p-xs bg-surface-container-lowest border-l-2 border-primary">
+<span class="text-outline">[14:20:03]</span> <span class="text-primary font-bold">INFO:</span> Backup relay node engaged.
+                        </div>
+</div>
+<div class="p-xs border-t border-outline-variant bg-surface-container-lowest flex items-center">
+<input class="w-full bg-transparent border-none text-data-sm text-on-surface-variant italic focus:ring-0" placeholder="Command line interface..." type="text"/>
+</div>
+</div>
+</div>
+<!-- Visual Diagnostic Section -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="h-48 bg-surface-container-low border border-outline-variant rounded-lg overflow-hidden relative group">
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-50"></div>
+<div class="absolute top-md left-md">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Global Infrastructure Visualizer</span>
+</div>
+<img class="w-full h-full object-cover opacity-30 grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A highly complex digital world map displayed on a dark high-tech monitor with glowing neon cyan lines representing global network data routes and server locations. The visual style is clinical and professional, reminiscent of a quantitative trading floor mission control center. Low-key lighting highlights the sharp technological details and the sophisticated data visualization across the dark blue canvas." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzwqm9KdXKepqbK3EDXPiGduBg3jxpoGNwhorceekQXC6Di4NttsnthUQEZfrGH-nmuaq1IF0gbTEdWkfqE5GwgEsjgvFQC9mR73DAbf7kPAwWGFtFls8XbIiNrcvW826-d1OuLNWZX2KRXF45LZFn4xAgTSQJ9GgxPY8GtcqhvEWNKmOfWN3_YRTn4KLb0FwIc0xknDTTpM3l6U1zurscFlRXjToL6UzXZh7VcBa3zKMbGTXGmNWIP4dwzOUkddM5hatOCxiyxX9Z"/>
+<div class="absolute bottom-md right-md flex gap-sm">
+<div class="px-sm py-xs bg-primary/20 border border-primary text-primary text-[10px] font-bold rounded">7 NODES ONLINE</div>
+<div class="px-sm py-xs bg-surface-container-highest border border-outline-variant text-on-surface-variant text-[10px] font-bold rounded">1 NODE FAILOVER</div>
+</div>
+</div>
+<div class="h-48 bg-surface-container-low border border-outline-variant rounded-lg p-md flex flex-col justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Resources Consumption</span>
+<div class="mt-md space-y-md">
+<div>
+<div class="flex justify-between font-data-sm text-data-sm mb-xs">
+<span>CPU Utilization</span>
+<span class="text-primary">42%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full" style="width: 42%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-data-sm text-data-sm mb-xs">
+<span>Memory usage</span>
+<span class="text-primary">2.4 / 16 GB</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full" style="width: 15%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-end">
+<span class="font-data-sm text-data-sm text-outline">Runtime: 12d 04h 22m 11s</span>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

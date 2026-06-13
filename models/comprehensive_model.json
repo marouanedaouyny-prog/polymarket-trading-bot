@@ -1,0 +1,15 @@
+{
+  "weights": {
+    "price_weight": 0.15000000000000002,
+    "edge_weight": 0.45,
+    "confidence_weight": 0.4
+  },
+  "training_samples": 12000,
+  "data_sources": [
+    "polymarket_api",
+    "open_source",
+    "market_intel"
+  ],
+  "accuracy": 79.35833333333333,
+  "version": "2026-05-09T21:27:10.887872"
+}
