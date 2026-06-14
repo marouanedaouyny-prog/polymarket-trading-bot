@@ -1,3 +1,13 @@
+---
+title: Polymarket API
+emoji: 🤖
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+pinned: false
+license: mit
+---
+
 # Polymarket AI Trading System
 
 A production-grade autonomous trading system for Polymarket prediction markets.
