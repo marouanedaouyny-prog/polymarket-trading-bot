@@ -29,4 +29,4 @@ ENV PYTHONUNBUFFERED=1
 
 EXPOSE 7860
 
-CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "7860"]
+CMD ["sh", "-c", "echo '=== STARTING APP ===' && python -c 'from api.main import app; print(\"IMPORT OK\")' && echo '=== RUNNING UVICORN ===' && uvicorn api.main:app --host 0.0.0.0 --port 7860"]
