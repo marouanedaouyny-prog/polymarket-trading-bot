@@ -1,5 +1,7 @@
 FROM python:3.11-slim
 
+RUN useradd -m -u 1000 user
+
 WORKDIR /app
 
 RUN pip install --no-cache-dir \
@@ -18,7 +20,9 @@ RUN pip install --no-cache-dir \
     sqlalchemy==2.0.35 \
     aiofiles==24.1.0
 
-COPY . .
+COPY --chown=user . .
+
+USER user
 
 ENV PYTHONPATH=/app/src
 ENV PYTHONUNBUFFERED=1
