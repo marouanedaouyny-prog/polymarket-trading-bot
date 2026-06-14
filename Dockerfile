@@ -1,9 +1,8 @@
-FROM python:3.11-slim
+FROM python:3.11
 
 WORKDIR /app
 
-RUN pip install --no-cache-dir fastapi uvicorn python-dotenv slowapi requests pydantic aiohttp pandas numpy redis websockets sqlalchemy aiofiles
-RUN pip install --no-cache-dir --only-binary :all: scikit-learn
+RUN pip install --no-cache-dir fastapi uvicorn python-dotenv slowapi requests pydantic aiohttp pandas numpy scikit-learn redis websockets sqlalchemy aiofiles
 
 COPY . .
 
