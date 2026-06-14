@@ -3,7 +3,7 @@ FROM python:3.11-slim
 WORKDIR /app
 
 COPY requirements_api.txt .
-RUN pip install --no-cache-dir -r requirements_api.txt
+RUN pip install --no-cache-dir --only-binary :all: -r requirements_api.txt
 
 COPY src/ src/
 COPY .env.template .
