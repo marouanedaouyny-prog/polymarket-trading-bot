@@ -4,7 +4,7 @@ WORKDIR /app
 
 RUN pip install --no-cache-dir fastapi uvicorn python-dotenv slowapi requests pydantic aiohttp
 
-COPY src/ src/
+COPY . .
 
 ENV PYTHONUNBUFFERED=1
 
