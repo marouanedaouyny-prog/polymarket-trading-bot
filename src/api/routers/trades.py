@@ -9,7 +9,7 @@ from uuid import uuid4
 from fastapi import APIRouter, Query
 from pydantic import BaseModel
 
-from ..state import ORDER_MANAGER, RISK_MANAGER, TRAINING_SERVICE
+from ..state import ORDER_MANAGER, RISK_MANAGER, get_training_service
 
 try:
     from ...data.connectors.gamma import PolymarketAPI
@@ -55,7 +55,7 @@ def _maybe_activate_kill_switch():
 @router.get("/training-status", response_model=dict)
 async def get_training_status():
     """Return model training state used by buy flow."""
-    return TRAINING_SERVICE.status()
+    return get_training_service().status()
 
 
 @router.get("/", response_model=dict)
@@ -102,7 +102,7 @@ async def place_trade(trade_data: TradeRequest):
     signal_result = None
     if side == "buy":
         markets = await gamma_api.get_markets(limit=200)
-        training_result = TRAINING_SERVICE.train_from_markets(markets)
+        training_result = get_training_service().train_from_markets(markets)
         if not training_result.get("trained", False):
             reason = training_result.get("reason", "training_failed")
             return TradeResponse(
@@ -112,7 +112,7 @@ async def place_trade(trade_data: TradeRequest):
             )
 
         market = await gamma_api.get_market(trade_data.market_id)
-        signal_result = TRAINING_SERVICE.evaluate_buy_signal(
+        signal_result = get_training_service().evaluate_buy_signal(
             market=market,
             fallback_price=trade_data.price,
             fallback_volume=trade_data.size,

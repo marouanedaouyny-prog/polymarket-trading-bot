@@ -18,7 +18,13 @@ except ImportError:
 STARTED_AT = datetime.now(timezone.utc)
 ORDER_MANAGER = OrderManager(mode=os.getenv("TRADING_MODE", "paper"))
 RISK_MANAGER = RiskManager()
-TRAINING_SERVICE = TrainingService()
+_training_service = None
+
+def get_training_service():
+    global _training_service
+    if _training_service is None:
+        _training_service = TrainingService()
+    return _training_service
 
 
 def uptime_seconds() -> float:
