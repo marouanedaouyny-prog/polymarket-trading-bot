@@ -8,7 +8,6 @@ __pycache__
 .env
 .venv
 .venv312
-.venv*/
 .mypy_cache/
 .pytest_cache
 .coverage
@@ -17,7 +16,7 @@ __pycache__
 .claude-flow/
 frontend/
 node_modules
-scripts/node_modules/
+scripts/
 venv
 docs/
 models/
@@ -36,9 +35,10 @@ keys.txt
 *.db
 *.sqlite
 paper_trades.json
-__pycache__/
-.pycache/
 *.png
 *.jpg
 *.jpeg
 start.bat
+!requirements_api.txt
+!requirements.txt
+!.env.template
