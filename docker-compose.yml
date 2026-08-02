@@ -1,32 +1,120 @@
-version: '3.8'
+# =============================================================================
+# Polymarket Trading Bot — Full Stack Deployment
+# =============================================================================
+
+version: "3.9"
 
 services:
+  # Main API + Trading Engine
   api:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8000:8000"
+      - "${API_PORT:-7860}:7860"
+    environment:
+      FASTAPI_API_KEY: ${FASTAPI_API_KEY:?FASTAPI_API_KEY is required}
+      FASTAPI_HOST: 0.0.0.0
+      FASTAPI_PORT: 7860
+      POLYMARKET_ALLOW_REAL_ORDERS: ${POLYMARKET_ALLOW_REAL_ORDERS:-false}
+      ENABLE_LIVE_TRADING: ${ENABLE_LIVE_TRADING:-false}
+      POLYMARKET_SANDBOX: ${POLYMARKET_SANDBOX:-true}
+      STARTING_BALANCE: ${STARTING_BALANCE:-100.0}
+      MAX_POSITION_PCT: ${MAX_POSITION_PCT:-0.10}
+      MIN_EDGE: ${MIN_EDGE:-0.08}
+      MIN_CONFIDENCE: ${MIN_CONFIDENCE:-85}
+      STOP_LOSS_PCT: ${STOP_LOSS_PCT:-0.15}
+      DAILY_LOSS_LIMIT: ${DAILY_LOSS_LIMIT:-0.05}
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
     env_file:
-      - config/.env
+      - .env
     volumes:
-      - ./data:/app/data
-      - ./models:/app/models
+      - trading_data:/app/data
+    depends_on:
+      redis:
+        condition: service_started
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:7860/health')"]
       interval: 30s
-      timeout: 10s
+      timeout: 5s
       retries: 3
-      start_period: 40s
+      start_period: 15s
 
+  # Redis Cache
   redis:
     image: redis:7-alpine
     ports:
-      - "6379:6379"
+      - "${REDIS_PORT:-6379}:6379"
     volumes:
       - redis_data:/data
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+
+  # PostgreSQL Database (optional — for persistent storage)
+  postgres:
+    image: postgres:15-alpine
+    profiles:
+      - full
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    environment:
+      POSTGRES_DB: ${DB_NAME:-polymarket_trading}
+      POSTGRES_USER: ${DB_USER:-trader}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-changeme}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-trader}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Prometheus (metrics collection)
+  prometheus:
+    image: prom/prometheus:latest
+    profiles:
+      - full
+      - monitoring
+    ports:
+      - "${PROMETHEUS_PORT:-9090}:9090"
+    volumes:
+      - ./config/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+      - "--web.enable-lifecycle"
+    restart: unless-stopped
+
+  # Grafana (visualization)
+  grafana:
+    image: grafana/grafana:latest
+    profiles:
+      - full
+      - monitoring
+    ports:
+      - "${GRAFANA_PORT:-3000}:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=${GRAFANA_USER:-admin}
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD:-admin}
+    volumes:
+      - ./config/grafana/provisioning:/etc/grafana/provisioning:ro
+      - grafana_data:/var/lib/grafana
+    depends_on:
+      - prometheus
+    restart: unless-stopped
 
 volumes:
+  trading_data:
   redis_data:
+  postgres_data:
+  prometheus_data:
+  grafana_data:

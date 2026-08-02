@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  mirofish-backend:
+    build:
+      context: ./mirofish
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5001"
+    environment:
+      - FLASK_HOST=0.0.0.0
+      - FLASK_PORT=5001
+      - ZEP_API_KEY=mock-key
+    volumes:
+      - ./mirofish/backend:/app
+    restart: unless-stopped

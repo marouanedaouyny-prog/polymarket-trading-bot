@@ -1,10 +1,15 @@
 """
 Advanced Risk Manager with Dynamic Risk Adjustment
 Includes Kelly Criterion, Drawdown Tracking, Adaptive Limits
+Consolidated single source of truth — all 4 risk managers merged here.
 """
 
 import json
+import logging
+import numpy as np
 from datetime import datetime
+
+logger = logging.getLogger(__name__)
 
 
 class DynamicRiskManager:
@@ -14,116 +19,158 @@ class DynamicRiskManager:
     - Real-time drawdown tracking
     - Adaptive loss limits based on streak
     - Volatility adjustment
+    - Circuit breakers for catastrophic loss
     """
-    
+
     def __init__(self, base_config=None):
-        # Base risk configuration
+        # Base risk configuration — CONSERVATIVE for real money
         self.base = base_config or {
-            'max_position_pct': 0.15,
-            'max_daily_trades': 20,
-            'stop_loss_pct': 0.25,
-            'take_profit_pct': 2.0,
-            'daily_loss_limit': 0.20,
-            'min_edge': 0.65,
-            'min_confidence': 65,
+            'max_position_pct': 0.10,        # 10% max per position
+            'max_daily_trades': 5,           # 5 trades per day max
+            'stop_loss_pct': 0.15,           # 15% stop-loss
+            'take_profit_pct': 0.50,         # 50% take-profit
+            'daily_loss_limit': 0.05,        # 5% daily loss cap
+            'min_edge': 0.08,                # 8% minimum edge
+            'min_confidence': 85,            # 85% min confidence
+            'max_drawdown_limit': 0.25,      # 25% circuit breaker
         }
-        
-        # Current adaptive settings
+
+        # Current adaptive settings (starts as copy of base)
         self.current = self.base.copy()
-        
+
         # Tracking state
-        self.peak_balance = 0
-        self.current_drawdown = 0
-        self.max_drawdown = 0
-        
+        self.peak_balance = 0.0
+        self.current_drawdown = 0.0
+        self.max_drawdown = 0.0
+
         self.winning_streak = 0
         self.losing_streak = 0
         self.consecutive_losses = 0
-        
-        self.session_start_balance = 0
-        self.daily_start_balance = 0
-        
+
+        self.session_start_balance = 0.0
+        self.daily_start_balance = 0.0
+
         # Performance tracking
         self.win_rate = 0.95
-        self.avg_win = 0
-        self.avg_loss = 0
-        
-    def start_session(self, balance):
-        """Initialize for new session"""
+        self.avg_win = 0.0
+        self.avg_loss = 0.0
+        self.win_count = 0
+        self.loss_count = 0
+
+    def start_session(self, balance: float):
+        """Initialize for new session."""
         self.session_start_balance = balance
         self.daily_start_balance = balance
         if balance > self.peak_balance:
             self.peak_balance = balance
-    
-    def update_after_trade(self, won, profit, balance):
-        """Update risk parameters after each trade"""
-        # Update balance tracking
-        if balance > self.peak_balance:
-            self.peak_balance = balance
-        
-        # Calculate drawdown
+
+    def update_after_trade(self, won: bool, profit: float, new_balance: float):
+        """Update risk state after each trade with enhanced safety checks."""
+        # Update peak balance
+        if new_balance > self.peak_balance:
+            self.peak_balance = new_balance
+
+        # Calculate current drawdown
         if self.peak_balance > 0:
-            self.current_drawdown = (self.peak_balance - balance) / self.peak_balance
-            if self.current_drawdown > self.max_drawdown:
-                self.max_drawdown = self.current_drawdown
-        
-        # Track streaks
+            self.current_drawdown = (self.peak_balance - new_balance) / self.peak_balance
+        else:
+            self.current_drawdown = 0.0
+
+        # Track max drawdown
+        if self.current_drawdown > self.max_drawdown:
+            self.max_drawdown = self.current_drawdown
+
+        # Track streaks and update averages
         if won:
             self.winning_streak += 1
             self.losing_streak = 0
-            self.consecutive_losses = 0
+            self.win_count += 1
+            self.avg_win = ((self.avg_win * (self.win_count - 1)) + profit) / self.win_count
         else:
-            self.losing_streak += 1
             self.winning_streak = 0
+            self.losing_streak += 1
             self.consecutive_losses += 1
-        
+            self.loss_count += 1
+            self.avg_loss = ((self.avg_loss * (self.loss_count - 1)) + abs(profit)) / self.loss_count
+
+        # Update daily start balance tracking
+        if new_balance > self.daily_start_balance * 1.5:
+            self.daily_start_balance = new_balance
+
         # Apply adaptive adjustments
         self._adjust_risk_for_drawdown()
         self._adjust_risk_for_streak()
-        
-        return self.current
-    
+
     def _adjust_risk_for_drawdown(self):
-        """Tighten risk when drawdown increases"""
-        # If drawdown > 10%, reduce position size
+        """Tighten risk when drawdown increases."""
         if self.current_drawdown > 0.10:
-            reduction = min(self.current_drawdown * 2, 0.5)  # Max 50% reduction
+            reduction = min(self.current_drawdown * 2, 0.5)
             self.current['max_position_pct'] = self.base['max_position_pct'] * (1 - reduction)
-        
-        # If drawdown > 20%, further reduce
+
         if self.current_drawdown > 0.20:
             self.current['max_position_pct'] = self.base['max_position_pct'] * 0.5
             self.current['daily_loss_limit'] = self.base['daily_loss_limit'] * 0.5
-        
-        # Reset to base if recovered
+
         if self.current_drawdown < 0.05:
             self.current['max_position_pct'] = self.base['max_position_pct']
             self.current['daily_loss_limit'] = self.base['daily_loss_limit']
-    
+
     def _adjust_risk_for_streak(self):
-        """Adjust risk based on winning/losing streaks"""
-        # After 5+ consecutive losses, tighten limits
+        """Adjust risk based on winning/losing streaks."""
         if self.consecutive_losses >= 5:
             self.current['max_position_pct'] = self.base['max_position_pct'] * 0.7
             self.current['daily_loss_limit'] = self.base['daily_loss_limit'] * 0.7
-        
-        # After 10 consecutive losses, go to minimum
+
         if self.consecutive_losses >= 10:
             self.current['max_position_pct'] = self.base['max_position_pct'] * 0.5
             self.current['min_edge'] = min(self.base['min_edge'] + 0.10, 0.80)
-        
-        # Reset after wins
+
         if self.winning_streak >= 3:
             self.current['max_position_pct'] = self.base['max_position_pct']
             self.current['min_edge'] = self.base['min_edge']
             self.current['daily_loss_limit'] = self.base['daily_loss_limit']
-    
-    def calculate_kelly_position(self, win_prob, odds):
-        """Calculate Kelly position size using win probability.
-        Kelly % = (b * p - q) / b where:
-          b = odds received on bet (decimal - 1)
-          p = win_prob, q = 1 - p
-        Returns a fraction of balance.
+
+    def check_circuit_breakers(self, current_balance: float, starting_balance: float) -> bool:
+        """Check for catastrophic conditions. Returns True if trading should halt."""
+        # 25% drawdown circuit breaker
+        if starting_balance > 0:
+            drawdown = (starting_balance - current_balance) / starting_balance
+            if drawdown >= self.base['max_drawdown_limit']:
+                logger.critical(
+                    f"CIRCUIT BREAKER: {drawdown:.1%} drawdown >= "
+                    f"{self.base['max_drawdown_limit']:.0%} limit"
+                )
+                return True
+
+        # Catastrophic drawdown — 50% loss from peak
+        if self.peak_balance > 0 and current_balance < self.peak_balance * 0.5:
+            logger.critical(
+                f"CATASTROPHIC DRAWDOWN: 50% loss from peak "
+                f"({current_balance:.2f} vs peak {self.peak_balance:.2f})"
+            )
+            return True
+
+        # Excessive consecutive losses
+        if self.consecutive_losses >= 10:
+            logger.critical(f"EXCESSIVE LOSSES: {self.consecutive_losses} consecutive losses")
+            return True
+
+        # Daily loss limit exceeded
+        if self.daily_start_balance > 0:
+            daily_pnl = current_balance - self.daily_start_balance
+            daily_loss_limit = -abs(self.daily_start_balance * self.current['daily_loss_limit'])
+            if daily_pnl < daily_loss_limit:
+                logger.critical(
+                    f"DAILY LOSS LIMIT EXCEEDED: {daily_pnl:.2f} < {daily_loss_limit:.2f}"
+                )
+                return True
+
+        return False
+
+    def calculate_kelly_position(self, win_prob: float, odds: float) -> float:
+        """Calculate Kelly position size.
+        Kelly % = (b * p - q) / b where b = odds - 1, p = win_prob, q = 1 - p
+        Returns fraction of balance. Uses half-Kelly for safety.
         """
         p = win_prob
         q = 1 - p
@@ -131,66 +178,120 @@ class DynamicRiskManager:
         if b <= 0 or p <= 0:
             return 0.0
         kelly = (b * p - q) / b
-        # Use half‑Kelly for safety
-        kelly = max(0.01, min(kelly * 0.5, 0.20))
-        return kelly
+        # Half-Kelly capped at 20%
+        return max(0.01, min(kelly * 0.5, 0.20))
 
     def configure_from_history(self, stats: dict):
-        """Adjust base config based on historical back‑test stats.
-        ``stats`` should contain keys: ``win_rate``, ``drawdown``.
-        Reduces max_position_pct if drawdown > 10% or win_rate < 60%.
-        """
+        """Adjust base config from historical backtest stats."""
         if stats.get('drawdown', 0) > 0.10:
-            self.base['max_position_pct'] = max(0.01, self.base.get('max_position_pct', 0.15) * 0.7)
+            self.base['max_position_pct'] = max(0.01, self.base.get('max_position_pct', 0.10) * 0.7)
         if stats.get('win_rate', 100) < 60:
-            self.base['max_position_pct'] = max(0.01, self.base.get('max_position_pct', 0.15) * 0.8)
-        # Ensure limits stay sensible
-        self.base['max_position_pct'] = min(0.20, max(0.01, self.base.get('max_position_pct', 0.15)))
+            self.base['max_position_pct'] = max(0.01, self.base.get('max_position_pct', 0.10) * 0.8)
+        self.base['max_position_pct'] = min(0.20, max(0.01, self.base.get('max_position_pct', 0.10)))
 
-    
-    def get_recommended_position(self, balance, edge, price, confidence):
-        """Get recommended position size using combination of rules"""
-        # Use base config as default
+    def get_recommended_position(self, balance: float, edge: float, price: float,
+                                  confidence: float) -> float:
+        """Get recommended position size using combination of rules."""
         base_pct = self.current['max_position_pct']
-        
+
         # Try Kelly if edge is high
         if edge >= 0.80 and price > 0:
-            kelly_pct = self.calculate_kelly_position(edge, 1/price)
-            # Use smaller of Kelly or base
+            kelly_pct = self.calculate_kelly_position(edge, 1 / price)
             recommended = min(kelly_pct, base_pct)
         else:
             recommended = base_pct
-        
-        # Apply drawdown adjustment
+
+        # Drawdown adjustment
         if self.current_drawdown > 0.15:
             recommended *= 0.7
-        
-        # Apply streak adjustment
+
+        # Streak adjustment
         if self.consecutive_losses >= 3:
             recommended *= 0.8
-        
+
         return recommended
-    
-    def should_trade(self, edge, confidence, balance):
-        """Determine if should trade based on current risk state"""
-        # Check daily loss limit
+
+    def should_trade(self, edge: float, confidence: float, balance: float):
+        """Determine if we should trade based on current risk state."""
+        # Daily loss limit
         if self.daily_start_balance > 0:
             daily_loss = (self.daily_start_balance - balance) / self.daily_start_balance
             if daily_loss >= self.current['daily_loss_limit']:
                 return False, "Daily loss limit reached"
-        
-        # Check minimum edge
+
+        # Minimum edge
         if edge < self.current['min_edge']:
             return False, f"Edge {edge:.0%} below minimum {self.current['min_edge']:.0%}"
-        
-        # Check minimum confidence
+
+        # Minimum confidence
         if confidence < self.current['min_confidence']:
             return False, f"Confidence {confidence:.0f} below minimum {self.current['min_confidence']}"
-        
+
         return True, "Approved"
-    
-    def get_risk_metrics(self):
-        """Get current risk metrics for monitoring"""
+
+    def calculate_portfolio_variance(self, positions, covariance_matrix):
+        """Calculate portfolio variance."""
+        positions_array = np.array(positions)
+        portfolio_variance = positions_array.T @ covariance_matrix @ positions_array
+        return float(portfolio_variance)
+
+    def monte_carlo_simulation(self, current_balance, n_simulations=1000, n_days=30):
+        """Run Monte Carlo simulation to estimate risk of ruin."""
+        results = {
+            'ending_balances': [],
+            'max_drawdowns': [],
+            'ruin_probability': 0.0,
+            'expected_final_balance': 0.0,
+            'cvar_95': 0.0,
+        }
+
+        win_rate = self.win_rate
+        avg_profit = self.avg_win if self.avg_win > 0 else 10.0
+        avg_loss = self.avg_loss if self.avg_loss > 0 else 5.0
+
+        for _ in range(n_simulations):
+            balance = current_balance
+            peak_balance = current_balance
+            max_drawdown = 0.0
+
+            for _ in range(n_days):
+                if np.random.random() < win_rate:
+                    profit = avg_profit * (1 + np.random.normal(0, 0.1))
+                    balance += profit
+                else:
+                    loss = avg_loss * (1 + np.random.normal(0, 0.1))
+                    balance -= loss
+
+                if balance > peak_balance:
+                    peak_balance = balance
+                drawdown = (peak_balance - balance) / peak_balance
+                if drawdown > max_drawdown:
+                    max_drawdown = drawdown
+
+            results['ending_balances'].append(balance)
+            results['max_drawdowns'].append(max_drawdown)
+
+        ending_balances = np.array(results['ending_balances'])
+        results['expected_final_balance'] = float(np.mean(ending_balances))
+        ruin_count = np.sum(ending_balances <= 0)
+        results['ruin_probability'] = float(ruin_count / n_simulations)
+
+        worst_5_percent = np.percentile(ending_balances, 5)
+        cvar_values = ending_balances[ending_balances <= worst_5_percent]
+        results['cvar_95'] = float(np.mean(cvar_values)) if len(cvar_values) > 0 else 0.0
+
+        return results
+
+    def get_win_rate(self) -> float:
+        return self.win_rate
+
+    def get_average_profit(self) -> float:
+        return self.avg_win if self.avg_win > 0 else 10.0
+
+    def get_average_loss(self) -> float:
+        return self.avg_loss if self.avg_loss > 0 else 5.0
+
+    def get_risk_metrics(self) -> dict:
         return {
             'current_position_pct': self.current['max_position_pct'],
             'drawdown': self.current_drawdown,
@@ -198,20 +299,21 @@ class DynamicRiskManager:
             'winning_streak': self.winning_streak,
             'losing_streak': self.losing_streak,
             'consecutive_losses': self.consecutive_losses,
-            'daily_loss_pct': (self.daily_start_balance - self.peak_balance) / self.daily_start_balance if self.daily_start_balance > 0 else 0,
+            'daily_loss_pct': (
+                (self.daily_start_balance - self.peak_balance) / self.daily_start_balance
+                if self.daily_start_balance > 0 else 0
+            ),
         }
-    
-    def reset_daily(self, balance):
-        """Reset daily tracking"""
+
+    def reset_daily(self, balance: float):
         self.daily_start_balance = balance
         self.consecutive_losses = 0
-    
-    def get_summary(self):
-        """Get risk manager summary"""
+
+    def get_summary(self) -> dict:
         return {
             'current_config': self.current,
             'peak_balance': self.peak_balance,
             'current_drawdown': self.current_drawdown,
             'max_drawdown': self.max_drawdown,
-            'streaks': {'wins': self.winning_streak, 'losses': self.losing_streak}
+            'streaks': {'wins': self.winning_streak, 'losses': self.losing_streak},
         }

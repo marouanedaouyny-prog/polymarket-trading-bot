@@ -103,3 +103,9 @@ temp/
 docs/reports/**/*.png
 docs/reports/**/*.jpg
 docs/reports/**/*.jpeg
+
+.mcp.json
+.claude/
+.openclaude/
+data/identity/
+

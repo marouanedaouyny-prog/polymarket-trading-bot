@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polymarket Trading Dashboard</title>
+<style>
+  :root {
+    --bg: #0d1117; --card: #161b22; --border: #30363d;
+    --text: #e6edf3; --muted: #8b949e;
+    --green: #3fb950; --red: #f85149; --yellow: #d29922; --blue: #58a6ff;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--text); padding:20px; }
+  .header { display:flex; justify-content:space-between; align-items:center; padding:16px 0; border-bottom:1px solid var(--border); margin-bottom:24px; }
+  .header h1 { font-size:1.5rem; font-weight:600; }
+  .status { display:flex; align-items:center; gap:8px; padding:6px 12px; border-radius:20px; font-size:.85rem; background:var(--card); border:1px solid var(--border); }
+  .dot { width:8px; height:8px; border-radius:50%; display:inline-block; }
+  .dot.on { background:var(--green); box-shadow:0 0 6px var(--green); }
+  .dot.off { background:var(--red); }
+  .dot.warn { background:var(--yellow); }
+  .grid { display:grid; gap:16px; }
+  .g6 { grid-template-columns:repeat(6,1fr); }
+  .g2 { grid-template-columns:1fr 1fr; }
+  @media(max-width:1024px){ .g6{grid-template-columns:repeat(3,1fr)} .g2{grid-template-columns:1fr} }
+  @media(max-width:600px){ .g6{grid-template-columns:repeat(2,1fr)} }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:8px; padding:16px; }
+  .lbl { font-size:.75rem; text-transform:uppercase; letter-spacing:.5px; color:var(--muted); margin-bottom:6px; }
+  .val { font-size:1.5rem; font-weight:700; font-variant-numeric:tabular-nums; }
+  .val.gn { color:var(--green); } .val.rd { color:var(--red); } .val.yl { color:var(--yellow); } .val.bl { color:var(--blue); }
+  table { width:100%; border-collapse:collapse; font-size:.85rem; }
+  th { text-align:left; padding:8px 12px; border-bottom:2px solid var(--border); color:var(--muted); font-weight:600; font-size:.75rem; text-transform:uppercase; letter-spacing:.5px; }
+  td { padding:8px 12px; border-bottom:1px solid var(--border); }
+  tr:hover td { background:rgba(255,255,255,.03); }
+  .badge { display:inline-block; padding:2px 8px; border-radius:4px; font-size:.75rem; font-weight:600; }
+  .badge.buy { background:rgba(63,185,80,.15); color:var(--green); }
+  .badge.sell { background:rgba(248,81,73,.15); color:var(--red); }
+  .alert { padding:12px 16px; border-radius:8px; margin-bottom:16px; display:flex; align-items:center; gap:12px; font-weight:600; }
+  .alert.danger { background:rgba(248,81,73,.15); border:1px solid var(--red); color:var(--red); }
+  .alert.warning { background:rgba(210,153,34,.15); border:1px solid var(--yellow); color:var(--yellow); }
+  .btn { padding:8px 16px; border:1px solid var(--border); border-radius:6px; background:var(--card); color:var(--text); cursor:pointer; font-size:.85rem; }
+  .btn:hover { background:var(--border); }
+  .section-title { font-size:1rem; font-weight:600; margin-bottom:12px; display:flex; align-items:center; gap:8px; }
+  .clock { font-size:.85rem; color:var(--muted); font-variant-numeric:tabular-nums; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>Polymarket Trading Bot</h1>
+    <div class="clock" id="clock"></div>
+  </div>
+  <div style="display:flex;gap:12px;align-items:center">
+    <button class="btn" onclick="refresh()">Refresh</button>
+    <div class="status">
+      <span class="dot on" id="dot"></span>
+      <span id="status">Online</span>
+    </div>
+  </div>
+</div>
+
+<div id="circuitBreaker" class="alert danger" style="display:none">CIRCUIT BREAKER ACTIVATED — Trading Halted</div>
+
+<div class="grid g6">
+  <div class="card"><div class="lbl">Balance</div><div class="val bl" id="balance">$0.00</div></div>
+  <div class="card"><div class="lbl">24h P&L</div><div class="val" id="pnl">$0.00</div></div>
+  <div class="card"><div class="lbl">Win Rate</div><div class="val" id="winRate">0%</div></div>
+  <div class="card"><div class="lbl">Drawdown</div><div class="val" id="dd">0%</div></div>
+  <div class="card"><div class="lbl">Open Positions</div><div class="val" id="positions">0</div></div>
+  <div class="card"><div class="lbl">Total Trades</div><div class="val" id="trades">0</div></div>
+</div>
+
+<div class="grid g6" style="margin-top:16px">
+  <div class="card"><div class="lbl">Wins</div><div class="val gn" id="wins">0</div></div>
+  <div class="card"><div class="lbl">Losses</div><div class="val rd" id="losses">0</div></div>
+  <div class="card"><div class="lbl">Consecutive Losses</div><div class="val yl" id="consec">0</div></div>
+  <div class="card"><div class="lbl">Max Drawdown</div><div class="val rd" id="maxDD">0%</div></div>
+  <div class="card"><div class="lbl">Peak Balance</div><div class="val bl" id="peak">$0.00</div></div>
+  <div class="card"><div class="lbl">Mode</div><div class="val" id="mode">Paper</div></div>
+</div>
+
+<div class="grid g2" style="margin-top:16px">
+  <div class="card">
+    <div class="section-title">Open Positions</div>
+    <div style="overflow-x:auto"><table><thead><tr><th>Market</th><th>Direction</th><th>Amount</th><th>Entry</th><th>Current</th><th>PnL</th></tr></thead>
+    <tbody id="posBody"><tr><td colspan="6" style="text-align:center;color:var(--muted)">None</td></tr></tbody></table></div>
+  </div>
+  <div class="card">
+    <div class="section-title">Recent Trades</div>
+    <div style="overflow-x:auto"><table><thead><tr><th>Time</th><th>Market</th><th>Side</th><th>Amount</th><th>PnL</th></tr></thead>
+    <tbody id="tradeBody"><tr><td colspan="5" style="text-align:center;color:var(--muted)">None</td></tr></tbody></table></div>
+  </div>
+</div>
+
+<script>
+const fmt = (n,f=2) => '$'+Number(n||0).toLocaleString('en',{minimumFractionDigits:f});
+const pct = v => (Number(v||0)*100).toFixed(1)+'%';
+
+async function refresh() {
+  try {
+    const d = await fetch('/api/dashboard/data',{signal:AbortSignal.timeout(8000)}).then(r=>r.json());
+    document.getElementById('balance').textContent = fmt(d.balance);
+    document.getElementById('trades').textContent = d.total_trades||0;
+    document.getElementById('wins').textContent = d.winning_trades||0;
+    document.getElementById('losses').textContent = d.losing_trades||0;
+    document.getElementById('winRate').textContent = pct(d.win_rate);
+    document.getElementById('consec').textContent = d.consecutive_losses||0;
+    document.getElementById('dd').textContent = pct(d.drawdown);
+    document.getElementById('maxDD').textContent = pct(d.max_drawdown);
+    document.getElementById('positions').textContent = d.open_positions_count||Object.keys(d.open_positions||{}).length;
+    document.getElementById('peak').textContent = fmt(d.peak_balance);
+    document.getElementById('mode').textContent = d.is_live ? 'LIVE' : 'Paper';
+    const pnl = document.getElementById('pnl');
+    pnl.textContent = fmt(d.daily_pnl);
+    pnl.className = 'val ' + ((d.daily_pnl||0)>=0?'gn':'rd');
+    document.getElementById('circuitBreaker').style.display = d.circuit_breaker_triggered?'flex':'none';
+    const dot = document.getElementById('dot');
+    dot.className = 'dot '+(d.circuit_breaker_triggered?'warn':'on');
+    document.getElementById('status').textContent = d.circuit_breaker_triggered?'Halted':'Online';
+  } catch(e) {
+    document.getElementById('dot').className = 'dot off';
+    document.getElementById('status').textContent = 'Offline';
+  }
+}
+setInterval(()=>document.getElementById('clock').textContent=new Date().toLocaleString(),1000);
+document.getElementById('clock').textContent=new Date().toLocaleString();
+refresh();
+setInterval(refresh, 5000);
+</script>
+</body>
+</html>

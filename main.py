@@ -6,9 +6,9 @@ import os
 import uvicorn
 import fastapi
 from fastapi import FastAPI, Request, HTTPException, Depends
-from data_pipeline import DataIngestionPipeline
-from feature_engineering import FeatureEngineer
-from strategies import StrategyEngine
+from src.data.data_pipeline import DataIngestionPipeline
+from src.data.feature_engineering import FeatureEngineer
+from src.trading.strategies import StrategyEngine
 from src.utils.logger import logger
 
 app = FastAPI(title="Polymarket AI Trading System")

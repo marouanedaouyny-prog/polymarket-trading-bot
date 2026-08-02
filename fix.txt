@@ -1,0 +1,476 @@
+# Polymarket Project Hardening Record
+
+Rescan date: 2026-06-15
+Working directory: C:\Users\HP\OneDrive\Desktop\New folder\polymarket
+
+## Executive Review
+
+The project is **not ready for real money**.
+
+The current hardening work is useful, but the claim of "10/10 production-ready architecture" is not accurate yet. The project is still a paper-trading candidate only after remaining fixes are completed.
+
+Current verdict:
+
+```text
+Real money: NO
+Production-grade: NO
+Paper trading: possible after fixes
+Strict enough: NO
+```
+
+---
+
+## Actions Taken
+
+### 1. Updated this hardening record
+
+`fix.txt` was rewritten to remove the inaccurate "10/10 production-ready architecture" claim.
+
+Current record now says:
+
+```text
+The project is not ready for real money.
+The current hardening record is useful but overstates readiness.
+Fix the remaining P0 items before claiming production-grade paper trading.
+```
+
+### 2. Fixed failing import test
+
+Old failing test:
+
+```text
+tests/test_trading.py:546
+ModuleNotFoundError: No module named 'src.trading.live_trading'
+```
+
+Fix applied:
+
+```python
+from src.trading.paper import PaperTradingEngine
+assert PaperTradingEngine is not None
+```
+
+Reason:
+
+```text
+The old live_trading module was deleted, so the test should verify the current paper trading module instead.
+```
+
+### 3. Removed static bullish fallback
+
+Location:
+
+```text
+agent_trading_system.py
+```
+
+Old behavior:
+
+```python
+return {
+    'sectors': ['crypto', 'bitcoin', 'ethereum', 'solana'],
+    'sentiment_score': 0.85,
+    'confidence_boost': 10,
+    'trending': [
+        {'sector': 'crypto', 'sentiment': 'bullish', 'confidence': 85},
+        {'sector': 'bitcoin', 'sentiment': 'bullish', 'confidence': 88},
+    ]
+}
+```
+
+New behavior:
+
+```text
+MiroFish unavailable = no intelligence.
+No intelligence = no trade.
+```
+
+This removes the dangerous bullish fallback.
+
+### 4. Fixed research_agent() undefined variables
+
+Fixed variables that were previously undefined or inconsistent:
+
+```text
+is_crypto
+confidence
+conf
+```
+
+The research agent now:
+
+```text
+Loads market prices before requesting intelligence.
+Skips markets without valid prices.
+Skips failed sentiment analysis.
+Skips unavailable MiroFish intelligence.
+Requires a trained ML model.
+Calculates EV and edge before adding an opportunity.
+Returns structured opportunities with price, volume, edge, confidence, sector, sentiment_score, and ev.
+```
+
+### 6. Added external signal-webhook integration layer
+
+Added reusable webhook patterns from `stock-market-signal-automation` without merging the whole external repo.
+
+New files:
+
+```text
+src/events/models.py
+src/events/delivery_log.py
+src/events/webhook_receiver.py
+src/api/routers/signals.py
+```
+
+Added API routes:
+
+```text
+POST /signals/webhook
+GET /signals/deliveries
+GET /signals/latest
+```
+
+What it adds:
+
+```text
+Signed webhook verification
+Timestamp replay protection
+Delivery ID duplicate detection
+Append-only delivery log at data/events/deliveries.jsonl
+Polymarket signal normalization
+Stock signal normalization for KamdenAI-style payloads
+No-pick day handling
+Latest delivery inspection
+```
+
+Security behavior:
+
+```text
+If POLYMARKET_SIGNAL_WEBHOOK_SECRET or KAMDENAI_SIGNING_SECRET is set, signature verification is required.
+If no signing secret is configured, the receiver accepts payloads for local testing only.
+Stale or invalid signed payloads return 401.
+Duplicate delivery IDs are stored but marked duplicate=true.
+```
+
+This improves the project’s auditability, but it does not replace Polymarket EV, model validation, or resolved-outcome proof.
+
+### 5. Centralized risk checks
+
+`risk_agent()` now checks all hard rules before delegating to `DynamicRiskManager`.
+
+Current hard checks:
+
+```text
+price range
+minimum volume
+minimum EV
+minimum edge
+minimum confidence
+minimum balance for 2% risk
+maximum daily trades
+daily loss limit
+DynamicRiskManager approval
+```
+
+### 7. Protected lead_agent() from missing intelligence
+
+Old behavior:
+
+```python
+print(f"[LEAD] Market Intelligence: {intel['sentiment_score']:.0%} bullish\n")
+```
+
+New behavior:
+
+```text
+If intelligence is unavailable, print a no-trade circuit breaker message.
+Do not crash.
+Do not trade without intelligence.
+```
+
+### 8. Protected candidate intelligence processing
+
+Old behavior:
+
+```python
+opp['confidence'] = min(opp['confidence'] + intel.get('confidence_boost', 10), 100)
+```
+
+New behavior:
+
+```text
+If intelligence is unavailable or failed, set confidence to -1.
+Risk checks reject the opportunity.
+No bullish default is applied.
+```
+
+### 9. Cleaned trailing whitespace
+
+Cleaned trailing whitespace in:
+
+```text
+agent_trading_system.py
+full_system_orchestrator.py
+src/api/main.py
+src/utils/config.py
+tests/test_trading.py
+```
+
+---
+
+## Verified Test Results
+
+### Main test suite
+
+Command:
+
+```bash
+python -m pytest tests -q
+```
+
+Result:
+
+```text
+90 passed, 4 warnings
+```
+
+Status:
+
+```text
+PASS
+```
+
+### Whitespace check
+
+Command:
+
+```bash
+git diff --check
+```
+
+Result:
+
+```text
+No output
+```
+
+Status:
+
+```text
+PASS
+```
+
+### Compile check
+
+Command:
+
+```bash
+python -m compileall -q agent_trading_system.py tests/test_trading.py src/utils/config.py src/trading/paper.py
+```
+
+Result:
+
+```text
+No output
+```
+
+Status:
+
+```text
+PASS
+```
+
+### Dependency check
+
+Command:
+
+```bash
+python -m pip check
+```
+
+Result:
+
+```text
+gtts requires click<8.2, but you have click 8.3.1
+langchain-openai requires openai<3.0.0,>=2.26.0, but you have openai 1.109.1
+litellm requires openai>=2.8.0, but you have openai 1.109.1
+seleniumbase requires pytest==9.0.3, but you have pytest 8.4.2
+seleniumbase requires setuptools>=82.0.1, but you have setuptools 81.0.0
+seleniumbase requires websockets>=16.0, but you have websockets 15.0.1
+```
+
+Status:
+
+```text
+FAIL
+```
+
+Meaning:
+
+```text
+The Python environment still has package conflicts.
+Use a clean virtual environment before production.
+```
+
+---
+
+## Current Code Findings Still Remaining
+
+### 1. No paper trading ledger is implemented
+
+Current paper-trading proof is not complete because there is no verified ledger of:
+
+```text
+entry
+market_id
+canonical_id
+selected_outcome
+entry_price
+model_probability
+EV
+edge
+bet size
+fees
+slippage
+resolution
+actual_outcome
+realized_pnl
+```
+
+Required behavior:
+
+```text
+Only resolved real outcomes count as proof.
+Simulated wins/losses do not count.
+```
+
+### 2. Risk checks are stronger but still need tests
+
+`risk_agent()` now centralizes hard checks, but tests should prove:
+
+```text
+$50 balance allows $1 bet.
+$49 balance blocks $1 bet.
+$20 balance blocks $1 bet.
+EV below threshold is rejected.
+Price above max is rejected.
+Volume below minimum is rejected.
+Daily loss limit blocks trading.
+Max daily trades blocks trading.
+```
+
+### 3. Random simulation still exists in the repository
+
+`random.random()` still appears in multiple files, including:
+
+```text
+realistic_wealth_projection.py
+sim_4h_real_data.py
+scripts/demo/*.py
+scripts/tests/auto_test_trader.py
+scripts/bots/enhanced_bot.py
+```
+
+Important distinction:
+
+```text
+Random simulation may be acceptable for projections or demos.
+Random simulation must not be used as proof of paper-trading performance.
+```
+
+### 4. src/tests is still missing
+
+Command:
+
+```bash
+python -m pytest src/tests -q
+```
+
+Result:
+
+```text
+ERROR: file or directory not found: src/tests
+```
+
+Required fix:
+
+```text
+Create replacement tests under src/tests for API, risk, execution, paper ledger, and prediction modules.
+```
+
+---
+
+## Required Fixes
+
+### P0: Must fix before claiming hardening
+
+1. Add tests for EV, edge, confidence, and risk sizing.
+2. Add tests for $50 minimum balance and $20 rejection.
+3. Add tests for no-trade behavior when intelligence fails.
+4. Add tests for max daily trades and daily loss limit.
+5. Add a real paper trading ledger.
+6. Resolve dependency conflicts in a clean virtual environment.
+7. Recreate `src/tests` with replacement tests.
+
+### P1: Required before real money
+
+1. Collect 500-1000 resolved paper trades.
+2. Use real Polymarket markets only.
+3. Use real resolved outcomes only.
+4. Include fees and slippage.
+5. Track profit factor, max drawdown, risk of ruin, and daily loss.
+6. Add kill switch.
+7. Add health checks.
+8. Add authentication.
+9. Add audit logs.
+10. Resolve dependency conflicts in a clean virtual environment.
+
+---
+
+## Real-Money Readiness Requirements
+
+Do not use real money until all of these are true:
+
+```text
+All tests pass.
+pip check is clean.
+No random simulation is used as paper-trading proof.
+No bullish fallback exists.
+EV formula has tests.
+Risk checks are centralized.
+2% risk is proven by tests.
+Paper ledger exists.
+All trades are logged.
+All outcomes are resolved from real Polymarket data.
+API authentication works.
+Kill switch works.
+Live order blocking works.
+```
+
+Performance requirements:
+
+```text
+500-1000 resolved paper trades
+at least 30 days of paper trading
+profit factor > 1.30
+max drawdown < 10% to 15%
+risk of ruin < 5%
+no single day loss > 5%
+lower confidence bound of EV > 0
+positive net PnL after fees and slippage
+```
+
+Capital requirement:
+
+```text
+If minimum order is $1, minimum balance must be $50.
+$50 * 2% = $1.
+```
+
+Final verdict:
+
+```text
+The project is not ready for real money.
+The hardening actions taken are real improvements.
+The project is still not production-grade until ledger, tests, dependencies, and resolved-trade validation are complete.
+```

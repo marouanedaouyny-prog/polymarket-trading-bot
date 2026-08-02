@@ -1,20 +1,18 @@
 {
-  "accuracy": 0.7107438016528925,
-  "f1_score": 0.8205128205128205,
-  "brier_score": 0.20077150642305994,
-  "roc_auc": 0.5799003322259135,
-  "confusion_matrix": [
-    [
-      6,
-      29
-    ],
-    [
-      6,
-      80
-    ]
+  "brier_score": 1e-06,
+  "roc_auc": null,
+  "n_train": 40,
+  "n_test": 10,
+  "target_brier": 0.15,
+  "meets_target": true,
+  "feature_names": [
+    "yes_price",
+    "log_volume",
+    "days_to_close_norm",
+    "price_velocity",
+    "bid_ask_spread",
+    "is_crypto",
+    "question_length_norm"
   ],
-  "avg_prediction": 0.7127685937871124,
-  "simulated_expectancy": 2.563842968935562,
-  "samples": 121,
-  "timestamp": "2026-06-13T21:22:44.949495"
+  "timestamp": "2026-06-28T20:52:09.926049"
 }

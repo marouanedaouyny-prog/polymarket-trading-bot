@@ -18,22 +18,23 @@ def run_simulation(name, win_rate, starting_balance=20, trades=100, iterations=1
                 balance = 0
                 break
                 
-            # 1. Position Sizing (Fixed 10% risk or $5 min)
+            # 1. Position Sizing
             bet = max(2, balance * 0.15)
             if bet > balance: bet = balance
             
-            # 2. Market Friction (Slippage)
-            # As balance grows, slippage increases because we move the market
-            # $20 -> 0.5% slippage, $1000 -> 3% slippage, $10k -> 10% slippage
-            slippage_pct = 0.005 + (min(balance, 10000) / 100000)
+            # 2. Market Friction (Slippage Model)
+            # Higher volume trades have higher slippage
+            # volume_impact = trade_size / market_depth (proxy)
+            market_depth = 50000 # Assume $50k depth per market
+            slippage_impact = (bet / market_depth) * 0.05 # 5% impact ratio
+            slippage_pct = 0.005 + slippage_impact
             
             # 3. Fees (Polymarket + Gas)
             fee_pct = 0.02 # 2% 
             
             # 4. Outcome
             if random.random() < win_rate:
-                # WIN: Assume average odds of 1.8x (buying at $0.55)
-                # Profit = bet * (multiplier - 1) - slippage - fees
+                # WIN
                 profit = (bet * 0.8) * (1 - slippage_pct) * (1 - fee_pct)
                 balance += profit
             else:

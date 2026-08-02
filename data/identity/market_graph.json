@@ -11576,5 +11576,75 @@
       "created_at": "2026-06-13"
     },
     "resolved_outcome": null
+  },
+  "PM-15538031": {
+    "identifiers": {
+      "id": "1",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will BTC hit 100k?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": null
+  },
+  "PM-253ED752": {
+    "identifiers": {
+      "id": "540844",
+      "conditionId": "0xbb57ccf5853a85487bc3d83d04d669310d28c6c810758953b9d9b91d1aee89d2",
+      "questionID": "0x7e4ff7b7fdfe7d1fbc6c0e2a7626ae4fc8d62f3848a5e601d511a51bdfa51f09",
+      "slug": "will-bitcoin-hit-1m-before-gta-vi-872-424"
+    },
+    "metadata": {
+      "question": "Will bitcoin hit $1m before GTA VI?",
+      "description": "This market will resolve to \"Yes\" if any Binance 1 minute candle for Bitcoin (BTCUSDT) has a final \"High\" price of $1,000,000 or higher before Grand Theft Auto VI is officially released in the US. Otherwise, this market will resolve to \"No\".\n\nIf neither occurs by July 31, 2026, 11:59 PM ET, this market will resolve to 50-50.\n\nFor the purposes of this market, \"release\" refers to the game becoming publicly available for purchase or download in the US. Early access, beta versions, other forms of pr",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": null
+  },
+  "PM-CA5E6AAE": {
+    "identifiers": {
+      "id": "559652",
+      "conditionId": "0x0f49db97f71c68b1e42a6d16e3de93d85dbf7d4148e3f018eb79e88554be9f75",
+      "questionID": "0x2c3d7e0eee6f058be3006baabf0d54a07da254ba47fe6e3e095e7990c7814700",
+      "slug": "will-gavin-newsom-win-the-2028-democratic-presidential-nomination-568"
+    },
+    "metadata": {
+      "question": "Will Gavin Newsom win the 2028 Democratic presidential nomination?",
+      "description": "This market will resolve to \u201cYes\u201d if the named individual wins and accepts the 2028 nomination of the Democratic Party for U.S. president. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThe resolution source for this market will be a consensus of official Democratic Party sources.\n\nAny replacement of the democratic nominee before election day will not change the resolution of the market.",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": null
+  },
+  "PM-756F6843": {
+    "identifiers": {
+      "id": "559653",
+      "conditionId": "0xe6bcc2f1dd025ce5e1833190f7c60a71171c94f805df55b9ab0ded695ec93565",
+      "questionID": "0x2c3d7e0eee6f058be3006baabf0d54a07da254ba47fe6e3e095e7990c7814701",
+      "slug": "will-alexandria-ocasio-cortez-win-the-2028-democratic-presidential-nomination-653"
+    },
+    "metadata": {
+      "question": "Will Alexandria Ocasio-Cortez win the 2028 Democratic presidential nomination?",
+      "description": "This market will resolve to \u201cYes\u201d if the named individual wins and accepts the 2028 nomination of the Democratic Party for U.S. president. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThe resolution source for this market will be a consensus of official Democratic Party sources.\n\nAny replacement of the democratic nominee before election day will not change the resolution of the market.",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": null
+  },
+  "PM-22560CCA": {
+    "identifiers": {
+      "id": "559655",
+      "conditionId": "0xd65891729ce093cc12236856837eba1a0872fc7998fd4294c21346f7db68079c",
+      "questionID": "0x2c3d7e0eee6f058be3006baabf0d54a07da254ba47fe6e3e095e7990c7814703",
+      "slug": "will-josh-shapiro-win-the-2028-democratic-presidential-nomination-977"
+    },
+    "metadata": {
+      "question": "Will Josh Shapiro win the 2028 Democratic presidential nomination?",
+      "description": "This market will resolve to \u201cYes\u201d if the named individual wins and accepts the 2028 nomination of the Democratic Party for U.S. president. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThe resolution source for this market will be a consensus of official Democratic Party sources.\n\nAny replacement of the democratic nominee before election day will not change the resolution of the market.",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": null
   }
 }

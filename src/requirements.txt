@@ -5,5 +5,9 @@ asyncpg>=0.29.0
 asyncio
 async-timeout
 python-dotenv>=0.19.0
-websockets>=10.0
+websockets>=13,<16
 redis>=4.5.0
+pytest==9.0.3
+click>=7.1,<8.2
+openai>=2.26.0,<3.0.0
+setuptools>=82.0.1

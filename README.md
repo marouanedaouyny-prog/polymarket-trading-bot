@@ -120,9 +120,58 @@ polymarket/
 
 ## Performance
 
-- **Win Rate**: 95-100% (paper trading)
-- **Total Trades Tested**: 1000+
-- **Profit**: $1.7M+ simulated
+**Important Note**: All performance metrics are based on paper trading simulations and have not been validated with real market conditions. Past performance does not guarantee future results.
+
+- **Paper Trading Win Rate**: 70-90% range observed in simulations
+- **Simulated Trades**: 1000+ paper trading simulations
+- **Simulated Profit**: Varies based on market conditions and configuration
+
+**⚠️ Risk Disclosure**: This system is for educational and research purposes only. No performance claims are guaranteed. Real trading involves significant risk of loss, including loss of entire capital. Always test thoroughly with small positions before considering any real money trading. The system has not been validated with real market conditions and may perform differently in live markets.
+
+## 🛡️ Comprehensive Risk Factors
+
+### Market Risks:
+- **Liquidity Risk**: Prediction markets may have low liquidity, making it difficult to enter/exit positions
+- **Volatility Risk**: Rapid price movements can trigger unexpected losses
+- **Slippage Risk**: Difference between expected and actual execution price
+- **Gap Risk**: Prices can jump significantly between trades
+
+### System Risks:
+- **Model Risk**: AI predictions may be incorrect or based on flawed assumptions
+- **Data Risk**: Incorrect or delayed market data can lead to bad decisions
+- **Technical Risk**: Software bugs, crashes, or connectivity issues
+- **Execution Risk**: Orders may not execute as expected
+
+### Operational Risks:
+- **Configuration Risk**: Improper settings can lead to excessive risk-taking
+- **Monitoring Risk**: Lack of oversight can allow problems to escalate
+- **Compliance Risk**: May not meet regulatory requirements for trading systems
+- **Security Risk**: Potential for unauthorized access or data breaches
+
+### Financial Risks:
+- **Leverage Risk**: If using leverage, losses can exceed initial capital
+- **Margin Risk**: Margin calls can force liquidation at unfavorable prices
+- **Counterparty Risk**: Exchange or broker may fail to honor obligations
+- **Currency Risk**: If trading across different currencies
+
+### Psychological Risks:
+- **Overconfidence**: Trusting the system too much without proper validation
+- **FOMO**: Fear of missing out leading to impulsive decisions
+- **Revenge Trading**: Trying to recover losses with aggressive strategies
+- **Confirmation Bias**: Ignoring warning signs that contradict beliefs
+
+## 📋 Safety Guidelines
+
+1. **Never trade with money you cannot afford to lose**
+2. **Start with paper trading to validate the system**
+3. **Use minimal position sizes when beginning live trading**
+4. **Monitor all trades manually at first**
+5. **Set conservative risk limits**
+6. **Regularly review and audit performance**
+7. **Have emergency stop procedures in place**
+8. **Never override safety mechanisms**
+9. **Keep emotions out of trading decisions**
+10. **Be prepared for total loss of capital**
 
 ## Testing
 

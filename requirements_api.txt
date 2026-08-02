@@ -1,9 +1,11 @@
-# Backend API dependencies
+# =============================================================================
+# API-specific dependencies
+# =============================================================================
 fastapi>=0.104.0
 uvicorn>=0.24.0
 pydantic>=2.0.0
 aiohttp>=3.9.0
-websockets>=12.0
+websockets>=13,<16
 slowapi>=0.1.9
 
 # Data processing
@@ -18,3 +20,9 @@ redis>=5.0.0
 # Utilities
 python-dotenv>=1.0.0
 requests>=2.31.0
+
+# Testing
+pytest==9.0.3
+click>=7.1,<8.2
+openai>=2.26.0,<3.0.0
+setuptools>=82.0.1

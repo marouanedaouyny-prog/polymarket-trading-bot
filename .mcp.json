@@ -19,6 +19,17 @@
         "CLAUDE_FLOW_MEMORY_BACKEND": "hybrid"
       },
       "autoStart": false
+    },
+    "stitch": {
+      "command": "npx",
+      "args": [
+        "@_davideast/stitch-mcp",
+        "proxy"
+      ],
+      "env": {
+        "STITCH_API_KEY": "YOUR_STITCH_API_KEY_HERE"
+      },
+      "autoStart": false
     }
   }
 }

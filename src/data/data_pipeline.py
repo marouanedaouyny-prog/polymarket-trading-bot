@@ -4,10 +4,11 @@
 import asyncio
 import json
 from typing import Dict, List
-from data.polymarket_client import PolymarketClient
+from src.data.polymarket_client import PolymarketClient
 from datetime import datetime
 
 from src.utils.logger import logger
+
 
 class DataIngestionPipeline:
     def __init__(self, api_key: str = None):

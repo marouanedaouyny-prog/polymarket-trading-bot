@@ -58,8 +58,8 @@ class Orchestrator:
         self.start_service("Frontend", ["npm.cmd", "run", "dev"] if sys.platform == "win32" else ["npm", "run", "dev"], cwd=self.frontend_dir)
         time.sleep(2)
 
-        # 3. Start Trading Bot ($20 Live Training Mode)
-        self.start_service("TradingBot", [sys.executable, "live_sim_20.py"])
+        # 3. Start Trading Bot ($50 Live Training Mode)
+        self.start_service("TradingBot", [sys.executable, "live_sim_50.py"])
 
         self.log("=" * 60)
         self.log("FULL TRADING STACK RUNNING")
@@ -71,6 +71,10 @@ class Orchestrator:
             for name, data in self.processes.items():
                 p = data['process']
                 if p.poll() is not None:
+                    if p.returncode == 0:
+                        self.log(f"✅ {name} finished successfully.")
+                        continue
+
                     self.log(f"⚠️ {name} stopped unexpectedly (Exit code: {p.returncode})")
                     if data['starts'] < 5:
                         self.log(f"Attempting to restart {name} (Attempt {data['starts']+1})...")

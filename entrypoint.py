@@ -4,7 +4,7 @@ sys.stdout = sys.stderr
 print("=== STARTUP ===", flush=True)
 
 try:
-    from api.main import app
+    from src.api.main import app
     print("IMPORT OK", flush=True)
 except Exception as e:
     print(f"IMPORT FAILED: {e}", flush=True)

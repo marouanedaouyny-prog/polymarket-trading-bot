@@ -10,23 +10,16 @@ alerting:
 rule_files: []
 
 scrape_configs:
-  - job_name: 'polymarket-trading'
+  - job_name: 'polymarket-api'
     static_configs:
-      - targets: ['polymarket-trading:8000']
+      - targets: ['api:7860']
     metrics_path: '/metrics'
+    scheme: http
 
   - job_name: 'prometheus'
     static_configs:
       - targets: ['localhost:9090']
 
-  - job_name: 'node'
-    static_configs:
-      - targets: ['node-exporter:9100']
-
   - job_name: 'redis'
     static_configs:
-      - targets: ['redis-exporter:9121']
-
-  - job_name: 'postgres'
-    static_configs:
-      - targets: ['postgres-exporter:9187']
+      - targets: ['redis:6379']

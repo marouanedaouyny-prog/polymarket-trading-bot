@@ -45,12 +45,13 @@ class MiroFishClient:
 
         try:
             resp = self.session.post(url, data=data, files=upload_files, timeout=self.timeout)
-            for _, f in upload_files:
-                f[1].close()
             if resp.status_code == 200:
                 return resp.json().get("data")
-        except requests.RequestException as e:
-            pass
+        except requests.RequestException:
+            return None
+        finally:
+            for _, f in upload_files:
+                f[1].close()
         return None
 
     def create_project_from_text(self, text: str, simulation_requirement: str,
@@ -65,8 +66,7 @@ class MiroFishClient:
                 project_name=project_name,
             )
         finally:
-            if tmp_path.exists():
-                tmp_path.unlink()
+            tmp_path.unlink(missing_ok=True)
 
     def build_graph(self, project_id: str, graph_name: str = None,
                     force: bool = False) -> Optional[dict]:
