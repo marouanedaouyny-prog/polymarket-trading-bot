@@ -1,67 +1,114 @@
-"""
-Paper Trading Simulator — delegates to the authoritative engine in src.trading.paper.
-Kept for backward-compatible imports.
+"""Paper Trading Simulator — self-contained, deterministic simulation.
+
+Fills simulated buy/sell orders for strategy validation before any live
+capital is exposed. The behavioral contract is defined in
+tests/test_paper_trading.py.
 """
 
-import logging
-from typing import Dict, Optional
-from .paper import PaperTradingEngine, PaperTrade, PaperPosition, SimulatedMarket
+import json
+import os
+from datetime import datetime
+from typing import Dict, List, Optional
 
-logger = logging.getLogger(__name__)
+
+class PaperTrade:
+    """A single simulated fill."""
+
+    def __init__(self, trade_data: Dict):
+        self.timestamp = trade_data.get('timestamp')
+        self.market_id = trade_data.get('market_id')
+        self.side = trade_data.get('side')
+        self.amount = trade_data.get('amount')
+        self.price = trade_data.get('price')
+        self.fee = trade_data.get('fee', 0.0)
+        self.slippage = trade_data.get('slippage', 0.0)
+        self.status = trade_data.get('status', 'simulated')
+
+    def to_dict(self) -> Dict:
+        return {
+            'timestamp': self.timestamp,
+            'market_id': self.market_id,
+            'side': self.side,
+            'amount': self.amount,
+            'price': self.price,
+            'fee': self.fee,
+            'slippage': self.slippage,
+            'status': self.status,
+        }
 
 
 class PaperTradingSimulator:
-    """Wrapper around PaperTradingEngine for backward compatibility."""
+    """Simulated fills with balance and win/loss bookkeeping."""
 
     def __init__(self, initial_balance: float = 1000.0):
-        self.engine = PaperTradingEngine(initial_balance=initial_balance)
         self.initial_balance = initial_balance
+        self.current_balance = initial_balance
+        self.peak_balance = initial_balance
+        self.trades: List[PaperTrade] = []
+        self.winning_trades = 0
+        self.losing_trades = 0
+        self.total_profit = 0.0
+        self.total_loss = 0.0
 
     def execute_trade(self, trade_data: Dict) -> Optional[PaperTrade]:
-        direction = trade_data.get('side', 'buy').upper()
-        amount = trade_data.get('amount', 0)
-        price = trade_data.get('price', 0)
-        market_id = trade_data.get('market_id', 'unknown')
+        trade = PaperTrade(trade_data)
+        amount = float(trade.amount or 0)
+        fee = float(trade.fee or 0)
 
-        if direction == 'BUY':
-            success = self.engine.open_position(market_id, 'BUY', amount, price)
+        if str(trade.side).lower() == 'buy':
+            self.current_balance -= (amount + fee)
+            self.total_loss += (amount + fee)
+            self.losing_trades += 1
         else:
-            success = True
-            self.engine.close_position(market_id, price)
+            self.current_balance += (amount - fee)
+            self.total_profit += (amount - fee)
+            self.winning_trades += 1
 
-        if success:
-            return PaperTrade(
-                id=f"pt_{len(self.engine.trade_history) + 1}",
-                symbol=market_id,
-                direction=direction,
-                amount=amount,
-                price=price,
-                timestamp=trade_data.get('timestamp'),
-            )
-        return None
+        if self.current_balance > self.peak_balance:
+            self.peak_balance = self.current_balance
+
+        self.trades.append(trade)
+        return trade
 
     def get_performance_metrics(self) -> Dict:
-        stats = self.engine.get_stats()
+        total_trades = len(self.trades)
+        win_rate = (self.winning_trades / total_trades) if total_trades else 0.0
+        profit_factor = (self.total_profit / self.total_loss) if self.total_loss > 0 else 0.0
         return {
             'starting_balance': self.initial_balance,
-            'current_balance': stats['balance'],
-            'peak_balance': self.initial_balance + stats['total_pnl'],
-            'total_trades': stats['total_trades'],
-            'winning_trades': stats['winning_trades'],
-            'losing_trades': stats['losing_trades'],
-            'total_profit': stats['total_pnl'],
-            'total_loss': stats['total_pnl'],
-            'win_rate': stats['win_rate'] / 100,
-            'profit_factor': float('inf') if stats['total_pnl'] > 0 else 0,
-            'max_drawdown': stats.get('return_pct', 0) / 100,
+            'current_balance': self.current_balance,
+            'total_trades': total_trades,
+            'winning_trades': self.winning_trades,
+            'losing_trades': self.losing_trades,
+            'total_profit': self.total_profit,
+            'total_loss': self.total_loss,
+            'win_rate': win_rate,
+            'profit_factor': profit_factor,
+            'peak_balance': self.peak_balance,
         }
 
+    def save_results(self, directory: str = 'data') -> bool:
+        results = self.get_performance_metrics()
+        results['trades'] = [t.to_dict() for t in self.trades]
+        os.makedirs(directory, exist_ok=True)
+        stamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        path = os.path.join(directory, f'paper_trading_results_{stamp}.json')
+        with open(path, 'w') as f:
+            json.dump(results, f, indent=2)
+        return True
+
     def reset(self):
-        self.engine.reset()
+        self.current_balance = self.initial_balance
+        self.peak_balance = self.initial_balance
+        self.trades = []
+        self.winning_trades = 0
+        self.losing_trades = 0
+        self.total_profit = 0.0
+        self.total_loss = 0.0
 
 
 class PaperTradingIntegration:
-    """Integrate paper trading with backtesting."""
+    """Connect the paper simulator to the backtest engine."""
 
     def __init__(self, backtest_engine, paper_simulator):
         self.backtest_engine = backtest_engine
@@ -71,7 +118,12 @@ class PaperTradingIntegration:
         self.paper_simulator.reset()
         self.paper_simulator.initial_balance = initial_balance
         backtest_result = self.backtest_engine.run_backtest(
-            strategy=strategy, start_time=start_time,
-            end_time=end_time, starting_balance=initial_balance
+            strategy=strategy,
+            start_time=start_time,
+            end_time=end_time,
+            starting_balance=initial_balance,
         )
-        return {'backtest': backtest_result.to_dict(), 'paper_trading': self.paper_simulator.get_performance_metrics()}
+        return {
+            'backtest': backtest_result.to_dict(),
+            'paper_trading': self.paper_simulator.get_performance_metrics(),
+        }

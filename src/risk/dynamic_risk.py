@@ -22,18 +22,25 @@ class DynamicRiskManager:
     - Circuit breakers for catastrophic loss
     """
 
+    _DEFAULTS = {
+        'max_position_pct': 0.10,        # 10% max per position
+        'max_daily_trades': 5,           # 5 trades per day max
+        'stop_loss_pct': 0.15,           # 15% stop-loss
+        'take_profit_pct': 0.50,         # 50% take-profit
+        'daily_loss_limit': 0.20,        # 20% daily loss cap (README-documented ceiling)
+        'min_edge': 0.08,                # 8% minimum edge
+        'min_confidence': 85,            # 85% min confidence
+        'max_drawdown_limit': 0.25,      # 25% circuit breaker
+    }
+
     def __init__(self, base_config=None):
-        # Base risk configuration — CONSERVATIVE for real money
-        self.base = base_config or {
-            'max_position_pct': 0.10,        # 10% max per position
-            'max_daily_trades': 5,           # 5 trades per day max
-            'stop_loss_pct': 0.15,           # 15% stop-loss
-            'take_profit_pct': 0.50,         # 50% take-profit
-            'daily_loss_limit': 0.05,        # 5% daily loss cap
-            'min_edge': 0.08,                # 8% minimum edge
-            'min_confidence': 85,            # 85% min confidence
-            'max_drawdown_limit': 0.25,      # 25% circuit breaker
-        }
+        # Base risk configuration — CONSERVATIVE for real money.
+        # Callers may pass a partial config; merge over defaults so no key is
+        # ever missing at runtime (this also keeps circuit breakers safe when
+        # a caller supplies only a subset of limits).
+        self.base = dict(self._DEFAULTS)
+        if base_config:
+            self.base.update(base_config)
 
         # Current adaptive settings (starts as copy of base)
         self.current = self.base.copy()
@@ -234,6 +241,51 @@ class DynamicRiskManager:
         positions_array = np.array(positions)
         portfolio_variance = positions_array.T @ covariance_matrix @ positions_array
         return float(portfolio_variance)
+
+    def mean_variance_optimization(self, expected_returns, covariance_matrix):
+        """Mean-variance optimization via Sharpe maximization.
+
+        Returns weights that sum to 1 and stay in [0, 1]. This is a portfolio
+        allocation (fractions of portfolio), not a per-trade position size, so
+        it is not capped by max_position_pct.
+        """
+        from scipy.optimize import minimize
+
+        expected_returns = np.asarray(expected_returns, dtype=float)
+        covariance_matrix = np.asarray(covariance_matrix, dtype=float)
+        n = len(expected_returns)
+
+        def neg_sharpe(w):
+            ret = float(np.dot(w, expected_returns))
+            var = float(w @ covariance_matrix @ w)
+            vol = np.sqrt(var) if var > 0 else 0.0
+            return -(ret / vol) if vol > 0 else 1e9
+
+        bounds = [(0.0, 1.0)] * n
+        constraints = ({'type': 'eq', 'fun': lambda w: np.sum(w) - 1.0})
+        init = np.full(n, 1.0 / n)
+
+        result = minimize(
+            neg_sharpe, init, method='SLSQP',
+            bounds=bounds, constraints=constraints,
+            options={'maxiter': 1000},
+        )
+
+        weights = result.x
+        weights = np.maximum(weights, 0.0) / max(np.sum(weights), 1e-12)
+        weights = weights / (np.sum(weights) or 1.0)
+
+        port_return = float(np.dot(weights, expected_returns))
+        variance = float(weights @ covariance_matrix @ weights)
+        risk = float(np.sqrt(max(variance, 0.0)))
+        sharpe = port_return / risk if risk > 0 else 0.0
+
+        return {
+            'weights': [float(w) for w in np.round(weights, 6)],
+            'expected_return': port_return,
+            'risk': risk,
+            'sharpe_ratio': sharpe,
+        }
 
     def monte_carlo_simulation(self, current_balance, n_simulations=1000, n_days=30):
         """Run Monte Carlo simulation to estimate risk of ruin."""
