@@ -1,0 +1,29 @@
+C:\Users\hp\AppData\Roaming\Python\Python314\site-packages\pytest_asyncio\plugin.py:299: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the "fixture" caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to "function" scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.14.6, pytest-9.2.0, pluggy-1.6.0 -- C:\Python314\python.exe
+rootdir: C:\Users\hp\Desktop\New folder\polymarket
+configfile: pytest.ini (WARNING: ignoring pytest config in pyproject.toml!)
+plugins: anyio-4.15.1, Faker-40.28.1, langsmith-0.10.15, asyncio-1.4.0, cov-7.1.0, mock-3.15.1
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 22 items
+
+tests/test_integration_pipeline.py::TestFilterRiskOrderPipeline::test_filter_markets_returns_valid_subset PASSED [  4%]
+tests/test_integration_pipeline.py::TestFilterRiskOrderPipeline::test_risk_manager_approves_good_opportunity PASSED [  9%]
+tests/test_integration_pipeline.py::TestFilterRiskOrderPipeline::test_order_manager_records_paper_trade PASSED [ 13%]
+tests/test_integration_pipeline.py::TestFilterRiskOrderPipeline::test_full_buy_sell_pnl_flow PASSED [ 18%]
+tests/test_integration_pipeline.py::TestFilterRiskOrderPipeline::test_partial_fill_tracking PASSED [ 22%]
+tests/test_integration_pipeline.py::TestFilterRiskOrderPipeline::test_position_reconciliation PASSED [ 27%]
+tests/test_readiness_gate.py::test_missing_verdict_blocks PASSED         [ 31%]
+tests/test_readiness_gate.py::test_failed_verdict_blocks PASSED          [ 36%]
+tests/test_readiness_gate.py::test_stale_verdict_blocks PASSED           [ 40%]
+tests/test_readiness_gate.py::test_future_verdict_blocks PASSED          [ 45%]
+tests/test_readiness_gate.py::test_invalid_json_blocks PASSED            [ 50%]
+tests/test_readiness_gate.py::test_fresh_passing_verdict_allows PASSED   [ 54%]
+tests/test_readiness_gate.py::test_order_manager_live_without_verdict_blocks PASSED [ 59%]
+tests/test_readiness_gate.py::test_order_manager_paper_ignores_gate PASSED [ 63%]
+tests/test_security_fixes.py::TestSecurityFixes::test_api_key_validation PASSED [ 68%]
+tests/test_security_fixes.py::TestSecurityFixes::test_input_validation PASSED [ 72%]
+tests/test_security_fixes.py::TestSecurityFixes::test_thread_safety 

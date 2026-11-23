@@ -1,0 +1,5 @@
+# S0 REQUEST — verbatim goal
+
+/goal /replica-build /replica-skill:replica-diff /replica-skill:replica-test https://vembit.com/bots/desk scan that bot agent on that site, and also grok bot idea on the trading and add them on that project and itegrate them with it for my project and search on the web and social media how we can upgrade that project and secure to add my money and be sure from its not lose them easy. /arena-skill:arena stay loop untill find the best structure and been the project trusted to put my money in
+
+Intent: Integrate Vembit bot-desk behaviors + Grok/X trading-agent ideas into the Polymarket trading-automation project, with fail-closed capital protection, paper-first validation, web/social research on upgrades and security, so the project is trustworthy enough to put money into. Constraints: clean-room public behavior only (Vembit Terms §12 — no JS bundle / network-call / source inspection), LLM output never authorizes or sizes live trades, no private keys/secrets stored, no unsupported profit claims.

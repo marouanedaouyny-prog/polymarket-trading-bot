@@ -1,0 +1,3 @@
+# S0 REQUEST — verbatim goal
+
+/user goal (session history, re-affirmed): build a pro interface with pro system trading for the Polymarket prediction-market trading-automation project; paper-first, trustworthy (like grok bot trading), prominent SIMULATED/PAPER label, real-time polling, market cards, equity curve, trade ledger, positions table, risk readouts, kill-switch status, mobile-responsive, dark theme. Direct social-media access (instagram.com/seb.ai, youtube.com, reddit.com/r/GrokBot) is blocked by the auto-mode classifier (Three-Party Attack / Data Exfiltration); locally-saved @seb.ai guides in goal/ are the substitute reference material. This task = the interface piece only; core trading system already exists and compiles.

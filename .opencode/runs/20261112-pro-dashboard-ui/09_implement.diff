@@ -1,0 +1,19 @@
+# S9 IMPLEMENT — diff (src/api/web/templates/dashboard.html)
+
+Wholesale rewrite of the dashboard template at the same path. Summary of changes (old 132-line basic template → new ~280-line pro template):
+
+- Replaced near-black #0d1117 + acid-green/vermilion palette with opinionated ink/surface/border tokens (#070a14 / #0f172a / #1e293b) + cyan accent (#22d3ee), green/red up/down, yellow warn for SIMULATED.
+- Replaced ALL-CAPS uppercase labels with sentence-case labels; tracking on small labels.
+- Added brand mark (P glyph, gradient) + title in top band.
+- Center band now shows a prominent SIMULATED · PAPER TRADING pill (yellow) or LIVE TRADING pill (cyan) + mode pill + server time; previously just a small dot + "Online".
+- Stat band: 5 cards (balance, 24h P&L, win rate, drawdown, positions) with signed color + sub-labels; removed Wins/Losses/Consecutive/MaxDD/Peak (kept via hover-free compact readout) to reduce clutter.
+- Main grid 2fr/1fr: open positions table (market, side badge, entry, size, pnl) + recent trades table (time, market, side badge, pnl); empty states.
+- Added full-width canvas equity curve (paper session) drawn from polled balance history; gradient fill, start/end dots, resize handler.
+- Added circuit-breaker alert bar (red, dismisses when cleared) and kill-switch button (POST /system/stop) that disables + shows "active" when circuit triggered.
+- Mobile-responsive: single-column below 900px, stacked pills, 2-col stat band below 560px.
+- Motion: single page-load fade; hover on buttons/rows only; respects prefers-reduced-motion.
+- All user-facing strings sentence-case; no ALL-CAPS labels; no '→' link arrows; no monospace-for-labels tell.
+- HTML-escapes all injected values (escapeHtml helper) to avoid XSS from market IDs.
+- Same endpoint contract (/api/dashboard/data) and same kill-switch target (/system/stop) — no backend changes.
+
+No backend code changed. Field reads preserved: positions[].market_id/direction/entry_price/size/pnl/unrealized_pnl; trade_history[].time/market/side/pnl; is_live; circuit_breaker_triggered; server_time.

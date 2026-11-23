@@ -1,0 +1,64 @@
+{
+  "checked_at": "2026-11-11T15:43:04.122323+00:00",
+  "passed": false,
+  "failed": [
+    "model beats price",
+    "out-of-sample size",
+    "trade expectancy > 0",
+    "bankroll survives losses",
+    "can reach 50 trades"
+  ],
+  "results_file": "data/test_runs/walkforward_v2_full_reset_results.json",
+  "checks": [
+    {
+      "name": "live flags",
+      "passed": true,
+      "detail": "mode=paper allow_real=False enable_live=False sandbox=True"
+    },
+    {
+      "name": "model beats price",
+      "passed": false,
+      "detail": "brier model=0.1515 price=0.1377 gap=-0.0138 (need model better by 0.005)"
+    },
+    {
+      "name": "out-of-sample size",
+      "passed": false,
+      "detail": "rows=1052 (need 200), executed trades=5 (need 30)"
+    },
+    {
+      "name": "trade expectancy > 0",
+      "passed": false,
+      "detail": "mean ROI +194.0%/trade, 95% CI lower -280.6%, n=5"
+    },
+    {
+      "name": "bankroll survives losses",
+      "passed": false,
+      "detail": "balance=$20.00, min_bet=$1.00, max_pos=5%, floor=$20.00, consecutive losses survivable=0 (need >= 5)"
+    },
+    {
+      "name": "can reach 50 trades",
+      "passed": false,
+      "detail": "5 trades over 13.6 months (0.37/month) -> 136 months to 50 (max 6)"
+    },
+    {
+      "name": "daily rollover wired",
+      "passed": true,
+      "detail": "_roll_daily_state -> reset_daily"
+    },
+    {
+      "name": "leakage guard present",
+      "passed": true,
+      "detail": "MarketPredictor rejects AUC>=0.999/Brier<=0.001"
+    },
+    {
+      "name": "live order gate intact",
+      "passed": true,
+      "detail": "OrderManager requires mode+flag+adapter"
+    },
+    {
+      "name": "live readiness gate wired",
+      "passed": true,
+      "detail": "live orders blocked without a fresh passing verdict (< 7 days)"
+    }
+  ]
+}

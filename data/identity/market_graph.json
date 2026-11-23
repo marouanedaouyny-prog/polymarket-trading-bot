@@ -11646,5 +11646,6963 @@
       "created_at": "2026-06-13"
     },
     "resolved_outcome": null
+  },
+  "PM-A4D6D520": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Bitcoin ETF approved by Jan 15?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-BF9964FB": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Ethereum ETF approved by May 31?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-B87B70DD": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Biden drops out of presidential race?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-626BC2B9": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Biden announce resignation by July 31?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-5AC4C0FC": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Michelle Obama win the 2024 Democratic Presidential Nomination?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-71A21548": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Hillary Clinton win the 2024 Democratic Presidential Nomination?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-FD2CC291": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Tim Walz be the 2024 Democratic VP nominee?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-9BDA26CA": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Pete Buttigieg be the 2024 Democratic VP nominee?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-7E73B78F": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Josh Shapiro be the 2024 Democratic VP nominee?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-2D43D418": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Andy Beshear be the 2024 Democratic VP nominee?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-52CCD384": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Fed rate cut by September 18?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-8BE24DEE": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Fed decreases interest rates by 50+ bps after September 2024 meeting?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-30740ED8": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "No change in Fed interest rates after 2024 September meeting?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-A64D4AE4": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Israeli forces enters Lebanon in September?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-0662AD8E": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Israel invade Lebanon in September?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-62F9BC1A": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Trump launch a coin before the election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-0A895422": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Israel military action against Iraq before November?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-D2CA3292": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will a Republican win Pennsylvania Presidential Election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-21917A68": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will a Democrat win the popular vote and a Republican win the Presidency?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-0638A7B7": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will a Republican win the popular vote and the Presidency? ",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-DB4A8EC7": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will a Democrat win Michigan Presidential Election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-B3753D71": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Trump wins every swing state?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-9AE43F23": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Donald Trump win the popular vote in the 2024 Presidential Election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-C44ABB11": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Kamala Harris wins the popular vote?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-83749B7A": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will a Republican win Arizona US Senate Election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-5AEC0A58": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "2024 Balance of Power: R Prez R Senate R House",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-FE5E04B8": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Jake Paul win his boxing match against Mike Tyson?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-CDDE1DD9": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Jake Paul vs. Mike Tyson have no official winner?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-256DF546": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Israel strike on Iranian nuclear facility in 2024?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-A60A7CAA": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Bitcoin hit $100k in November?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-0662DD45": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Bitcoin hit $100k in 2024?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-B85B1D24": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will \u22652% of votes go to 3rd Party candidates?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-83C091C3": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Fed cut interest rates 3 times in 2024?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-AB8EF390": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Israel invade Syria in 2024?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-F95336B8": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will there be a US Government shutdown? ",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-5737B69B": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Bitcoin reach $110,000 in December?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-BE786047": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Ethereum all time high in 2024?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-CDC70018": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Yoon out as president of South Korea in 2024?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-E7929D2F": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Bengals win the AFC Championship?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-F83E5123": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Chargers win Super Bowl 2025?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-1869C564": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Yoon arrested by January 31?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-BF082929": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Lions win Super Bowl 2025?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-5C7369BE": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Biden pardon SBF?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-04822B84": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "TikTok banned in the US before May 2025?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-7C766838": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "No change in Fed interest rates after January 2025 meeting?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-FB970819": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Bitcoin above $97,000 on February 14?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-6B9F31D4": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will AC Milan win the UEFA Champions League?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-0CDBB7CF": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Juventus win the UEFA Champions League?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-EE0CEDFD": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Union win the most seats in the next German election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-5D92542F": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Kanye launch a coin in February?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-5A60840A": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Bayer Leverkusen win the UEFA Champions League?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-CF075783": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "U.S. Government funding lapse on March 15?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-3D5EFCDE": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Yoon out as president of South Korea before April?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-EADA491C": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Borussia Dortmund win the UEFA Champions League?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-1242554E": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Trump lower tariffs on China in April? ",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-69E4F2F1": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Trump create Bitcoin reserve in first 100 days?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-3BCA6970": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Pierre Poilievre be the next Canadian Prime Minister?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-1A09DA8A": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Mark Carney be the next Canadian Prime Minister?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-7229396D": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Los Angeles Lakers win the 2025 NBA Finals?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-57D2EAD5": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the LA Clippers win the 2025 NBA Finals?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-D963FA48": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Han Duck-soo be the People's Power Party candidate for president?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-1B4F93FB": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Cleveland Cavaliers win the 2025 NBA Finals?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-79BE9E6E": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Golden State Warriors win the 2025 NBA Finals?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-3DB6B017": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Boston Celtics win the 2025 NBA Finals?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-63C6A15C": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Winnipeg Jets win the 2025 Stanley Cup?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-CB29E33D": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will George Simion win the Romanian presidential election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-5419A8CC": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Denver Nuggets win the 2025 NBA Finals?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-FEA52CF2": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Minnesota Timberwolves win the 2025 NBA Finals?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-E763DAE8": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Paris Saint-Germain win the UEFA Champions League?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-BBB48AEC": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Bitcoin dip to $90k in May?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-C2A96AF0": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the New York Knicks win the 2025 NBA Finals?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-C39D7553": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Indiana Pacers win the Eastern Conference?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-1F143169": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Karol Nawrocki be the next President of Poland?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-6B6025F6": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Rafa\u0142 Trzaskowski be the next President of Poland?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-0A57E3F0": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Lee Jae-myung be elected the next president of South Korea?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-C6C661EF": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Kim Moon-soo be elected the next president of South Korea?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-BCEA0EE7": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will South Korea presidential election winner get over 50% of votes?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-DA99E5E4": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "US military action against Iran before July?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-DF9DA581": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Oklahoma City Thunder win the 2025 NBA Finals?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-78B001FD": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Major cyberattack on Iran in June?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-B329B22F": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will  Zohran Mamdani win the Democratic Primary for Mayor of New York City?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-EC813B6C": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Fordow nuclear facility destroyed before July?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-470D88DC": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Russia x Ukraine ceasefire before July?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-DA8FAD22": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Tesla launch a driverless Robotaxi service before July?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-1BC29D9C": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Israel x Hamas ceasefire before August?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-F91F2EC7": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Houthi strike on Israel by August 31?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-E37E78D6": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Lord Miles completes 40-day water fast in the desert?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-56FCBB44": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "US government shutdown by October 1?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-A8F83261": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Donald Trump win Nobel Peace Prize in 2025?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-09438748": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Trump meet with Xi Jinping by October 31?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-E3407E77": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Los Angeles Dodgers win the 2025 World Series?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-4019F757": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Toronto Blue Jays win the 2025 World Series?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-C2D808FB": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Party for Freedom win the most seats in the 2025 Netherlands parliamentary election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-E4676DD6": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Zohran Mamdani win the 2025 NYC mayoral election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-BEB2F63A": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Andrew Cuomo win the 2025 NYC mayoral election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-5D34F446": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Government shutdown end November 8-11?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-C38441DA": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Monad market cap (FDV) >$4B one day after launch?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-213C1FA6": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "US x Venezuela military engagement by November 30?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-975B0A6C": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Donald Trump be the #1 searched person on Google this year?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-F234566D": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Polymarket US go live in 2025?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-11B81B44": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Max Verstappen be the 2025 Drivers Champion?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-D59A4189": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Stable launch a token in 2025?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-496F9E68": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Trump declassifies UFO files in 2025?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-92468E98": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Jeannette Jara win the Chilean presidential election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-B1E93CFD": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Jake Paul win his boxing match against Anthony Joshua?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-BF058177": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Anthony Joshua win his boxing match against Jake Paul?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-1369398E": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Jake Paul vs. Anthony Joshua have no official winner?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-DD86AEF0": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Trump release the Epstein files by December 19?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-63448356": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Salvador Nasralla win the 2025 Honduras presidential election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-4EDAF118": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "TikTok sale announced in 2025?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-242F3D23": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Stephen Colbert be named in newly released Epstein files?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-DC9F391A": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Epstein blackmail evidence released in 2025? ",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-155076EB": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Lighter Airdrop on December 29?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-B9C8D3B9": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will lighter perform an airdrop by December 31? ",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-DEC290F6": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will NVIDIA be the largest company in the world by market cap on December 31?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-8C7AEB5A": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Bitcoin dip to $70,000 by December 31, 2025?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-CE36514E": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Bitcoin reach $95,000 by December 31, 2025?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-06E66169": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Maduro out in 2025?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-B917012A": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Maduro out by January 31, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-E6ACCE9A": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Eleven die in \"Stranger Things: Season 5\"?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-83F3DA6D": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Tottenham Hotspur FC win on 2026-01-17?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-8430849D": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Aston Villa FC win on 2026-01-18?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-5BE5443C": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Houston Texans win Super Bowl 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-413523ED": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Liverpool FC win on 2026-01-21?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-CDB45E0A": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will FC Barcelona win on 2026-01-21?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-45A40224": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "US strikes Iran by January 23, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-33A7F6C5": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Denver Broncos win Super Bowl 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-02B9BAC5": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Los Angeles Rams win Super Bowl 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-30EC4D0D": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the US strike Somalia next?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-674C9809": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Paris Saint-Germain FC win on 2026-01-28?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-84FF8B93": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Bitcoin dip to $85,000 in January?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-C3C98F5B": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Khamenei out as Supreme Leader of Iran by January 31?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-1F1C0E11": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Iranian regime fall by January 31?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-35722355": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the U.S. invade Venezuela by January 31, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-D8C34E98": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Bitcoin reach $100,000 in January?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-9F566597": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Tesla launches unsupervised full self driving (FSD) by June 30?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-4BC58DE6": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "U.S. anti-cartel ground operation in Mexico by January 31?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-1BD25E6A": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "US government shutdown Saturday?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-B6345060": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Andr\u00e9 Ventura win the 2026 Portugal presidential election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-3AC11B9C": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Seattle Seahawks win Super Bowl 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-D423B6AE": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the New England Patriots win Super Bowl 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-1F099B4F": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will BV Borussia 09 Dortmund win on 2026-02-17?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-A858C983": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "US strikes Iran by February 19, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-0D09E360": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Arsenal FC win on 2026-02-22?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-952C425E": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Club Atl\u00e9tico de Madrid win on 2026-02-24?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-EA827ACC": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Trump nominate Kevin Warsh as the next Fed chair?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-D3A33B09": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Trump nominate Judy Shelton as the next Fed chair?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-18641051": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Crude Oil (CL) hit (HIGH) $100 by end of March?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-179EAD42": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "US x Iran ceasefire by March 31?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-5B838907": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "US forces enter Iran by March 31?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-048E8F66": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Trump talk to Xi Jinping in March?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-8FE51FD1": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "US forces enter Iran by December 31?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-A0A87D46": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Xander Schauffele win the 2026 Masters tournament?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-01BF3ECB": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Trump announces end of military operations against Iran by April 15th?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-78F2E163": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Kharg Island no longer under Iranian control by April 15?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-D3631744": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Military action against Iran ends by April 17, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-04FC08CD": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "US x Iran permanent peace deal by April 22, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-A633966A": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Iran x Israel/US conflict ends by April 15?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-3C4DA5DD": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Israel x Hezbollah Ceasefire extended by April 26, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-2D823186": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Clavicular pregnancy in 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-8F35E6E7": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Toronto Raptors win the NBA Eastern Conference Finals?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-7931AA5D": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Chelsea FC win on 2026-05-04?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-7679DF67": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "QatarEnergy announces/resumes LNG production in Qatar by April 30?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-BCD97D69": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will a U.S. anti-cartel operation outside of the United States occur by April 30, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-7B28E8F9": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Atletico Madrid win the 2025\u201326 Champions League?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-9AF77041": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Russia x Ukraine ceasefire by June 30, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-9BD51A01": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Philadelphia 76ers win the 2026 NBA Finals?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-3BA4C238": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Trump visit China by May 15?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-53AEF84C": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Minnesota Wild win the 2026 NHL Stanley Cup?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-77D8208C": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Epstein suicide note released by May 8?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-B47D1A8C": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Manchester City FC win on 2026-05-16?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-6EDF7ECD": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Detroit Pistons win the 2026 NBA Finals?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-FE27EAB0": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Arsenal win the 2025\u201326 English Premier League?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-BC2B96BD": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Manchester City win the 2025\u201326 English Premier League?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-9A75458B": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Trump say \"Iran\" during events with Xi Jinping?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-BDDEC26A": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Trump say \"Strait\" or \"Hormuz\" during events with Xi Jinping?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-C9D41607": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Iran closes its airspace by May 24?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-D3AD49F3": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Colorado Avalanche win the 2026 NHL Stanley Cup?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-AA625CF9": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "US obtains Iranian enriched uranium by May 31?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-E0EE4509": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Donald Trump announce that the United States blockade of the Strait of Hormuz has been lifted by May 31, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-8ED2E293": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "MicroStrategy sells any Bitcoin by June 30, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-F34A32FC": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Iran ceasefire continue through May 24?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-361441C9": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Strait of Hormuz traffic returns to normal by end of May?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-32064E9C": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Joao Fonseca win the 2026 Men's French Open?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-16DFF532": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Israel announces Lebanon ceasefire extension by June 7?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-47FD0352": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Mexico win on 2026-06-11?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-51BACC28": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Korea Republic win on 2026-06-11?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-1999BC48": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Canada win on 2026-06-12?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-404EB15C": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will United States win on 2026-06-12?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-232BDCBB": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Brazil win on 2026-06-13?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-3D16EC14": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will T\u00fcrkiye win on 2026-06-14?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-E231CDA7": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Netherlands win on 2026-06-14?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-130A645D": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "US-Iran nuclear deal by June 30?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-504D1F04": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Sweden win on 2026-06-14?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-73094BA0": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Spain win on 2026-06-15?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-A8C8B713": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "US announces new Iran agreement/ceasefire extension by June 12?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-6865E132": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Belgium win on 2026-06-15?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-1D2CF7DB": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Uruguay win on 2026-06-15?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-87E93373": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will France win on 2026-06-16?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-1820115D": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Argentina win on 2026-06-16?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-571481F1": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Colombia win on 2026-06-17?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-C159FDE3": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Czechia win on 2026-06-18?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-3D3166EF": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Germany win on 2026-06-20?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-945C060A": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Egypt win on 2026-06-21?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-0FFCDC91": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Norway win on 2026-06-22?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-5FD8FAF8": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Portugal win on 2026-06-23?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-CC5426FC": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Morocco win on 2026-06-24?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-A78247FB": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will DR Congo win on 2026-06-27?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-5863F08E": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Austria win on 2026-06-27?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-EE26D33C": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Algeria vs. Austria end in a draw?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-42F7435D": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Israel x Iran permanent peace deal by June 30, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-DB6635B8": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": " Iran agrees to end enrichment of uranium by June 30?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-D3BA2113": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Ronaldo Cry at the World Cup?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-54FFC217": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Lionel Messi be the top goalscorer at the 2026 FIFA World Cup?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-21D2D5D3": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Trump be in the WC Champions Photo?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-ADE99FC2": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will there be no change in Fed interest rates after the July 2026 meeting?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-DCCA6915": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "US x Iran Effective Ceasefire by July 31?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-177C7B19": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Fed rate hike in 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-1ACD3321": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Real Betis Balompi\u00e9 win on 2026-09-17?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-A7B2788E": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will United Russia (ER) gain the most seats in the next Russian parliamentary election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-6C929BF8": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Demeke Mekonnen be the next Prime Minister of Ethiopia?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-59D6B8D7": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Real Madrid CF win on 2026-10-14?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-952312B6": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Luiz In\u00e1cio Lula da Silva win the 2026 Brazilian presidential election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-37702B40": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Fl\u00e1vio Bolsonaro win the 2026 Brazilian presidential election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-5C4C54ED": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Lionel Messi win the 2026 Ballon d'Or?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-EA6CC809": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Kylian Mbapp\u00e9 win the 2026 Ballon d'Or?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-E7A51580": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Harry Kane win the 2026 Ballon d'Or?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-EBD22551": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Likud win the most seats in the 2026 Israeli legislative election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-A920E712": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Republicans win the Texas Senate race in 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-87368DF9": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Republican Party control the Senate after the 2026 Midterm elections?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-FF0E1D22": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "2026 Balance of Power: D Senate, D House",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-1239724D": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Republican Party hold exactly 24 or 25 governorships after the 2026 midterm elections?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-02A8F1A4": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Republican Party hold between 200 and 204 House seats after the 2026 midterm elections?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-78AD03A9": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Is $DJT real?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-DFE0F87D": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will JD Vance win the 2024 Republican VP nomination?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-5B499D02": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Vivek Ramaswamy win the 2024 Republican VP nomination?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-10C46468": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "RFK Jr. endorses Trump in August?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-E781B6DC": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "JD Vance replaced as Republican VP nominee?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-FE260E85": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Israel invade Lebanon before November?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-54DED628": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will a Republican win North Carolina Presidential Election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-B15F66D3": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "2024 presidential election: Democrats win by 215+",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-B4EBE109": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "2024 presidential election: GOP wins by 1-4",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-E4321B5A": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Ethereum reach $3,750 in November?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-63D0B564": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Assad remain President of Syria through 2024?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-46B8C7ED": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "MSFT shareholders vote for Bitcoin investment? ",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-BD5C2F57": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Biden pardon Trump?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-7B08287D": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Trump pardon Ross Ulbricht in his first 100 days?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-6CD031D4": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Bitcoin reach $110,000 by January 31, 2025?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-30DB6AB1": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Tulsi Gabbard confirmed as Director of National Intelligence?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-868E8428": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Ethereum above $2,700 on February 14?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-02ABBA8E": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Elon Musk out as Head of DOGE in 2025?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-1203BCF1": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Fed end QT before May?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-174F7AEF": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Russia x Ukraine Ceasefire by Friday? ",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-447A2EA8": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Ukraine agrees to Trump mineral deal before April?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-138AFEE8": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Energy infrastructure ceasefire in Ukraine in March? ",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-5B05DE3A": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Yoon reinstated as President before July?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-0C901104": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Conservatives win majority in Canadian election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-1D43510E": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Putin meet with Trump in first 100 days?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-379C49B5": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Trump x Ukraine mineral deal signed before May?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-E7D8E478": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the St. Louis Blues win the 2025 Stanley Cup?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-D510E106": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Cleveland Cavaliers win the Eastern Conference?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-59A2F050": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Barcelona win La Liga?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-1D4B3A6E": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the next Government of Canada be a Liberal majority?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-15C25DC0": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Nicu\u0219or Dan win by 6\u201312%?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-8DE6C87C": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Nicu\u0219or Dan win by more than 12%?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-83183BCE": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Lee Jun-seok win 2nd place in the South Korean presidential election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-722B584F": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Lee Jae-myung win 45-50% of the vote in the South Korea election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-928AC464": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Bitcoin reach $115K in June?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-134DB791": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Iran close the Strait of Hormuz before July?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-568FE53E": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Israel x Hamas ceasefire by July 15?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-50A9BD35": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Ethereum reach $4000 in July?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-2602433B": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will MrBeast raise $40M for clean water by August 31?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-5657F45B": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Jannik Sinner win the 2025 US Open?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-2B360F00": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Tesla launch a driverless Robotaxi service by October 31?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-BFE43D77": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Trump impose more sanctions on Russia by September 30?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-0519D278": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Lisa Cook out as Fed Governor by September 30?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-77A0593E": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Israel x Hamas ceasefire by September 30?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-3217CDAB": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Trump strikes another drug boat by Sep 30?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-9C833901": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Jorge \u201cTuto\u201d Quiroga win the 2025 Bolivia presidential election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-A6D2BBD1": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Rodrigo Paz win the 2025 Bolivia presidential election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-62D87B6B": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "OpenAI browser by October 31?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-444EAD17": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Bitcoin reach $130k in October?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-C85B153B": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Democrats 66 win the most seats in the 2025 Netherlands parliamentary election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-95CDFC39": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Katy Perry and Justin Trudeau confirmed relationship by October 31?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-D623E053": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Mikie Sherrill win the New Jersey Governor Election in 2025",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-90A61FF8": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Jack Ciattarelli win the New Jersey Governor Election in 2025",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-9DCB8E76": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will T1 win LoL Worlds 2025?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-4B0737C9": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Maduro out by November 30, 2025?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-D68642A8": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Mamdani get over 50% of the vote in the general mayoral election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-402057D8": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Zohran Mamdani win by 0-10%?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-21D262EC": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Pope Leo XIV be the #1 searched person on Google this year?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-63225BC5": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Lando Norris be the 2025 Drivers Champion?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-5ACF064B": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Oscar Piastri be the 2025 Drivers Champion?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-46FEABCE": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Hyperliquid dip to $28 by December 31, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-1019DC27": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Donald Trump be TIME's Person of the Year for 2025?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-4E44EBC5": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Jos\u00e9 Antonio Kast win the Chilean presidential election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-A2557E6C": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Solana dip to $120 by December 31, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-CB008298": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Elon Musk post 580+ tweets from December 12 to December 19, 2025?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-298DDEB9": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will UNI reach $6.50 by December 31, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-48B2B2FC": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will \"Avatar: Fire and Ash\" Opening Weekend Box Office be greater than 123m?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-B2C03CA2": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Kodiak launch a token by December 31, 2025?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-AACBD58F": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-23460EC3": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Elon Musk be named in newly released Epstein files?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-5B0BFEF9": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "US forces in Venezuela by January 31, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-08E4B7EF": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Brevis FDV above $200M one day after launch?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-CADF4F10": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Over $5M committed to the Infinex public sale?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-CBD40DFA": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Pittsburgh Steelers win Super Bowl 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-491C9357": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Lighter dip to $2 before 2027?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-79BDC9C5": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Fogo FDV above $1B one day after launch?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-2BD51286": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Stade Rennais FC 1901 win on 2026-01-18?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-314DB5BB": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Villarreal CF win on 2026-01-20?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-5DF4256D": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will ETHGAS launch a token by March 31, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-D549D779": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Juventus FC win on 2026-01-21?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-7B06DF74": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Sentient FDV above $400M one day after launch?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-55B176A5": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Immunefi FDV above $800M one day after launch?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-9CFBC88A": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Netflix say \"Warner Bros\" during earnings call?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-5ED4ABF5": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Zama auction clearing price above $0.03?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-6711B609": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Ethereum dip to $2,500 by December 31, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-E8DA7E9E": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Bitcoin below MicroStrategy average buy price in 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-4020E238": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will US or Israel strike Iran by January 31, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-A1DD3769": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Tria launch a token by September 30, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-F727E2A1": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Trump talk to Vladimir Putin in January?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-3A2C674D": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Bitcoin -12% daily candle change in 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-BCE86FB8": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will People\u2019s Party (PPLE) win the most seats in the 2026 Thai legislative election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-E5C1D3D5": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Cardi B perform during the Super Bowl LX halftime show?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-6E796B9D": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Opinion launch a token by February 17, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-FB8F93DE": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Getafe CF win on 2026-02-22?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-3824BDA5": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Flying Tulip launch a token by March 31, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-093A6347": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Flying Tulip FDV above $800M one day after launch?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-AE969D8F": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Binance launch stock tokens in 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-BDF62634": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Inter win the 2025\u201326 Champions League?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-41607D5D": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Hyperlend FDV above $20M one day after launch?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-1BC213AA": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "US strikes Iran by March 15, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-D7FBF2BE": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Nick Shirley attend the 2026 State of the Union address?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-FE5AF52C": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Starmer out by February 28, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-246E9015": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Bitcoin reach $75,000 in February?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-425B3D67": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Trump deport 250,000-500,000 people?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-1B860396": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Paradex launch a token by February 28, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-4EC97B7E": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the US next strike Iran on February 28, 2026 (ET)?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-99FD1D41": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the U.S. invade Iran by March 31?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-4AB22661": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Bitcoin dip to $60,000 in March?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-A3425413": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will FC Bayern M\u00fcnchen win on 2026-04-07?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-FE92B471": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "OneFootball FDV above $300M one day after launch?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-41BAD14B": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Viktor Hovland win the 2026 Masters tournament?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-9A65DD7F": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Jordan Spieth win the 2026 Masters tournament?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-619A70EC": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Matt Fitzpatrick win the 2026 Masters tournament?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-8FD48350": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Rory McIlroy win the 2026 Masters tournament?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-D1DD5EF7": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Cameron Young win the 2026 Masters tournament?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-ECF57CFE": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "US x Iran meeting by April 10, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-F6D6B501": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will \"Donk\" be said during the PGL Bucharest 2026 Grand Final?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-96656864": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Another crypto hack over $100m by December 31?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-04E2E5D6": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "US x Iran ceasefire extended by April 21, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-329FFF36": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "USD.AI FDV above $150M one day after launch?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-BD30598C": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Iran x Israel/US conflict ends by June 30?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-D198B43D": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "U.S. forces seize another oil tanker by April 30?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-32439B93": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will MegaETH launch a token by April 30, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-28CA17FE": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will WTI Crude Oil (WTI) hit (HIGH) $120 in April?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-62FBAE4E": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "US x Iran diplomatic meeting by April 30, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-33A92671": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Over $800M crypto hack value in 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-282635CE": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will SSC Napoli win on 2026-05-11?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-FB9A3A70": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Venezuelan crude oil production reach 1m barrels per day in 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-B88185FD": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Hyperliquid reach $46 by December 31, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-352A78AE": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Starmer out by May 15, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-92ED8441": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Finland win Eurovision 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-C001BD8A": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Jorge Masvidal fight Conor McGregor next?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-E46101F5": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Nate Diaz fight Conor McGregor next?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-FFC7B3AB": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Maur\u00edcio Ruffy fight Max Holloway next?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-20258228": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Dan Hooker fight Max Holloway next?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-FF53C6E3": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Newcastle United FC win on 2026-05-17?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-BDD3EFF2": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Fulham FC win on 2026-05-17?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-6075BD5F": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Victor Wembanyama win the 2025\u20132026 NBA MVP?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-4E7BC0FC": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Goldman Sachs or any of its underwriting affiliates serve as the lead underwriter in SpaceX\u2019s initial public offering?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-F49A12E7": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will West Ham United FC win on 2026-05-24?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-BC074DFB": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Se\u00e1n Kyne win the 2026 Galway West by-election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-7093946E": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Noel Thomas win the 2026 Galway West by-election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-3C13C179": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Citrea launch a token by June 30, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-3D714949": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Ken Paxton win the 2026 Texas Republican Primary?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-4164F803": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Anthropic's valuation hit (HIGH) $1.0T by December 31?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-6115F190": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will WTI Crude Oil (WTI) hit (LOW) $85 in May?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-40B146B7": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Oh Se-hoon win the 2026 Seoul Mayoral Election",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-28DF5863": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Ethereum flipped in 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-4473CB18": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Iran closes its airspace by June 30?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-ED204B66": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "SpaceX IPO closing market cap above $1.2T?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-E40C5D16": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Bosnia and Herzegovina win on 2026-06-12?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-3528DF5A": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will SpaceX's market cap be greater than $1T at market close on IPO day?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-724BA2F9": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will SpaceX's market cap be between $1.8T and $2.0T at market close on IPO day?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-6AC8A111": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will United States vs. Paraguay end in a draw?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-D26AB903": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Qatar win on 2026-06-13?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-F2AA84AB": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Trump restart Project Freedom by June 30?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-85088941": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Germany vs. Cura\u00e7ao end in a draw?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-B3722A37": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will C\u00f4te d'Ivoire win on 2026-06-14?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-C2612708": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Cabo Verde win on 2026-06-15?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-038B64F4": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Czechia vs. South Africa end in a draw?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-C4C204DD": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Rebecca Shepherd win the 2026 Makerfield by-election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-7D4F3A39": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Starmer out by June 30, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-54FFE026": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Norway vs. Senegal end in a draw?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-FD40AF36": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Abelardo de la Espriella  win the 2026 Colombian presidential election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-D5573053": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Ivan Cepeda Castro win the 2026 Colombian presidential election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-C9B0D3EE": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Haiti win on 2026-06-24?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-BAF9F582": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will South Africa win on 2026-06-24?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-AE6D2ECC": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Saudi Arabia win on 2026-06-26?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-554D1B24": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Israel x Syria security agreement by June 30?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-35CF725C": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Iran agrees to surrender enriched uranium stockpile by June 30, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-07972C4E": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Sabrina Carpenter be one of Taylor Swift's bridesmaids?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-4C677230": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Gigi Hadid be one of Taylor Swift's bridesmaids?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-43B3C92E": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Selena Gomez be one of Taylor Swift's bridesmaids?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-DB661FA2": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Brittany Mahomes be one of Taylor Swift's bridesmaids?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-D134559C": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Laso Finance FDV above $20M one day after launch",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-26368AB7": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Marine Le Pen announce their candidacy for the 2027 French presidential election in 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-1E202AE3": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Lindsey Graham be the next Senate Majority Leader?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-BFE129B6": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Jordan Bardella be the National Rally\u2019s candidate for the 2027 French Presidential election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-CB48DF33": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will LeBron James play for the Miami Heat in 2026-27?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-3B243F56": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will LeBron James play for the Golden State Warriors in 2026-27?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-45CF6B04": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Milakulo Tukumuli be the next President of the Government of New Caledonia?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-6B46E941": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will any month of 2026 be the hottest on record?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-0372AEAF": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Nigel Farage win the 2026 Clacton by-election by 60% or more?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-1815ABDE": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Nigel Farage win 50\u201360% of votes in the Clacton parliamentary by-election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-F95F0FCD": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Nigel Farage win the 2026 Clacton by-election by between 20% and 40%?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-765F3806": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Yair Rodriguez fight Arnold Allen next?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-31378B4F": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Lighter reach $3 before 2027?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-58F3443E": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Zcash reach $700 by December 31, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-0FFAE696": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will April be the best month for Bitcoin in 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-35857692": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Shein's closing IPO market cap be at least 350B HKD?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-F420681B": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Sporting CP win on 2026-09-09?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-192F8A31": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will OpenAI's Astra model debut as #1? (Text Arena)",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-62BD80DF": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Canva's valuation hit (LOW) $40B by December 31?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-DE0FA0D6": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will AC Milan win on 2026-09-16?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-46ABD83B": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Pump.fun dip to $0.0034 by December 31, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-51E5BB9C": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Philadelphia Waterdogs be named the 2026 Premier League Lacrosse Champion?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-095A616B": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Liberal Democratic Party of Russia (LDPR) gain the most seats in the next Russian parliamentary election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-EF9DC652": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will AfD win an absolute majority of seats in Mecklenburg-Vorpommern?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-37305C03": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Yegor Kovalchuk win the 2026 Bryansk Oblast gubernatorial elections?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-9E3E36E3": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Brad Ausmus be the next Red Sox manager?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-1DF1DE53": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Alexander Shuvaev win the 2026 Belgorod Oblast gubernatorial elections?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-37818E5E": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will United Russia win the next Oryol Oblast Parliament elections?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-E3BC65EB": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Russia Elections: United Russia Wins Every Region?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-6C83098F": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the next Grok model (4.7+) debut at a score of at least 1470 by June 30, 2027?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-7BB2BB59": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Belit Onay win the next Hannover mayoral election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-DD27F002": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will SpaceX Starship Flight Test 14 Superheavy explode?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-0742880A": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the chopsticks catch SpaceX Starship Flight Test 14 Superheavy booster?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-7EA362B8": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Lambda's valuation hit (HIGH) $12.5B by December 31?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-47C92C52": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "US announces end of Iranian blockade by September 30, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-B4B51908": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Iran full airspace closure by September 30?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-5C2772F7": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Maur\u00edcio Ruffy fight Charles Oliveira next?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-D50817D3": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Paddy Pimblett fight Charles Oliveira next?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-51E21176": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Arman Tsarukyan fight Charles Oliveira next?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-CC68C24D": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Justina Pula be the next President of Kosovo?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-EC3DB6AC": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Bekim Sejdiu be the next President of Kosovo?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-0C09EF6D": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Zack Polanski win the Holborn and St Pancras by-election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-661B3B86": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Sagal Abdi-Wali win the Holborn and St Pancras by-election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-13E371FA": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Tamim bin Hamad Al Thani win the Nobel Peace Prize in 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-26AC3BCF": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Pope Leo XIV win the Nobel Peace Prize in 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-9BA62194": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Yulia Navalnaya win the Nobel Peace Prize in 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-D21F9226": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the International Court of Justice win the Nobel Peace Prize in 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-A2F0E7FC": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Greta Thunberg win the Nobel Peace Prize in 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-805F4A86": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Volodymyr Zelenskyy win the Nobel Peace Prize in 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-36E4591B": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Rob Callister be the next Chief Minister of the Isle of Man?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-B78582B3": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Ryan Flaherty be the next permanent manager of the Philadelphia Phillies?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-80CCEF6C": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the next GPT Sol model (6.1+) debut with a Humanity's Last Exam score of 40% or higher?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-C039F8B5": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Gemini Argon debut with a Humanity's Last Exam score of 50% or higher?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-C9DEF502": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Bayer 04 Leverkusen win on 2026-10-15?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-9EED3BC3": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Brighton & Hove Albion FC win on 2026-10-18?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-D3DA82C4": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will FalleN Win an S-Tier Event in 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-E01FA256": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will George Simion be the next Prime Minister of Romania?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-814FFCEB": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the next governing coalition of Romania include PSD + UDMR?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-91A846DE": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will another result occur for the next governing coalition of Romania?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-C51C84C7": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the next Prime Minister of Romania be a member of PSD?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-65918CEF": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the next Prime Minister of Romania be an Independent or a Technocrat?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-FDE221B6": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Social Democratic Party (PSD) be included in the next Romanian government?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-86FD1F08": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the National Liberal Party (PNL) be included in the next Romanian government?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-4F32D260": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Save Romania Union (USR) be included in the next Romanian government?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-4C2B493A": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Alexandru Nazare be the next Prime Minister of Romania?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-62B333E5": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Dan Motreanu be the next Prime Minister of Romania?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-5B2F343D": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will $ANSEM dip to $0.08 before 2027?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-86912B11": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Fatima Ezzahra El Mansouri be the next Prime Minister of Morocco?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-07EF3F06": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Joshua Van fight Manel Kape next?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-93E5A1DF": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Manel Kape fight Joshua Van next?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-11B6176F": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Montenegro win Junior Eurovision 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-A4383C5C": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Italy win Junior Eurovision 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-3FACE41B": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will San Marino win Junior Eurovision 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-2B26BA12": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will North Macedonia win Junior Eurovision 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-0D0AF37E": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Azerbaijan win Junior Eurovision 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-0B5EE2A3": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Student List \u2013 Students Win win the most seats in the 2026 Serbian parliamentary election?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-F82C8FCB": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Netherlands participate in Eurovision 2027?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-A4623E10": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Quillan Salkilld fight Benoit Saint Denis next?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-C0AFF704": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will NYC have less than 3 inches of precipitation in October?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-80FDACA3": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Seattle have between 1.75 and 2.5 inches of precipitation in October?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-9007FD66": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Seoul have 85mm or more of precipitation in October?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-10D05E5A": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Seoul have between 70-85mm of precipitation in October?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-505DFD6F": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Hong Kong have between 120-210mm of precipitation in October?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-DDDAF4CF": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will 1win launch a token by October 31, 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-09333579": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Harry Styles perform at the 2027 Big Game halftime show?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-27F7F483": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will Justin Bieber perform at the 2027 Big Game halftime show?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-8EF47E35": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Blue wave in 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-05F9C5BD": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will the Democrats win the Michigan Senate race in 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
+  },
+  "PM-3CF911FF": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Will there be another US government shutdown by January 31 and will the Republican Party win the House in 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "no"
+  },
+  "PM-3B3D5E72": {
+    "identifiers": {
+      "id": "",
+      "conditionId": "",
+      "questionID": "",
+      "slug": ""
+    },
+    "metadata": {
+      "question": "Blue tsunami in 2026?",
+      "description": "",
+      "created_at": "2026-06-13"
+    },
+    "resolved_outcome": "yes"
   }
 }
