@@ -100,7 +100,12 @@ async def startup_event():
     if live_order_flag or live_enabled:
         if missing_live_keys:
             raise RuntimeError(f"CRITICAL: live trading requested but missing keys: {', '.join(missing_live_keys)}")
-        print("🚀 LIVE TRADING MODE ENABLED")
+        from src.utils.readiness_gate import check_live_readiness
+        blocked = check_live_readiness()
+        if blocked:
+            print(f"⛔ LIVE TRADING REQUESTED BUT BLOCKED: {blocked}")
+        else:
+            print("🚀 LIVE TRADING MODE ENABLED")
     else:
         print("🛡️ PAPER TRADING MODE ENABLED (Safe)")
 

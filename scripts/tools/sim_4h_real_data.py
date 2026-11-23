@@ -13,8 +13,8 @@ import time
 from datetime import datetime, timedelta
 from pathlib import Path
 
-# Add project root to path
-PROJECT_ROOT = Path(__file__).resolve().parent
+# Add project root to path (scripts/tools/ -> project root)
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.ml.market_predictor import MarketPredictor
@@ -27,9 +27,9 @@ def load_real_data():
     with open(resolved_file, 'r', encoding='utf-8') as f:
         return json.load(f)
 
-def run_4h_sim(start_balance=20.0):
+def run_4h_sim(start_balance=50.0):
     print("\n" + "="*60)
-    print(f"🚀 STARTING 4-HOUR REAL-MARKET SIMULATION")
+    print(f"STARTING 4-HOUR REAL-MARKET SIMULATION")
     print(f"Starting Capital: ${start_balance:.2f}")
     print(f"Strategy: Smart Scalper (High-Frequency / Conservative)")
     print("="*60 + "\n")
@@ -43,41 +43,54 @@ def run_4h_sim(start_balance=20.0):
     balance = start_balance
     trades = []
     
-    # Simulate 240 minutes (4 hours)
+    # Simulate scanning until exactly TARGET_TRADES trades are recorded
+    TARGET_TRADES = 100
     current_sim_time = datetime.now()
-    
-    for minute in range(240):
-        # Every 2 minutes, the bot "scans" (120 cycles total)
-        if minute % 2 != 0: continue
-        
+
+    while len(trades) < TARGET_TRADES:
         current_sim_time += timedelta(minutes=2)
         timestamp = current_sim_time.strftime("%H:%M")
-        
-        # In each scan, there's a 30% chance to find a "Consensus" trade
-        if random.random() > 0.30: continue
-        
+
         # Pick a random market from real resolved data
         m = random.choice(markets)
         actual_winner = m.get('outcome')
         question = m.get('question')
         
-        # Simulate bot picking the side
-        # Based on our 63% win rate training, the bot picks the right side 63% of the time
-        if random.random() < 0.63:
-            chosen_side = actual_winner
-            won = True
-        else:
-            chosen_side = "no" if actual_winner == "yes" else "yes"
-            won = False
-            
-        # Realistic scalp parameters
-        # Most crypto scalps are in the $0.40 - $0.80 price range
-        price = random.uniform(0.40, 0.85)
-        
+        # ---- Model-driven side selection (MECHANICS TEST ONLY) ----
+        # NOTE: yes/no prices in resolved_markets.json are FINAL SETTLEMENT
+        # prices. Feeding them to the model + grading against `outcome` is
+        # hindsight (the answer is baked into the price). So the loop below
+        # exercises sizing/fee/balance mechanics, NOT predictive edge.
+        yes_price = float(m.get('yes_price', 0.5) or 0.5)
+        no_price = float(m.get('no_price', 0.5) or 0.5)
+        volume = m.get('volume', 0) or 0
+        is_crypto = str(m.get('tag', '')).lower() in ('crypto', 'cryptocurrency')
+
+        # Normalize entry price into a stable band for the model
+        entry_price = min(max(yes_price, 0.05), 0.95)
+        spread = 0.04
+        days_to_close = 7.0
+
+        pred = predictor.predict_win_probability(
+            entry_price, volume,
+            is_crypto=is_crypto, days_to_close=days_to_close, spread=spread,
+        )
+        chosen_side = "yes" if pred >= 0.5 else "no"
+        won = (chosen_side == actual_winner)
+
+        # Skip low-conviction trades — trade fewer, but better
+        CONF_MIN = 0.10
+        if abs(pred - 0.5) < CONF_MIN:
+            continue
+
+        # Payout at the chosen side's real price, clamped to sane scalp band
+        price = yes_price if chosen_side == "yes" else no_price
+        price = min(max(price, 0.20), 0.85)
+
         # Scalper Position Sizing: 4% of balance
         bet_amount = round(balance * 0.04, 2)
         if bet_amount < 1.0: bet_amount = 1.0 # Minimum bet
-        
+
         # Calculate Payout
         if won:
             # 1 / price payout minus 7% fee
@@ -108,7 +121,7 @@ def run_4h_sim(start_balance=20.0):
     win_rate = (win_count / len(trades)) * 100 if trades else 0
     
     print("\n" + "="*60)
-    print("🏁 4-HOUR SIMULATION COMPLETE")
+    print("4-HOUR SIMULATION COMPLETE")
     print("="*60)
     print(f"Initial Balance: ${start_balance:.2f}")
     print(f"Final Balance:   ${balance:.2f}")
@@ -122,4 +135,4 @@ def run_4h_sim(start_balance=20.0):
         json.dump(trades, f, indent=2)
 
 if __name__ == "__main__":
-    run_4h_sim(20.0)
+    run_4h_sim(50.0)

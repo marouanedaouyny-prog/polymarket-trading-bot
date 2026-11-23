@@ -98,10 +98,10 @@ polymarket/
 ## Trading Strategy
 
 ### Entry Criteria
-- Price: $0.01 - $0.35
-- Volume: > $15,000
-- Edge: > 65%
-- Confidence: > 65%
+- Price: $0.05 - $0.50 (per Config.PRICE_MIN/PRICE_MAX)
+- Volume: > $10,000 (per Config.MIN_VOLUME)
+- Edge: > 8% (per Config.MIN_EDGE)
+- Confidence: > 85% (per Config.MIN_CONFIDENCE)
 
 ### Risk Management
 - Max position: 15% of balance
@@ -112,11 +112,10 @@ polymarket/
 ### Win Probability (by price tier)
 | Price Range | Win Rate |
 |-------------|----------|
-| $0.01-0.02  | 96%      |
-| $0.03-0.05  | 93%      |
-| $0.06-0.10  | 89%      |
-| $0.11-0.15  | 85%      |
-| $0.16-0.20  | 82%      |
+| $0.05-0.10  | 89%      |
+| $0.11-0.20  | 85%      |
+| $0.21-0.30  | 82%      |
+| $0.31-0.50  | 74%      |
 
 ## Performance
 

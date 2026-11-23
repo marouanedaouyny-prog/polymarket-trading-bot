@@ -1,0 +1,14 @@
+feature,area,priority,original,clone,notes
+Plain-English bot idea input,bot desk,must,yes,no,S04 — describe idea in a sentence
+Backtest check before live,bot desk,must,yes,partial,paper_evaluator.py evaluates edge before live; no clone backtest screen yet
+Bot desk (list of bots),bot desk,must,yes,no,S04 — every bot sits on your bot desk
+Eight-agent AI desk (CRAWLER/SOCIAL/SCAN/VET/SIZE/RISK/FILLS/CHIEF),AI desk,must,yes,no,S04 — RISK can always say no
+RISK veto on every setup,AI desk,must,yes,partial,approval_gate.py wraps DynamicRiskManager; manual_approved gate
+AI coach: direction/entry/stop/target,AI coach,must,yes,partial,grok_extractor.py produces hypothesis; ai_setups schema + confirm route ready
+Confirm-before-place (human-in-the-loop),execution,must,yes,partial,order_manager.py manual_approved + approval_gate before live_adapter.place_order
+Copy trading with own margin + leverage cap + TP/SL,copy trading,must,yes,no,Excluded from live execution (unsafe); schema supports trades but no copy route built
+Leaderboard 24H/7D/30D,social,should,yes,no,schema leaderboard_entries + route GET /api/v1/leaderboard ready
+Trader profile + positions,social,should,yes,no,route GET /api/v1/traders/{id} ready
+Leverage 1x–1000x,trading,must,yes,no,Excluded from live (unsafe); schema leverage_cap default 1.0
+Cross margin + liquidation price shown before open,trading,should,yes,no,Not built
+Practice money or real cash mode,execution,should,yes,partial,project default is paper mode; live requires fail-closed gate

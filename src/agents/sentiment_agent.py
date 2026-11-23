@@ -44,10 +44,11 @@ class SentimentAgent:
 
         raw = (pos - neg) / max(pos + neg, 1)
 
-        # Neutral questions (no strong keywords): return 0.65 so confidence=65 passes threshold.
-        # The ML model + EV check are the real gates; sentiment is just a coarse pre-filter.
+        # Neutral questions (no strong keywords): score 0.0 = no signal, not a
+        # manufactured confidence. Do not fabricate confidence to pass thresholds;
+        # the ML model + EV check + risk gate are the real gates.
         if pos == 0 and neg == 0:
-            raw = 0.65
+            raw = 0.0
 
         # Slight boost for high-interest topics (more volume = more data)
         if interest:

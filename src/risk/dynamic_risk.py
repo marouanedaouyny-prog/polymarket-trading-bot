@@ -54,6 +54,11 @@ class DynamicRiskManager:
         self.losing_streak = 0
         self.consecutive_losses = 0
 
+        # Runtime kill switch and daily PnL, driven by the API risk routes.
+        # These must exist up front: routers read them without a prior write.
+        self.kill_switch_activated = False
+        self.daily_pnl = 0.0
+
         self.session_start_balance = 0.0
         self.daily_start_balance = 0.0
 
@@ -70,6 +75,32 @@ class DynamicRiskManager:
         self.daily_start_balance = balance
         if balance > self.peak_balance:
             self.peak_balance = balance
+
+    def emergency_kill_switch(self) -> None:
+        """Halt all trading immediately."""
+        self.kill_switch_activated = True
+        logger.critical("EMERGENCY KILL SWITCH ACTIVATED - trading halted")
+
+    def update_daily_pnl(self, realized_pnl: float) -> None:
+        """Sync daily realized PnL from the execution layer.
+
+        The caller passes a cumulative figure, so this assigns rather than adds.
+        """
+        self.daily_pnl = float(realized_pnl)
+
+    def check_risk_limits(self) -> dict:
+        """Return effective limits and current risk state for API consumers."""
+        return {
+            'max_position_size': self.current['max_position_pct'],
+            'daily_loss_limit': self.current['daily_loss_limit'],
+            'max_drawdown_limit': self.base['max_drawdown_limit'],
+            'kill_switch_activated': self.kill_switch_activated,
+            'current_drawdown': self.current_drawdown,
+            'max_drawdown': self.max_drawdown,
+            'daily_pnl': self.daily_pnl,
+            'consecutive_losses': self.consecutive_losses,
+            'winning_streak': self.winning_streak,
+        }
 
     def update_after_trade(self, won: bool, profit: float, new_balance: float):
         """Update risk state after each trade with enhanced safety checks."""
@@ -220,6 +251,9 @@ class DynamicRiskManager:
 
     def should_trade(self, edge: float, confidence: float, balance: float):
         """Determine if we should trade based on current risk state."""
+        if self.kill_switch_activated:
+            return False, "Kill switch active"
+
         # Daily loss limit
         if self.daily_start_balance > 0:
             daily_loss = (self.daily_start_balance - balance) / self.daily_start_balance

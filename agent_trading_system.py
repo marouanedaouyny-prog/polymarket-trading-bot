@@ -46,6 +46,16 @@ try:
 except ImportError:
     MIROFISH_AVAILABLE = False
 
+# Grok research integration — advisory only, never authorizes or sizes trades
+try:
+    from src.agents.research.grok_extractor import GrokExtractor
+    from src.agents.research.sanitizer import TextSanitizer
+    from src.trading.research_feature_store import hypothesis_to_features
+    from src.trading.paper_evaluator import PaperEvaluator
+    GROK_RESEARCH_AVAILABLE = True
+except ImportError:
+    GROK_RESEARCH_AVAILABLE = False
+
 # Use centralized config
 try:
     from src.utils.config import config
@@ -69,27 +79,27 @@ PROJECT_CONTEXT = """
 
 ## Project Goal
 Build an LLM-powered trading system that analyzes Polymarket prediction markets
-using real-time web intelligence + trained ML model to achieve 85%+ win rate.
+using real-time web intelligence + trained ML model to achieve consistent profitability
+with strict risk management.
 
 ## Key Components
 1. **Data Collection**: Polymarket API (gamma-api.polymarket.com)
-2. **Training Data**: 29,309 records (markets, prices, volumes, outcomes)
-3. **Model**: Trained weights - price (15%), edge (45%), confidence (40%)
-4. **Strategy**: Low prices ($0.01-0.35) + high volume ($15K+) + edge>65%, conf>65%
-5. **Risk Management**: Stop-loss 25%, take-profit 200%, max position 15%
+2. **Training Data**: Market data with price, volume, outcomes
+3. **Model**: Trained weights for win probability prediction
+4. **Strategy**: Low prices ($0.05-0.50) + high volume (+$10K) + edge>8%, conf>85%
+5. **Risk Management**: Stop-loss 15%, take-profit 50%, max position 10%, daily loss 5%
 
 ## Current Results (Paper Trading)
-- Average Win Rate: 78-88% (varies by configuration)
-- Average Profit: $4,000+ per 20 trades
+- Win Rate: varies by configuration (target: maintain >70%)
+- Average Profit: varies based on configuration and market conditions
 - Total test trades: 500+
 
 ## Target
-- Consistent 85%+ win rate before live trading
-- 100% certainty before using real money
+- Consistent profitability with win rate above 70%
+- 100% compliance with risk limits before considering any parameter changes
 
 ## Files
-- production_llm_bot.py: Main trading bot
-- llm_intelligent_trader_v2.py: High-win-rate version
+- agent_trading_system.py: Main trading system
 - models/comprehensive_model.json: Trained weights
 - data/test_runs/: Test results
 """
@@ -140,8 +150,8 @@ PROJECT CONTEXT:
 YOUR ROLE:
 - Fetch markets from Polymarket API (price, volume, question)
 - Get LLM web intelligence on trending markets (crypto, BTC, ETH, SOL)
-- Analyze: price range ($0.01-0.35), volume (>15K), edge, confidence
-- Identify opportunities that meet criteria: edge>65%, confidence>65%
+- Analyze: price range ($0.05-0.50), volume (>$10K), edge, confidence
+- Identify opportunities that meet criteria: edge>8%, confidence>85%
 
 OUTPUT FORMAT:
 Return list of trade opportunities with:
@@ -172,14 +182,11 @@ YOUR ROLE:
 - Receive validated trades from Risk Agent
 - Execute paper trades with position sizing (15% max)
 - Calculate win probability by price tier:
-  * $0.01-0.02: 96%
-  * $0.03-0.05: 93%
-  * $0.06-0.10: 89%
-  * $0.11-0.15: 85%
-  * $0.16-0.20: 82%
-  * $0.21-0.25: 78%
-  * $0.26-0.35: 74%
-- Adjust probability by confidence (3%)
+  * $0.05-0.10: 89%
+  * $0.11-0.20: 85%
+  * $0.21-0.30: 82%
+  * $0.31-0.50: 74%
+- Adjust probability by confidence
 - Apply 7% Polymarket fee in profit calculation
 
 OUTPUT:
@@ -206,13 +213,13 @@ YOUR RISK RULES:
 - Max position: 15% of balance
 - Max daily trades: 20
 - Max open positions: 5
-- Stop loss: 25% per trade
-- Take profit: 200% per trade
-- Daily loss limit: 20%
-- Min edge: 65%
-- Min confidence: 65%
-- Price range: $0.01-0.35
-- Min volume: $15,000
+- Stop loss: 15% per trade
+- Take profit: 50% per trade
+- Daily loss limit: 5%
+- Min edge: 8%
+- Min confidence: 85%
+- Price range: $0.05-0.50
+- Min volume: $10,000
 
 VALIDATE:
 - Each trade opportunity against all rules
@@ -309,6 +316,7 @@ class TradingAgentSystem:
 
         self.trades_today = 0
         self.daily_start = starting_balance
+        self._session_date = datetime.now().date()
         self.killed = False
 
         # Import client
@@ -374,6 +382,24 @@ class TradingAgentSystem:
             except Exception as e:
                 print(f"[MiroFish] Init error: {e}")
                 self.mirofish = None
+
+        # Grok research extractor — advisory signal only, no execution authority
+        self.grok = None
+        self.sanitizer = None
+        self.paper_evaluator = None
+        if GROK_RESEARCH_AVAILABLE:
+            try:
+                self.grok = GrokExtractor()
+                self.sanitizer = TextSanitizer()
+                self.paper_evaluator = PaperEvaluator(
+                    min_edge=config.MIN_EDGE,
+                    min_confidence=float(getattr(config, 'MIN_CONFIDENCE', 85)) / 100.0,
+                )
+                if USE_LOGGING:
+                    logger.info("Grok research extractor initialized (advisory only)")
+            except Exception as e:
+                if USE_LOGGING:
+                    logger.warning(f"Grok research extractor unavailable: {e}")
 
         # Initialize Paper Ledger
         try:
@@ -528,6 +554,46 @@ class TradingAgentSystem:
             "volume_signal": "high" if volume > 500_000 else "normal",
         }
 
+    def _grok_research_signal(self, question: str, market_id: str) -> dict:
+        """
+        Advisory research signal from Grok/X. Never authorizes or sizes a trade.
+
+        Returns a dict with research_direction (1/-1/0), research_confidence (0-1),
+        research_uncertainty (0-1), and research_passed (paper-eval result).
+        All external text is sanitized before reaching the model.
+        """
+        result = {
+            "research_direction": 0.0,
+            "research_confidence": 0.0,
+            "research_uncertainty": 1.0,
+            "research_passed": False,
+        }
+        if not (self.grok and self.sanitizer and self.paper_evaluator):
+            return result
+
+        # Sanitize the question before it leaves this process (prompt-injection guard).
+        clean = self.sanitizer.sanitize(question)
+        if not clean.safe:
+            if USE_LOGGING:
+                logger.warning(f"Grok input rejected for {market_id}: {clean.reasons}")
+            return result
+
+        hypothesis = self.grok.extract_hypothesis(market_id, clean.text)
+        if hypothesis is None:
+            return result
+
+        features = hypothesis_to_features(hypothesis)
+        eval_result = self.paper_evaluator.evaluate(
+            market_id=market_id,
+            hypothesis=hypothesis,
+        )
+
+        result["research_direction"] = features.research_direction
+        result["research_confidence"] = features.research_confidence
+        result["research_uncertainty"] = features.research_uncertainty
+        result["research_passed"] = bool(eval_result.passed)
+        return result
+
     def _load_resolved_outcomes(self):
         """Load resolved market outcomes using Identity Manager for canonical resolution."""
         resolved_file = os.path.join('data', 'training', 'resolved_markets.json')
@@ -672,17 +738,26 @@ class TradingAgentSystem:
                 if not prices or len(prices) < 2:
                     continue
 
+                price = float(prices[0])
+                volume = float(m.get('volume', 0) or 0)
+                market_id = m.get('id')
+
                 market_intel = self.get_llm_intelligence(question, {
-                    'price': float(prices[0]),
-                    'volume': float(m.get('volume', 0) or 0)
+                    'price': price,
+                    'volume': volume
                 })
                 if not market_intel or "Analysis failed" in market_intel.get('reasoning', ''):
                     logger.warning(f"Market intelligence unavailable for {question[:30]}... Skipping.")
                     continue
 
-                price = float(prices[0])
-                volume = float(m.get('volume', 0) or 0)
-                market_id = m.get('id')
+                # Grok research signal — advisory only, never authorizes or sizes a trade.
+                grok_signal = self._grok_research_signal(question, market_id)
+                research_modifier = 1.0
+                if grok_signal['research_passed'] and grok_signal['research_confidence'] > 0:
+                    # Blend Grok confidence into sentiment confidence; cannot raise floor above risk gate.
+                    research_modifier = grok_signal['research_confidence']
+
+                confidence = min(max(sentiment_score * 100 * research_modifier, 0), 100)
 
                 if price < self.risk['price_range'][0] or price > self.risk['price_range'][1]:
                     continue
@@ -707,7 +782,8 @@ class TradingAgentSystem:
                     volume=volume,
                     edge=0.0,
                     confidence=confidence,
-                    is_crypto=is_crypto
+                    is_crypto=is_crypto,
+                    question=question,
                 )
 
                 ev = (model_prob * ((1 / price - 1) * (1 - self.fee))) - (1 - model_prob)
@@ -742,8 +818,25 @@ class TradingAgentSystem:
         print(f"[RESEARCH AGENT] Found {len(opportunities)} opportunities")
         return opportunities
 
+    def _roll_daily_state(self):
+        """Reset daily counters on a new calendar day.
+
+        Without this, trades_today and daily_start never move after __init__,
+        so the daily trade cap and daily loss limit apply to the whole process
+        lifetime instead of to one day.
+        """
+        today = datetime.now().date()
+        if today == self._session_date:
+            return
+        self._session_date = today
+        self.trades_today = 0
+        self.daily_start = self.balance
+        if self.risk_manager:
+            self.risk_manager.reset_daily(self.balance)
+
     def risk_agent(self, opportunity):
         """Risk Agent - validate trade using centralized hard rules."""
+        self._roll_daily_state()
         if opportunity['price'] < self.risk['price_range'][0]:
             return {'approved': False, 'reason': 'Price below min'}
         if opportunity['price'] > self.risk['price_range'][1]:
@@ -843,7 +936,8 @@ class TradingAgentSystem:
                     volume=volume,
                     edge=edge,
                     confidence=confidence,
-                    is_crypto=is_crypto
+                    is_crypto=is_crypto,
+                    question=question,
                 )
             except Exception as e:
                 if USE_LOGGING:
@@ -868,13 +962,18 @@ class TradingAgentSystem:
                         f"slippage={slippage:.4f}, "
                         f"volume={opportunity['volume']:.2f}")
 
+        # Buy the side the model thinks is underpriced relative to the market.
+        # A win_prob below the YES price means NO is the value side.
+        predicted_yes = win_prob >= price
+        side_price = price if predicted_yes else (1.0 - price)
+
         # [LEDGER] Record trade entry
         if self.ledger:
             self.ledger.record_entry({
                 "market_id": opportunity.get('market_id'),
                 "canonical_id": opportunity.get('canonical_id'),
-                "selected_outcome": "yes" if win_prob >= 0.5 else "no",
-                "entry_price": actual_price,
+                "selected_outcome": "yes" if predicted_yes else "no",
+                "entry_price": side_price,
                 "model_probability": win_prob,
                 "ev": opportunity.get('ev', 0),
                 "edge": edge,
@@ -882,9 +981,6 @@ class TradingAgentSystem:
                 "fees": bet * self.fee,
                 "slippage": slippage
             })
-
-        # Determine predicted outcome (yes if win_prob >= 0.5)
-        predicted_yes = win_prob >= 0.5
 
         # [HARDENING] Only resolve outcomes from verified data
         actual_outcome = self.resolved_outcomes.get(opportunity.get('canonical_id'))
@@ -904,7 +1000,8 @@ class TradingAgentSystem:
             logger.info(f"Trade: price=${price:.2f}, win_prob={win_prob:.2%}, predicted_yes={predicted_yes}, actual_outcome={actual_outcome}, won={won}")
 
         if won:
-            profit = bet * (1 / price - 1) * (1 - self.fee)
+            # Payout is on the side actually bought, not always the YES price.
+            profit = bet * (1 / side_price - 1) * (1 - self.fee)
         else:
             profit = -bet
 
@@ -1067,7 +1164,7 @@ class TradingAgentSystem:
         print(f"Mode: PAPER TRADING")
         print(f"Starting Balance: ${self.balance:.2f}")
         print(f"Risk Config: Max Pos 15%, Stop-Loss 25%, Take-Profit 200%")
-        print(f"Target: 85%+ win rate")
+        print(f"Target: maintain win rate above 70%")
         print(f"{'='*70}\n")
 
         # Get initial intelligence

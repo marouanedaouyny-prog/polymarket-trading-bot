@@ -1,8 +1,8 @@
 {
-  "brier_score": 1e-06,
-  "roc_auc": null,
-  "n_train": 40,
-  "n_test": 10,
+  "brier_score": 0.118562,
+  "roc_auc": 0.93163,
+  "n_train": 1001,
+  "n_test": 251,
   "target_brier": 0.15,
   "meets_target": true,
   "feature_names": [
@@ -14,5 +14,5 @@
     "is_crypto",
     "question_length_norm"
   ],
-  "timestamp": "2026-06-28T20:52:09.926049"
+  "timestamp": "2026-11-05T13:54:29.080927"
 }

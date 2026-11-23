@@ -1,17 +1,18 @@
 """
-LLM-Based Risk Recommendation System
-Uses LLM to analyze market conditions and recommend risk parameters
+Advisory risk parameter generator — rule-based (NOT an LLM despite the name).
+
+This module produces suggested risk parameters (position size %, stop loss,
+take profit, min edge) as a heuristic pre-filter only. It is NOT execution
+authority: position_size_pct is an advisory cap that must be re-validated by
+DynamicRiskManager / ApprovalGate before any order reaches the CLOB adapter.
+Live execution never sizes trades from this module's output alone.
 """
 
 import os
 import json
-import random
 from datetime import datetime
 from dataclasses import dataclass
 from typing import Optional, Dict, List
-from dotenv import load_dotenv
-
-load_dotenv()
 
 
 @dataclass
@@ -26,6 +27,7 @@ class RiskRecommendation:
 
 
 class LLMRiskAdvisor:
+    """Rule-based risk advisor (advisory only — not execution authority)."""
     def __init__(self):
         self.last_recommendation: Optional[RiskRecommendation] = None
         self.cache_duration = 300  # 5 minutes cache

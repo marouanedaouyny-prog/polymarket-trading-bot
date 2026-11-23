@@ -71,9 +71,9 @@ def _fetch_active_markets(limit: int = 100) -> List[Dict]:
         except Exception:
             pass
     # Pure fallback
+    # Simplified fallback – use requests directly so that tests can patch it
     try:
-        import requests as _req
-        resp = _req.get(
+        resp = requests.get(
             f"{GAMMA_API}/markets",
             params={"active": "true", "closed": "false", "limit": limit},
             timeout=15,

@@ -36,12 +36,20 @@ def _extract_yes_no_prices(market: Dict) -> Tuple[float, float]:
     no_price = _to_float(market.get("no_price") or market.get("noPrice"))
 
     outcomes = market.get("outcomes")
-    if (yes_price == 0.0 or no_price == 0.0) and isinstance(outcomes, list):
-        if len(outcomes) >= 2:
+    if (yes_price == 0.0 or no_price == 0.0) and isinstance(outcomes, list) and len(outcomes) >= 2:
+        # outcomes list may contain dicts with price keys or plain labels
+        first = outcomes[0]
+        second = outcomes[1]
+        if isinstance(first, dict):
             if yes_price == 0.0:
-                yes_price = _to_float(outcomes[0].get("price"), yes_price)
+                yes_price = _to_float(first.get("price"), yes_price)
+        elif isinstance(first, str) and yes_price == 0.0:
+            yes_price = _to_float(first, yes_price)
+        if isinstance(second, dict):
             if no_price == 0.0:
-                no_price = _to_float(outcomes[1].get("price"), no_price)
+                no_price = _to_float(second.get("price"), no_price)
+        elif isinstance(second, str) and no_price == 0.0:
+            no_price = _to_float(second, no_price)
 
     outcome_prices = market.get("outcomePrices")
     if (yes_price == 0.0 or no_price == 0.0) and outcome_prices is not None:
@@ -51,7 +59,6 @@ def _extract_yes_no_prices(market: Dict) -> Tuple[float, float]:
                 parsed = json.loads(outcome_prices)
             except json.JSONDecodeError:
                 parsed = None
-
         if isinstance(parsed, list) and len(parsed) >= 2:
             if yes_price == 0.0:
                 yes_price = _to_float(parsed[0], yes_price)

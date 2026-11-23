@@ -3,8 +3,14 @@ Integration test: filter_markets → DynamicRiskManager → OrderManager pipelin
 
 Uses unittest.mock to avoid real network calls and filesystem dependencies.
 """
+from datetime import datetime, timedelta
+
 import pytest
 from unittest.mock import patch, MagicMock
+
+
+def _future_iso(days: int) -> str:
+    return (datetime.now() + timedelta(days=days)).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 # ---------------------------------------------------------------------------
@@ -18,7 +24,7 @@ FAKE_MARKETS_API = [
         "outcomePrices": '["0.35","0.65"]',
         "volume": 250_000,
         "volume24hr": 25_000,
-        "endDate": "2026-12-31T23:59:59Z",
+        "endDate": _future_iso(60),
         "slug": "btc-100k-2026",
         "bestBid": "0.35",
     },
@@ -28,7 +34,7 @@ FAKE_MARKETS_API = [
         "outcomePrices": '["0.15","0.85"]',
         "volume": 120_000,
         "volume24hr": 15_000,
-        "endDate": "2026-09-01T00:00:00Z",
+        "endDate": _future_iso(180),
         "slug": "sol-flip-eth",
         "bestBid": "0.15",
     },
@@ -39,7 +45,7 @@ FAKE_MARKETS_API = [
         "outcomePrices": '["0.20","0.80"]',
         "volume": 500,
         "volume24hr": 50,
-        "endDate": "2026-12-01T00:00:00Z",
+        "endDate": _future_iso(30),
         "slug": "x-happen",
         "bestBid": "0.20",
     },
@@ -52,6 +58,12 @@ FAKE_MARKETS_API = [
 
 class TestFilterRiskOrderPipeline:
     """End-to-end pipeline test with mocked network and disk I/O."""
+
+    @pytest.fixture(autouse=True)
+    def _force_requests_path(self, monkeypatch):
+        # filter_markets prefers httpx; force the requests fallback that these
+        # tests mock, so no live network call can leak into the assertions.
+        monkeypatch.setattr("src.trading.signal_filter._HTTPX_AVAILABLE", False)
 
     @patch("src.trading.signal_filter.requests.get")
     def test_filter_markets_returns_valid_subset(self, mock_get):

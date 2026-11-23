@@ -44,7 +44,8 @@ def _build_features(record: dict) -> Optional[list]:
       5  is_crypto          – binary domain flag
       6  question_length    – longer questions often → more complex outcomes
     """
-    yes_price = record.get('yes_price') or record.get('price')
+    yes_price = (record.get('yes_price') or record.get('entry_price')
+                 or record.get('price'))
     volume = record.get('volume', 0) or 0
 
     if yes_price is None:
@@ -64,6 +65,20 @@ def _build_features(record: dict) -> Optional[list]:
     q_len = min(len(question) / 200.0, 1.0)  # normalise to [0, 1]
 
     return [yes_price, log_vol, days / 30.0, velocity, spread, is_crypto, q_len]
+
+
+def _model_looks_leaked(metrics: dict) -> bool:
+    """A perfect score on a small sample means the label leaked into the features."""
+    auc = metrics.get('roc_auc')
+    brier = metrics.get('brier_score')
+    try:
+        if auc is not None and float(auc) >= 0.999:
+            return True
+        if brier is not None and float(brier) <= 0.001:
+            return True
+    except (TypeError, ValueError):
+        return False
+    return False
 
 
 class MarketPredictor:
@@ -91,6 +106,8 @@ class MarketPredictor:
                                 is_crypto: bool = False,
                                 days_to_close: float = 7.0,
                                 spread: float = 0.02,
+                                price_velocity: float = 0.0,
+                                question: Optional[str] = None,
                                 timesfm_signal: Optional[dict] = None) -> float:
         """
         Predict win probability.  Falls back to the market price when the
@@ -103,14 +120,17 @@ class MarketPredictor:
         if not self.is_trained:
             base = self._fallback_probability(price)
         else:
+            # Mirror _build_features exactly: training uses a fixed 7-day
+            # horizon, so callers must pass the same values here.
+            q_len = 0.5 if question is None else min(len(question) / 200.0, 1.0)
             feat = [
                 price,
                 float(np.log1p(volume)),
                 days_to_close / 30.0,
-                0.0,   # price_velocity unknown at prediction time
+                abs(float(price_velocity)),
                 spread,
                 int(is_crypto),
-                0.5,   # question length unknown at prediction time
+                q_len,
             ]
             X = self.scaler.transform([feat])
             prob = float(self.model.predict_proba(X)[0][1])
@@ -180,6 +200,17 @@ class MarketPredictor:
         logger.info(f"Model trained: {len(X_train)} train / {len(X_test)} test | "
                     f"Brier={brier:.4f} (target <0.15) | AUC={auc:.4f}")
 
+        if _model_looks_leaked({'brier_score': brier, 'roc_auc': auc}):
+            logger.critical(
+                "Rejecting trained model: Brier=%.4f AUC=%.4f indicates label leakage. "
+                "Train on entry-time prices, not post-resolution prices.",
+                brier, auc,
+            )
+            self.model = None
+            self.scaler = None
+            self.is_trained = False
+            return
+
         self._save_metrics(brier, auc, len(X_train), len(X_test))
         self._save_model()
         self.is_trained = True
@@ -194,12 +225,32 @@ class MarketPredictor:
                 self.model = pickle.load(f)
             with open(self.scaler_path, 'rb') as f:
                 self.scaler = pickle.load(f)
-            self.is_trained = True
-            logger.info("Model loaded from disk.")
-            return True
         except FileNotFoundError:
             logger.info("No saved model found.")
             return False
+
+        metrics_path = os.path.join(MODEL_DIR, 'metrics.json')
+        if os.path.isfile(metrics_path):
+            try:
+                with open(metrics_path, 'r', encoding='utf-8') as f:
+                    metrics = json.load(f)
+                if _model_looks_leaked(metrics):
+                    logger.critical(
+                        "Rejecting saved model: metrics indicate label leakage "
+                        "(Brier=%s AUC=%s on %s train / %s test). Refusing to trade on it.",
+                        metrics.get('brier_score'), metrics.get('roc_auc'),
+                        metrics.get('n_train'), metrics.get('n_test'),
+                    )
+                    self.model = None
+                    self.scaler = None
+                    self.is_trained = False
+                    return False
+            except (OSError, ValueError, TypeError) as e:
+                logger.warning(f"Could not read model metrics: {e}")
+
+        self.is_trained = True
+        logger.info("Model loaded from disk.")
+        return True
 
     def _save_model(self) -> None:
         with open(self.model_path, 'wb') as f:

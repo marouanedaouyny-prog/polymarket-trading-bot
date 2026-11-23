@@ -10,6 +10,9 @@ from datetime import datetime
 from typing import Dict, List, Optional
 from uuid import uuid4
 
+from src.execution.preflight import PreflightValidator
+from src.risk.approval_gate import ApprovalGate
+
 logger = logging.getLogger(__name__)
 
 
@@ -34,17 +37,36 @@ class OrderManager:
 
         # [LIVE ADAPTER] Initialize live execution adapter only when live trading is requested.
         self.live_adapter = None
+        self.live_block_reason: Optional[str] = None
+        # Preflight validator gates every live order before it reaches the adapter.
+        self.preflight = PreflightValidator()
+        # Approval gate enforces independent risk policy + manual approval.
+        self.approval_gate = ApprovalGate()
         if self.mode == "live" and os.getenv("POLYMARKET_ALLOW_REAL_ORDERS", "false").lower() == "true":
             try:
-                from .clob_adapter import PolymarketCLOBAdapter
-                self.live_adapter = PolymarketCLOBAdapter()
-            except ImportError:
-                self.live_adapter = None
+                from src.utils.readiness_gate import check_live_readiness
+                self.live_block_reason = check_live_readiness()
+            except Exception as e:  # gate itself broken -> stay closed
+                self.live_block_reason = f"readiness gate unavailable: {e}"
+            if self.live_block_reason:
+                logger.error("Live trading blocked: %s", self.live_block_reason)
+            else:
+                try:
+                    from .clob_adapter import PolymarketCLOBAdapter
+                    self.live_adapter = PolymarketCLOBAdapter()
+                except ImportError:
+                    self.live_adapter = None
 
     def _live_trading_enabled(self) -> bool:
-        """Return True only when live mode is explicitly enabled and adapter is ready."""
+        """Return True only when live mode is explicitly enabled and adapter is ready.
+
+        Requires ALL of: TRADING_MODE=live, ENABLE_LIVE_TRADING=true,
+        POLYMARKET_ALLOW_REAL_ORDERS=true, CLOB adapter available + ready.
+        Fail-closed: any missing flag blocks live orders.
+        """
         return (
             self.mode == "live"
+            and os.getenv("ENABLE_LIVE_TRADING", "false").lower() == "true"
             and os.getenv("POLYMARKET_ALLOW_REAL_ORDERS", "false").lower() == "true"
             and self.live_adapter is not None
             and self.live_adapter.is_available
@@ -64,6 +86,54 @@ class OrderManager:
 
         if self.mode == "live":
             if self._live_trading_enabled():
+                # [PREFLIGHT] Validate order before any live execution.
+                pf = self.preflight.validate(
+                    market_id=order.get("market_id"),
+                    side=order.get("side"),
+                    price=order.get("price"),
+                    size=order.get("size"),
+                )
+                if not pf.allowed:
+                    order["status"] = "blocked"
+                    order["error_message"] = f"preflight rejected: {pf.reason}"
+                    self.approval_gate.record_order_attempt(
+                        order_id,
+                        order.get("market_id", ""),
+                        str(order.get("side")),
+                        float(order.get("size", 0.0)),
+                        float(order.get("price", 0.0)),
+                        "blocked",
+                        pf.reason,
+                    )
+                    logger.error("Live order blocked by preflight: %s", pf.reason)
+                    return False
+
+                # [APPROVAL GATE] Independent risk veto + manual approval.
+                edge = float(order.get("edge", 0.0))
+                confidence = float(order.get("confidence", 0.5))
+                balance = float(order.get("balance", 0.0))
+                decision = self.approval_gate.evaluate(
+                    market_id=str(order.get("market_id", "")),
+                    edge=edge,
+                    confidence=confidence,
+                    balance=balance,
+                    manual_approved=bool(order.get("manual_approved", False)),
+                )
+                if not decision.allowed:
+                    order["status"] = "blocked"
+                    order["error_message"] = f"approval gate rejected: {decision.reason}"
+                    self.approval_gate.record_order_attempt(
+                        order_id,
+                        order.get("market_id", ""),
+                        str(order.get("side")),
+                        float(order.get("size", 0.0)),
+                        float(order.get("price", 0.0)),
+                        "blocked",
+                        decision.reason,
+                    )
+                    logger.error("Live order blocked by approval gate: %s", decision.reason)
+                    return False
+
                 # [LIVE EXECUTION] Execute real trade
                 result = self.live_adapter.place_order(
                     market_id=order.get("market_id"),
@@ -76,6 +146,14 @@ class OrderManager:
                     order["exchange_order_id"] = result["order_id"]
                     self._apply_simulated_fill(order) # Sync local state
                     self.order_history.append(order)
+                    self.approval_gate.record_order_attempt(
+                        order_id,
+                        order.get("market_id", ""),
+                        str(order.get("side")),
+                        float(order.get("size", 0.0)),
+                        float(order.get("price", 0.0)),
+                        "filled",
+                    )
                     print(f"[ORDER_MANAGER] LIVE order {order_id} placed successfully.")
                     return True
                 else:
@@ -85,7 +163,9 @@ class OrderManager:
                     return False
             else:
                 order["status"] = "blocked"
-                print(f"[ORDER_MANAGER] Live mode requested but adapter not ready or blocked by guard.")
+                reason = self.live_block_reason or "adapter not ready"
+                order["error_message"] = reason
+                print(f"[ORDER_MANAGER] Live order blocked: {reason}")
                 return False
 
         # [PAPER MODE] With simulated latency
